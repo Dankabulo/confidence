@@ -1,0 +1,14 @@
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\bin\Debug\Confidence.exe.config
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\bin\Debug\Confidence.exe
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\bin\Debug\Confidence.pdb
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.csprojResolveAssemblyReference.cache
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.Form1.resources
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.Properties.Resources.resources
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.csproj.GenerateResource.Cache
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.exe
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.pdb
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.Authentification.resources
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\bin\Debug\Bunifu_UI_v1.5.3.dll
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.Design.dll
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.dll
+c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.Fonts.dll
