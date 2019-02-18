@@ -8,7 +8,3 @@ c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj
 c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.exe
 c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.pdb
 c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.Authentification.resources
-c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\bin\Debug\Bunifu_UI_v1.5.3.dll
-c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.Design.dll
-c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.dll
-c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.Fonts.dll
