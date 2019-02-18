@@ -66,7 +66,7 @@ namespace Confidence
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            txtTexte.Text = "Tableau de bord";
+            txtTexte.Text = "Tableau de bord et de fous";
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
