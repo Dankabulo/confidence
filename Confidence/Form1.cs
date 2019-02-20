@@ -88,5 +88,10 @@ namespace Confidence
         {
             txtTexte.Text = "Les Conceptreurs";
         }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            txtTexte.Text = "Creation du compte";
+        }
     }
 }

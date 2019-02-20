@@ -8,3 +8,7 @@ c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj
 c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.exe
 c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.pdb
 c:\users\priskas\documents\visual studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.Authentification.resources
+C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.Design.dll
+C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.dll
+C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.Fonts.dll
