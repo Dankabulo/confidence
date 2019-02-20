@@ -10,22 +10,26 @@ using System.Windows.Forms;
 
 namespace Confidence
 {
-    public partial class AskCompte : Form
+    public partial class CreerCompte : Form
     {
-        public AskCompte()
+        public CreerCompte()
         {
             InitializeComponent();
         }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void CreerCompte_Load(object sender, EventArgs e)
         {
-            CreerCompte n = new CreerCompte();
-            n.Show();
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
