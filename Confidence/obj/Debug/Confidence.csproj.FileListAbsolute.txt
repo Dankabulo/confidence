@@ -29,3 +29,4 @@ C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.PersonnesAt.resources
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.Properties.Resources.resources
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.csproj.GenerateResource.Cache
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.compte_a_terme.resources

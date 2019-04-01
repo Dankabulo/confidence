@@ -27,5 +27,11 @@ namespace Confidence
             CreerCompte n = new CreerCompte();
             n.Show();
         }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            compte_a_terme n = new compte_a_terme();
+            n.Show();
+        }
     }
 }

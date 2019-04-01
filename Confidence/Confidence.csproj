@@ -75,6 +75,12 @@
     <Compile Include="Authentification.Designer.cs">
       <DependentUpon>Authentification.cs</DependentUpon>
     </Compile>
+    <Compile Include="compte_a_terme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compte_a_terme.Designer.cs">
+      <DependentUpon>compte_a_terme.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreerCompte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compte_a_terme.resx">
+      <DependentUpon>compte_a_terme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreerCompte.resx">
       <DependentUpon>CreerCompte.cs</DependentUpon>
