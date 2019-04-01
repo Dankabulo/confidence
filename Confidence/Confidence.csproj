@@ -75,6 +75,12 @@
     <Compile Include="Authentification.Designer.cs">
       <DependentUpon>Authentification.cs</DependentUpon>
     </Compile>
+    <Compile Include="clients_options.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="clients_options.Designer.cs">
+      <DependentUpon>clients_options.cs</DependentUpon>
+    </Compile>
     <Compile Include="compte_a_terme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="operation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operation.Designer.cs">
+      <DependentUpon>operation.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonnesAt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,9 @@
     <EmbeddedResource Include="Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="clients_options.resx">
+      <DependentUpon>clients_options.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="compte_a_terme.resx">
       <DependentUpon>compte_a_terme.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operation.resx">
+      <DependentUpon>operation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonnesAt.resx">
       <DependentUpon>PersonnesAt.cs</DependentUpon>

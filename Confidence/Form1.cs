@@ -73,6 +73,17 @@ namespace Confidence
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
+            if (!mmainpale.Controls.Contains(clients_options.Instance))
+            {
+                mmainpale.Controls.Add(clients_options.Instance);
+                clients_options.Instance.Dock = DockStyle.Fill;
+                clients_options.Instance.BringToFront();
+            }
+            else
+            {
+                clients_options.Instance.BringToFront();
+            }
+
             txtTexte.Text = "Clients";
         }
 
