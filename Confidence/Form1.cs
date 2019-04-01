@@ -12,6 +12,8 @@ namespace Confidence
 {
     public partial class Form1 : Form
     {
+        Form ask = new AskCompte();
+
         public Form1()
         {
             InitializeComponent();
@@ -92,10 +94,9 @@ namespace Confidence
         private void bunifuFlatButton6_Click(object sender, EventArgs e)
         {
             txtTexte.Text = "Creation du compte";
-            
+
             // Appel au formulaire Askcompte a l'evenement click du bouton cree un compte
-            AskCompte n = new AskCompte();
-            n.Show();
+            ask.ShowDialog();
         }
     }
 }
