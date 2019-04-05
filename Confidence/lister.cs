@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace Confidence
 {
+    
     public partial class lister : UserControl
     {
-        Form visualiser = new listage();
-        Form operation = new operation();
         private static lister _instance;
         public static lister Instance
         {
@@ -29,14 +28,9 @@ namespace Confidence
             InitializeComponent();
         }
 
-        private void bunifuImageButton2_Click(object sender, EventArgs e)
-        {
-            operation.ShowDialog();
-        }
-
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            visualiser.ShowDialog();
+
         }
     }
 }

@@ -12,8 +12,9 @@ namespace Confidence
 {
     public partial class Form1 : Form
     {
-        Form ask = new AskCompte();
-
+        Form operation = new operation();
+        Form courant = new CreerCompte();
+        Form terme = new compte_a_terme();
         public Form1()
         {
             InitializeComponent();
@@ -73,6 +74,19 @@ namespace Confidence
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
+            if (barre.Height == 0)
+            {
+                barre.Height = 97;
+            }
+            if (mmainpale.Height == 575)
+            {
+                mmainpale.Height = 730;
+            }
+            btncompteA.Visible = false;
+            btncompteC.Visible = false;
+            btnListe_clients.Visible = true;
+            btnoperation.Visible = true;
+            btnvision.Visible = true;
             if (!mmainpale.Controls.Contains(lister.Instance))
             {
                 mmainpale.Controls.Add(lister.Instance);
@@ -83,7 +97,6 @@ namespace Confidence
             {
                 lister.Instance.BringToFront();
             }
-
             txtTexte.Text = "Clients";
         }
 
@@ -104,7 +117,16 @@ namespace Confidence
 
         private void bunifuFlatButton6_Click(object sender, EventArgs e)
         {
-            txtTexte.Text = "Creation du compte";
+            
+            mmainpale.Height = 575;
+
+            btncompteA.Visible = true;
+            btncompteC.Visible = true;
+            btnListe_clients.Visible = false;
+            btnoperation.Visible = false;
+            btnvision.Visible = false;
+
+            
 
             // Appel au formulaire Askcompte a l'evenement click du bouton cree un compte
             if (!mmainpale.Controls.Contains(entree.Instance))
@@ -118,8 +140,37 @@ namespace Confidence
                 entree.Instance.BringToFront();
             }
 
-            txtTexte.Text = "Clients";
+            txtTexte.Text = "Creation du compte";
 
+        }
+
+        private void btncompteC_Click(object sender, EventArgs e)
+        {
+            courant.ShowDialog();
+        }
+
+        private void btncompteA_Click(object sender, EventArgs e)
+        {
+            terme.ShowDialog();
+        }
+
+        private void btnListe_clients_Click(object sender, EventArgs e)
+        {
+            if (!mmainpale.Controls.Contains(clients_options.Instance))
+            {
+                mmainpale.Controls.Add(clients_options.Instance);
+                clients_options.Instance.Dock = DockStyle.Fill;
+                clients_options.Instance.BringToFront();
+            }
+            else
+            {
+                clients_options.Instance.BringToFront();
+            }
+        }
+
+        private void btnoperation_Click(object sender, EventArgs e)
+        {
+            operation.ShowDialog();
         }
     }
 }

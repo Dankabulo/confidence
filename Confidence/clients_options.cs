@@ -15,6 +15,7 @@ namespace Confidence
 {
     public partial class clients_options : UserControl
     {
+        Control lister = new lister();
         Form operation = new operation();
         string cs = ConfigurationManager.ConnectionStrings["GESTION"].ConnectionString;
         private static clients_options _instance;
@@ -64,6 +65,26 @@ namespace Confidence
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            operation.ShowDialog();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton2_Click_1(object sender, EventArgs e)
+        {
+            lister.Show();
+        }
+
+        private void bunifuFlatButton2_Click_1(object sender, EventArgs e)
         {
             dataGridView2.Visible = true;
 
@@ -148,11 +169,6 @@ namespace Confidence
             {
                 MetroFramework.MetroMessageBox.Show(this, ex.Message, "Message error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            operation.ShowDialog();
         }
     }
 }
