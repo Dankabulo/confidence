@@ -57,18 +57,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AskCompte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AskCompte.Designer.cs">
-      <DependentUpon>AskCompte.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AskCreerCompte.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AskCreerCompte.Designer.cs">
-      <DependentUpon>AskCreerCompte.cs</DependentUpon>
-    </Compile>
     <Compile Include="Authentification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,12 +119,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AskCompte.resx">
-      <DependentUpon>AskCompte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AskCreerCompte.resx">
-      <DependentUpon>AskCreerCompte.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="visionG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="visionG.Designer.cs">
+      <DependentUpon>visionG.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +164,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="visionG.resx">
+      <DependentUpon>visionG.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

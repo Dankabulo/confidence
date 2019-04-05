@@ -172,5 +172,19 @@ namespace Confidence
         {
             operation.ShowDialog();
         }
+
+        private void btnvision_Click(object sender, EventArgs e)
+        {
+            if (!mmainpale.Controls.Contains(visionG.Instance))
+            {
+                mmainpale.Controls.Add(visionG.Instance);
+                visionG.Instance.Dock = DockStyle.Fill;
+                visionG.Instance.BringToFront();
+            }
+            else
+            {
+                visionG.Instance.BringToFront();
+            }
+        }
     }
 }

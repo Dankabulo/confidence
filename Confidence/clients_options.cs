@@ -30,38 +30,7 @@ namespace Confidence
         }
         public clients_options()
         {
-            InitializeComponent();
-
-            SqlConnection con = new SqlConnection(cs);
-            
-
-            try
-            {
-                SqlConnection conn = new SqlConnection(cs);
-                string queryn = string.Format("declare @_nombre int;  SELECT @_nombre = nombre COUNT(idproprietaire) FROM proprietaire");
-                SqlCommand cmdn = new SqlCommand(queryn, conn);
-                SqlDataReader sdrn;
-
-                try
-                {
-                    conn.Open();
-                    sdrn = cmdn.ExecuteReader();
-
-                    while (sdrn.Read())
-                    {
-                        //lblnombre.Text = sdrn[].ToString;
-                    }
-                }
-                catch
-                {
-
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
+            InitializeComponent();     
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -136,7 +105,7 @@ namespace Confidence
                 {
                     if (this.cmbcategorie.Text == "Comptes courants")
                     {
-                        string requete = "SELECT idcompte, type_compte,devise, nom, postnom, prenom, date_creation,montant FROM proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join compte_courant cc on c.idcompte = cc.idcompte_cc; ";
+                        string requete = "SELECT idcompte, type_compte,devise, nom, postnom, prenom, date_creation,montant FROM proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join compte_courant cc on c.idcompte = cc.idcompte_cc WHERE date_creation BETWEEN '" + dtdebut.Value.ToShortDateString() + "' AND '" + this.dtfin.Value.ToShortDateString() + "' ; ";
                         SqlConnection con = new SqlConnection(cs);
                         string query = requete;  //string.Format("SELECT * FROM proprietaire");
                         SqlCommand cmd = new SqlCommand(query, con);
@@ -150,7 +119,7 @@ namespace Confidence
                     }
                     else if (this.cmbcategorie.Text == "Comptes  a termes")
                     {
-                        string requete = "SELECT idcompte, type_compte,devise, nom, postnom, prenom, date_creation,montant,delai FROM proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join compte_a_terme ca on c.idcompte = ca.idcompte_ca; ";
+                        string requete = "SELECT idcompte, type_compte,devise, nom, postnom, prenom, date_creation,montant,delai FROM proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join compte_a_terme ca on c.idcompte = ca.idcompte_ca WHERE date_creation BETWEEN '" + dtdebut.Value.ToShortDateString() + "' AND '" + this.dtfin.Value.ToShortDateString() + "'; ";
                         SqlConnection con = new SqlConnection(cs);
                         string query = requete;  //string.Format("SELECT * FROM proprietaire");
                         SqlCommand cmd = new SqlCommand(query, con);
