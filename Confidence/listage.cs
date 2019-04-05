@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,54 +13,12 @@ using System.Configuration;
 
 namespace Confidence
 {
-    public partial class clients_options : UserControl
+    public partial class listage : Form
     {
-        Form operation = new operation();
         string cs = ConfigurationManager.ConnectionStrings["GESTION"].ConnectionString;
-        private static clients_options _instance;
-        public static clients_options Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new clients_options();
-                return _instance;
-            }
-        }
-        public clients_options()
+        public listage()
         {
             InitializeComponent();
-
-            SqlConnection con = new SqlConnection(cs);
-            
-
-            try
-            {
-                SqlConnection conn = new SqlConnection(cs);
-                string queryn = string.Format("declare @_nombre int;  SELECT @_nombre = nombre COUNT(idproprietaire) FROM proprietaire");
-                SqlCommand cmdn = new SqlCommand(queryn, conn);
-                SqlDataReader sdrn;
-
-                try
-                {
-                    conn.Open();
-                    sdrn = cmdn.ExecuteReader();
-
-                    while (sdrn.Read())
-                    {
-                        //lblnombre.Text = sdrn[].ToString;
-                    }
-                }
-                catch
-                {
-
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -98,7 +56,8 @@ namespace Confidence
                     }
                     else if (this.cmbcategorie.Text == "Operation d'entrees")
                     {
-                        string requete = "SELECT date_operation, idcompte, type_compte,nom, prenom,type_operation, solde FROM [CONFIDENCEX].[dbo].proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join operation o on c.idcompte = o.idcompte_operation WHERE type_operation = 'Depot' AND date_operation BETWEEN '" + dtdebut.Value.ToShortDateString() + "' AND '" + this.dtfin.Value.ToShortDateString() + "' ";
+                        string requete = "SELECT date_operation, idcompte, type_compte,nom, prenom,type_operation, solde FROM [CONFIDENCEX].[dbo].proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join operation o on c.idcompte = o.idcompte_operation WHERE date_operation BETWEEN '" 
+                                    + dtdebut.Value.ToShortDateString() + "' AND '" + this.dtfin.Value.ToShortDateString() + "' AND type_operation = 'Depot' ";
                         SqlConnection con = new SqlConnection(cs);
                         string query = requete;  //string.Format("SELECT * FROM proprietaire");
                         SqlCommand cmd = new SqlCommand(query, con);
@@ -150,9 +109,9 @@ namespace Confidence
             }
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            operation.ShowDialog();
+            this.Close();
         }
     }
 }

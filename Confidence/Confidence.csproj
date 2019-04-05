@@ -93,11 +93,29 @@
     <Compile Include="CreerCompte.Designer.cs">
       <DependentUpon>CreerCompte.cs</DependentUpon>
     </Compile>
+    <Compile Include="entree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="entree.Designer.cs">
+      <DependentUpon>entree.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listage.Designer.cs">
+      <DependentUpon>listage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lister.Designer.cs">
+      <DependentUpon>lister.cs</DependentUpon>
     </Compile>
     <Compile Include="operation.cs">
       <SubType>Form</SubType>
@@ -131,8 +149,17 @@
     <EmbeddedResource Include="CreerCompte.resx">
       <DependentUpon>CreerCompte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="entree.resx">
+      <DependentUpon>entree.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listage.resx">
+      <DependentUpon>listage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lister.resx">
+      <DependentUpon>lister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="operation.resx">
       <DependentUpon>operation.cs</DependentUpon>

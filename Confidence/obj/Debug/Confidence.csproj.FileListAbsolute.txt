@@ -32,3 +32,6 @@ C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.compte_a_terme.resources
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.clients_options.resources
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.operation.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.entree.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.lister.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.listage.resources

@@ -47,9 +47,9 @@ namespace Confidence
                         if (id != "")
                         {
 
-                            string query = "INSERT INTO compte(idproprietaire, type)VALUES((SELECT idproprietaire FROM proprietaire WHERE nom= '" + this.txtnom.Text + "' AND postnom = '"
+                            string query = "INSERT INTO compte(idproprietaire, type_compte)VALUES((SELECT idproprietaire FROM proprietaire WHERE nom= '" + this.txtnom.Text + "' AND postnom = '"
                          + this.txtpostnom.Text + "' AND prenom= '" + this.txtprenom.Text + "'), '"
-                         + this.cmbtypecompte.SelectedItem + "'); INSERT INTO compte_a_terme(idcompte, date_creation,delai, montant, devise) VALUES((SELECT idcompte FROM compte WHERE idproprietaire ='"+id+"' AND type = 'Compte a terme' ), '" + this.dtdate.Value.ToShortDateString() + "', '"
+                         + this.cmbtypecompte.SelectedItem + "'); INSERT INTO compte_a_terme(idcompte_ca, date_creation,delai, montant, devise) VALUES((SELECT idcompte FROM compte WHERE idproprietaire ='"+id+"' AND type_compte = 'Compte a terme' ), '" + this.dtdate.Value.ToShortDateString() + "', '"
                          + this.txtdelai.Text + "','" + this.txtmontant.Text + "', '" + this.cmbdevise.SelectedItem + "')";
 
 
@@ -81,7 +81,7 @@ namespace Confidence
                         else {
 
                             string query = "INSERT INTO proprietaire(nom, postnom, prenom) VALUES('" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '"
-                            + this.txtprenom.Text + "'); INSERT INTO compte(idproprietaire, type)VALUES((SELECT idproprietaire FROM proprietaire WHERE nom= '" + this.txtnom.Text + "' AND postnom = '"
+                            + this.txtprenom.Text + "'); INSERT INTO compte(idproprietaire, type_compte)VALUES((SELECT idproprietaire FROM proprietaire WHERE nom= '" + this.txtnom.Text + "' AND postnom = '"
                             + this.txtpostnom.Text + "' AND prenom= '" + this.txtprenom.Text + "'), '"
                             + this.cmbtypecompte.SelectedItem + "'); INSERT INTO compte_a_terme(idcompte, date_creation,delai, montant, devise) VALUES((SELECT idcompte FROM compte WHERE idproprietaire =(SELECT idproprietaire FROM proprietaire WHERE nom= '" + this.txtnom.Text + "' AND postnom = '"
                             + this.txtpostnom.Text + "' AND prenom= '" + this.txtprenom.Text + "') ), '" + this.dtdate.Value.ToShortDateString() + "', '"

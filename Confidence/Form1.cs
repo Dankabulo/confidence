@@ -73,15 +73,15 @@ namespace Confidence
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            if (!mmainpale.Controls.Contains(clients_options.Instance))
+            if (!mmainpale.Controls.Contains(lister.Instance))
             {
-                mmainpale.Controls.Add(clients_options.Instance);
-                clients_options.Instance.Dock = DockStyle.Fill;
-                clients_options.Instance.BringToFront();
+                mmainpale.Controls.Add(lister.Instance);
+                lister.Instance.Dock = DockStyle.Fill;
+                lister.Instance.BringToFront();
             }
             else
             {
-                clients_options.Instance.BringToFront();
+                lister.Instance.BringToFront();
             }
 
             txtTexte.Text = "Clients";
@@ -107,7 +107,19 @@ namespace Confidence
             txtTexte.Text = "Creation du compte";
 
             // Appel au formulaire Askcompte a l'evenement click du bouton cree un compte
-            ask.ShowDialog();
+            if (!mmainpale.Controls.Contains(entree.Instance))
+            {
+                mmainpale.Controls.Add(entree.Instance);
+                entree.Instance.Dock = DockStyle.Fill;
+                entree.Instance.BringToFront();
+            }
+            else
+            {
+                entree.Instance.BringToFront();
+            }
+
+            txtTexte.Text = "Clients";
+
         }
     }
 }
