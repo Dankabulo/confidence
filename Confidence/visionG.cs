@@ -15,6 +15,7 @@ namespace Confidence
 {
     public partial class visionG : UserControl
     {
+        Form recherche = new recherche();
         string cs = ConfigurationManager.ConnectionStrings["GESTION"].ConnectionString;
         private static visionG _instance;
         public static visionG Instance
@@ -125,6 +126,11 @@ namespace Confidence
             {
 
             }
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            recherche.ShowDialog();
         }
     }
 }

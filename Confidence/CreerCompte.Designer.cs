@@ -48,9 +48,6 @@
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.cmbtypecompte = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -58,13 +55,18 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtprenom = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbltitre = new System.Windows.Forms.Label();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnlancer = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.littele_panel = new System.Windows.Forms.Panel();
+            this.btn_supprimer = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bnt_modifier = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.panel1.SuspendLayout();
+            this.littele_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtnom
@@ -119,7 +121,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(51, 245);
+            this.label5.Location = new System.Drawing.Point(51, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 17);
             this.label5.TabIndex = 8;
@@ -128,7 +130,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel3.Location = new System.Drawing.Point(182, 260);
+            this.panel3.Location = new System.Drawing.Point(182, 252);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(159, 2);
             this.panel3.TabIndex = 4;
@@ -137,7 +139,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(51, 284);
+            this.label6.Location = new System.Drawing.Point(51, 276);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 17);
             this.label6.TabIndex = 11;
@@ -146,7 +148,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel4.Location = new System.Drawing.Point(172, 299);
+            this.panel4.Location = new System.Drawing.Point(172, 291);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(159, 2);
             this.panel4.TabIndex = 10;
@@ -156,7 +158,7 @@
             this.txtmontant.BackColor = System.Drawing.SystemColors.Control;
             this.txtmontant.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtmontant.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtmontant.Location = new System.Drawing.Point(172, 282);
+            this.txtmontant.Location = new System.Drawing.Point(172, 274);
             this.txtmontant.Name = "txtmontant";
             this.txtmontant.Size = new System.Drawing.Size(156, 16);
             this.txtmontant.TabIndex = 4;
@@ -165,7 +167,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(51, 360);
+            this.label8.Location = new System.Drawing.Point(51, 352);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 17);
             this.label8.TabIndex = 17;
@@ -174,7 +176,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel6.Location = new System.Drawing.Point(172, 380);
+            this.panel6.Location = new System.Drawing.Point(172, 372);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(159, 2);
             this.panel6.TabIndex = 16;
@@ -183,7 +185,7 @@
             // 
             this.dtdate.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F);
             this.dtdate.CalendarMonthBackground = System.Drawing.SystemColors.Control;
-            this.dtdate.Location = new System.Drawing.Point(172, 351);
+            this.dtdate.Location = new System.Drawing.Point(172, 343);
             this.dtdate.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtdate.Name = "dtdate";
             this.dtdate.Size = new System.Drawing.Size(161, 29);
@@ -193,7 +195,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(51, 321);
+            this.label9.Location = new System.Drawing.Point(51, 313);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 17);
             this.label9.TabIndex = 21;
@@ -202,7 +204,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel7.Location = new System.Drawing.Point(172, 336);
+            this.panel7.Location = new System.Drawing.Point(172, 328);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(96, 2);
             this.panel7.TabIndex = 20;
@@ -214,7 +216,7 @@
             this.cmbdevise.Items.AddRange(new object[] {
             "USD",
             "CFD"});
-            this.cmbdevise.Location = new System.Drawing.Point(172, 311);
+            this.cmbdevise.Location = new System.Drawing.Point(172, 303);
             this.cmbdevise.Name = "cmbdevise";
             this.cmbdevise.Size = new System.Drawing.Size(94, 25);
             this.cmbdevise.TabIndex = 5;
@@ -240,7 +242,7 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(264, 583);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(254, 583);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
@@ -295,40 +297,10 @@
             this.cmbtypecompte.Items.AddRange(new object[] {
             "Compte courant",
             "Compte a terme"});
-            this.cmbtypecompte.Location = new System.Drawing.Point(185, 234);
+            this.cmbtypecompte.Location = new System.Drawing.Point(185, 226);
             this.cmbtypecompte.Name = "cmbtypecompte";
             this.cmbtypecompte.Size = new System.Drawing.Size(156, 25);
             this.cmbtypecompte.TabIndex = 3;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(22, 424);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(345, 17);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "vous pouvez ajouter certaines personnes qui auront ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(22, 441);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(325, 17);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "les privileges d\'exercer les operations de depot et";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(22, 458);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(223, 17);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "de retrait pour le present compte";
             // 
             // bunifuFlatButton3
             // 
@@ -336,7 +308,7 @@
             this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
             this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "            Ajouter";
+            this.bunifuFlatButton3.ButtonText = "         Rechercher";
             this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
@@ -351,7 +323,7 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(264, 477);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(256, 508);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
@@ -359,7 +331,7 @@
             this.bunifuFlatButton3.selected = false;
             this.bunifuFlatButton3.Size = new System.Drawing.Size(118, 35);
             this.bunifuFlatButton3.TabIndex = 7;
-            this.bunifuFlatButton3.Text = "            Ajouter";
+            this.bunifuFlatButton3.Text = "         Rechercher";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -421,16 +393,16 @@
             this.txtprenom.Size = new System.Drawing.Size(156, 16);
             this.txtprenom.TabIndex = 2;
             // 
-            // label1
+            // lbltitre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(58, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nouvel compte ";
+            this.lbltitre.AutoSize = true;
+            this.lbltitre.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.lbltitre.ForeColor = System.Drawing.Color.White;
+            this.lbltitre.Location = new System.Drawing.Point(58, 12);
+            this.lbltitre.Name = "lbltitre";
+            this.lbltitre.Size = new System.Drawing.Size(181, 24);
+            this.lbltitre.TabIndex = 0;
+            this.lbltitre.Text = "Nouvel compte ";
             // 
             // bunifuImageButton1
             // 
@@ -451,7 +423,7 @@
             this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(380, 0);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(345, 0);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(45, 45);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -465,44 +437,158 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
             this.panel1.Controls.Add(this.bunifuImageButton2);
             this.panel1.Controls.Add(this.bunifuImageButton1);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbltitre);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(425, 48);
+            this.panel1.Size = new System.Drawing.Size(390, 48);
             this.panel1.TabIndex = 0;
+            // 
+            // btnlancer
+            // 
+            this.btnlancer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
+            this.btnlancer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.btnlancer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlancer.BorderRadius = 0;
+            this.btnlancer.ButtonText = "              Lancer";
+            this.btnlancer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlancer.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlancer.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlancer.Iconimage = null;
+            this.btnlancer.Iconimage_right = null;
+            this.btnlancer.Iconimage_right_Selected = null;
+            this.btnlancer.Iconimage_Selected = null;
+            this.btnlancer.IconMarginLeft = 0;
+            this.btnlancer.IconMarginRight = 0;
+            this.btnlancer.IconRightVisible = true;
+            this.btnlancer.IconRightZoom = 0D;
+            this.btnlancer.IconVisible = true;
+            this.btnlancer.IconZoom = 90D;
+            this.btnlancer.IsTab = false;
+            this.btnlancer.Location = new System.Drawing.Point(254, 508);
+            this.btnlancer.Name = "btnlancer";
+            this.btnlancer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.btnlancer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
+            this.btnlancer.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlancer.selected = false;
+            this.btnlancer.Size = new System.Drawing.Size(118, 35);
+            this.btnlancer.TabIndex = 73;
+            this.btnlancer.Text = "              Lancer";
+            this.btnlancer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlancer.Textcolor = System.Drawing.Color.White;
+            this.btnlancer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlancer.Visible = false;
+            this.btnlancer.Click += new System.EventHandler(this.btnlancer_Click);
+            // 
+            // littele_panel
+            // 
+            this.littele_panel.Controls.Add(this.btn_supprimer);
+            this.littele_panel.Controls.Add(this.bnt_modifier);
+            this.littele_panel.Location = new System.Drawing.Point(12, 380);
+            this.littele_panel.Name = "littele_panel";
+            this.littele_panel.Size = new System.Drawing.Size(362, 82);
+            this.littele_panel.TabIndex = 74;
+            // 
+            // btn_supprimer
+            // 
+            this.btn_supprimer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
+            this.btn_supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.btn_supprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_supprimer.BorderRadius = 0;
+            this.btn_supprimer.ButtonText = "          Supprimer";
+            this.btn_supprimer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_supprimer.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_supprimer.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_supprimer.Iconimage = null;
+            this.btn_supprimer.Iconimage_right = null;
+            this.btn_supprimer.Iconimage_right_Selected = null;
+            this.btn_supprimer.Iconimage_Selected = null;
+            this.btn_supprimer.IconMarginLeft = 0;
+            this.btn_supprimer.IconMarginRight = 0;
+            this.btn_supprimer.IconRightVisible = true;
+            this.btn_supprimer.IconRightZoom = 0D;
+            this.btn_supprimer.IconVisible = true;
+            this.btn_supprimer.IconZoom = 90D;
+            this.btn_supprimer.IsTab = false;
+            this.btn_supprimer.Location = new System.Drawing.Point(195, 24);
+            this.btn_supprimer.Name = "btn_supprimer";
+            this.btn_supprimer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.btn_supprimer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
+            this.btn_supprimer.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_supprimer.selected = false;
+            this.btn_supprimer.Size = new System.Drawing.Size(118, 35);
+            this.btn_supprimer.TabIndex = 76;
+            this.btn_supprimer.Text = "          Supprimer";
+            this.btn_supprimer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_supprimer.Textcolor = System.Drawing.Color.White;
+            this.btn_supprimer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_supprimer.Visible = false;
+            // 
+            // bnt_modifier
+            // 
+            this.bnt_modifier.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
+            this.bnt_modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.bnt_modifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bnt_modifier.BorderRadius = 0;
+            this.bnt_modifier.ButtonText = "            Modifier";
+            this.bnt_modifier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bnt_modifier.DisabledColor = System.Drawing.Color.Gray;
+            this.bnt_modifier.Iconcolor = System.Drawing.Color.Transparent;
+            this.bnt_modifier.Iconimage = null;
+            this.bnt_modifier.Iconimage_right = null;
+            this.bnt_modifier.Iconimage_right_Selected = null;
+            this.bnt_modifier.Iconimage_Selected = null;
+            this.bnt_modifier.IconMarginLeft = 0;
+            this.bnt_modifier.IconMarginRight = 0;
+            this.bnt_modifier.IconRightVisible = true;
+            this.bnt_modifier.IconRightZoom = 0D;
+            this.bnt_modifier.IconVisible = true;
+            this.bnt_modifier.IconZoom = 90D;
+            this.bnt_modifier.IsTab = false;
+            this.bnt_modifier.Location = new System.Drawing.Point(49, 24);
+            this.bnt_modifier.Name = "bnt_modifier";
+            this.bnt_modifier.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.bnt_modifier.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
+            this.bnt_modifier.OnHoverTextColor = System.Drawing.Color.White;
+            this.bnt_modifier.selected = false;
+            this.bnt_modifier.Size = new System.Drawing.Size(118, 35);
+            this.bnt_modifier.TabIndex = 75;
+            this.bnt_modifier.Text = "            Modifier";
+            this.bnt_modifier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bnt_modifier.Textcolor = System.Drawing.Color.White;
+            this.bnt_modifier.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt_modifier.Visible = false;
             // 
             // CreerCompte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 665);
+            this.ClientSize = new System.Drawing.Size(390, 665);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.littele_panel);
+            this.Controls.Add(this.txtmontant);
+            this.Controls.Add(this.btnlancer);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.label13);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.txtprenom);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label12);
+            this.Controls.Add(this.dtdate);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.txtpostnom);
             this.Controls.Add(this.bunifuFlatButton3);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.cmbtypecompte);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.cmbdevise);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.dtdate);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.txtmontant);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.cmbtypecompte);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtnom);
@@ -516,6 +602,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.littele_panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,9 +628,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.ComboBox cmbtypecompte;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel5;
@@ -551,9 +635,13 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox txtprenom;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbltitre;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlancer;
+        private System.Windows.Forms.Panel littele_panel;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_supprimer;
+        private Bunifu.Framework.UI.BunifuFlatButton bnt_modifier;
     }
 }

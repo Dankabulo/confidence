@@ -36,23 +36,20 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtpostnom = new System.Windows.Forms.TextBox();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.cmbtypecompte = new System.Windows.Forms.ComboBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.cmbdevise = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbldevise = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dtdate = new MetroFramework.Controls.MetroDateTime();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbldate = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblmontant = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtmontant = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbltype = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,14 +58,19 @@
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbltitre = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.txtdelai = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.petitPanel = new System.Windows.Forms.Panel();
+            this.btnlancer = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bnt_modifier = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bnt_supprimer = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.petitPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label13
@@ -133,7 +135,7 @@
             this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
             this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "            Ajouter";
+            this.bunifuFlatButton3.ButtonText = "        Rechercher";
             this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
@@ -148,7 +150,7 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(295, 515);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(296, 537);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
@@ -156,41 +158,11 @@
             this.bunifuFlatButton3.selected = false;
             this.bunifuFlatButton3.Size = new System.Drawing.Size(118, 35);
             this.bunifuFlatButton3.TabIndex = 49;
-            this.bunifuFlatButton3.Text = "            Ajouter";
+            this.bunifuFlatButton3.Text = "        Rechercher";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(53, 496);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(223, 17);
-            this.label11.TabIndex = 61;
-            this.label11.Text = "de retrait pour le present compte";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(53, 479);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(325, 17);
-            this.label10.TabIndex = 60;
-            this.label10.Text = "les privileges d\'exercer les operations de depot et";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(53, 462);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(345, 17);
-            this.label7.TabIndex = 59;
-            this.label7.Text = "vous pouvez ajouter certaines personnes qui auront ";
             // 
             // cmbtypecompte
             // 
@@ -199,7 +171,7 @@
             this.cmbtypecompte.Items.AddRange(new object[] {
             "Compte courant",
             "Compte a terme"});
-            this.cmbtypecompte.Location = new System.Drawing.Point(216, 272);
+            this.cmbtypecompte.Location = new System.Drawing.Point(216, 261);
             this.cmbtypecompte.Name = "cmbtypecompte";
             this.cmbtypecompte.Size = new System.Drawing.Size(156, 25);
             this.cmbtypecompte.TabIndex = 41;
@@ -281,25 +253,25 @@
             this.cmbdevise.Items.AddRange(new object[] {
             "USD",
             "CFD"});
-            this.cmbdevise.Location = new System.Drawing.Point(203, 349);
+            this.cmbdevise.Location = new System.Drawing.Point(203, 338);
             this.cmbdevise.Name = "cmbdevise";
             this.cmbdevise.Size = new System.Drawing.Size(94, 25);
             this.cmbdevise.TabIndex = 46;
             // 
-            // label9
+            // lbldevise
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(82, 359);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 17);
-            this.label9.TabIndex = 58;
-            this.label9.Text = "Devise :";
+            this.lbldevise.AutoSize = true;
+            this.lbldevise.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldevise.Location = new System.Drawing.Point(82, 348);
+            this.lbldevise.Name = "lbldevise";
+            this.lbldevise.Size = new System.Drawing.Size(58, 17);
+            this.lbldevise.TabIndex = 58;
+            this.lbldevise.Text = "Devise :";
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel7.Location = new System.Drawing.Point(203, 374);
+            this.panel7.Location = new System.Drawing.Point(203, 363);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(96, 2);
             this.panel7.TabIndex = 57;
@@ -308,44 +280,44 @@
             // 
             this.dtdate.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F);
             this.dtdate.CalendarMonthBackground = System.Drawing.SystemColors.Control;
-            this.dtdate.Location = new System.Drawing.Point(203, 389);
+            this.dtdate.Location = new System.Drawing.Point(203, 378);
             this.dtdate.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtdate.Name = "dtdate";
             this.dtdate.Size = new System.Drawing.Size(161, 29);
             this.dtdate.TabIndex = 48;
             // 
-            // label8
+            // lbldate
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(82, 398);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 17);
-            this.label8.TabIndex = 56;
-            this.label8.Text = "Date creation :";
+            this.lbldate.AutoSize = true;
+            this.lbldate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldate.Location = new System.Drawing.Point(82, 387);
+            this.lbldate.Name = "lbldate";
+            this.lbldate.Size = new System.Drawing.Size(106, 17);
+            this.lbldate.TabIndex = 56;
+            this.lbldate.Text = "Date creation :";
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel6.Location = new System.Drawing.Point(203, 418);
+            this.panel6.Location = new System.Drawing.Point(203, 407);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(159, 2);
             this.panel6.TabIndex = 55;
             // 
-            // label6
+            // lblmontant
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(82, 322);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 17);
-            this.label6.TabIndex = 54;
-            this.label6.Text = "Montant :";
+            this.lblmontant.AutoSize = true;
+            this.lblmontant.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmontant.Location = new System.Drawing.Point(82, 311);
+            this.lblmontant.Name = "lblmontant";
+            this.lblmontant.Size = new System.Drawing.Size(71, 17);
+            this.lblmontant.TabIndex = 54;
+            this.lblmontant.Text = "Montant :";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel4.Location = new System.Drawing.Point(203, 337);
+            this.panel4.Location = new System.Drawing.Point(203, 326);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(159, 2);
             this.panel4.TabIndex = 53;
@@ -355,7 +327,7 @@
             this.txtmontant.BackColor = System.Drawing.SystemColors.Control;
             this.txtmontant.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtmontant.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtmontant.Location = new System.Drawing.Point(203, 320);
+            this.txtmontant.Location = new System.Drawing.Point(203, 309);
             this.txtmontant.Name = "txtmontant";
             this.txtmontant.Size = new System.Drawing.Size(156, 16);
             this.txtmontant.TabIndex = 45;
@@ -363,20 +335,20 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel3.Location = new System.Drawing.Point(213, 298);
+            this.panel3.Location = new System.Drawing.Point(213, 287);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(159, 2);
             this.panel3.TabIndex = 44;
             // 
-            // label5
+            // lbltype
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(82, 283);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 17);
-            this.label5.TabIndex = 50;
-            this.label5.Text = "Type du compte :\r\n";
+            this.lbltype.AutoSize = true;
+            this.lbltype.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltype.Location = new System.Drawing.Point(82, 272);
+            this.lbltype.Name = "lbltype";
+            this.lbltype.Size = new System.Drawing.Size(121, 17);
+            this.lbltype.TabIndex = 50;
+            this.lbltype.Text = "Type du compte :\r\n";
             // 
             // label4
             // 
@@ -432,7 +404,7 @@
             this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(408, 0);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(388, 0);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(45, 45);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -446,11 +418,11 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
             this.panel1.Controls.Add(this.bunifuImageButton2);
             this.panel1.Controls.Add(this.bunifuImageButton1);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbltitre);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(453, 48);
+            this.panel1.Size = new System.Drawing.Size(433, 48);
             this.panel1.TabIndex = 66;
             // 
             // bunifuImageButton1
@@ -466,16 +438,16 @@
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             // 
-            // label1
+            // lbltitre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(58, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nouvel compte ";
+            this.lbltitre.AutoSize = true;
+            this.lbltitre.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.lbltitre.ForeColor = System.Drawing.Color.White;
+            this.lbltitre.Location = new System.Drawing.Point(58, 12);
+            this.lbltitre.Name = "lbltitre";
+            this.lbltitre.Size = new System.Drawing.Size(203, 24);
+            this.lbltitre.TabIndex = 0;
+            this.lbltitre.Text = "Nouveau compte ";
             // 
             // label14
             // 
@@ -516,40 +488,154 @@
             this.label15.TabIndex = 70;
             this.label15.Text = "jour(s)";
             // 
+            // petitPanel
+            // 
+            this.petitPanel.Controls.Add(this.bnt_supprimer);
+            this.petitPanel.Controls.Add(this.bnt_modifier);
+            this.petitPanel.Location = new System.Drawing.Point(41, 426);
+            this.petitPanel.Name = "petitPanel";
+            this.petitPanel.Size = new System.Drawing.Size(365, 80);
+            this.petitPanel.TabIndex = 71;
+            // 
+            // btnlancer
+            // 
+            this.btnlancer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
+            this.btnlancer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.btnlancer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlancer.BorderRadius = 0;
+            this.btnlancer.ButtonText = "              Lancer";
+            this.btnlancer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlancer.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlancer.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlancer.Iconimage = null;
+            this.btnlancer.Iconimage_right = null;
+            this.btnlancer.Iconimage_right_Selected = null;
+            this.btnlancer.Iconimage_Selected = null;
+            this.btnlancer.IconMarginLeft = 0;
+            this.btnlancer.IconMarginRight = 0;
+            this.btnlancer.IconRightVisible = true;
+            this.btnlancer.IconRightZoom = 0D;
+            this.btnlancer.IconVisible = true;
+            this.btnlancer.IconZoom = 90D;
+            this.btnlancer.IsTab = false;
+            this.btnlancer.Location = new System.Drawing.Point(295, 537);
+            this.btnlancer.Name = "btnlancer";
+            this.btnlancer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.btnlancer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
+            this.btnlancer.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlancer.selected = false;
+            this.btnlancer.Size = new System.Drawing.Size(118, 35);
+            this.btnlancer.TabIndex = 72;
+            this.btnlancer.Text = "              Lancer";
+            this.btnlancer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlancer.Textcolor = System.Drawing.Color.White;
+            this.btnlancer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlancer.Visible = false;
+            this.btnlancer.Click += new System.EventHandler(this.btnlancer_Click);
+            // 
+            // bnt_modifier
+            // 
+            this.bnt_modifier.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
+            this.bnt_modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.bnt_modifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bnt_modifier.BorderRadius = 0;
+            this.bnt_modifier.ButtonText = "            Modifier";
+            this.bnt_modifier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bnt_modifier.DisabledColor = System.Drawing.Color.Gray;
+            this.bnt_modifier.Iconcolor = System.Drawing.Color.Transparent;
+            this.bnt_modifier.Iconimage = null;
+            this.bnt_modifier.Iconimage_right = null;
+            this.bnt_modifier.Iconimage_right_Selected = null;
+            this.bnt_modifier.Iconimage_Selected = null;
+            this.bnt_modifier.IconMarginLeft = 0;
+            this.bnt_modifier.IconMarginRight = 0;
+            this.bnt_modifier.IconRightVisible = true;
+            this.bnt_modifier.IconRightZoom = 0D;
+            this.bnt_modifier.IconVisible = true;
+            this.bnt_modifier.IconZoom = 90D;
+            this.bnt_modifier.IsTab = false;
+            this.bnt_modifier.Location = new System.Drawing.Point(56, 21);
+            this.bnt_modifier.Name = "bnt_modifier";
+            this.bnt_modifier.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.bnt_modifier.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
+            this.bnt_modifier.OnHoverTextColor = System.Drawing.Color.White;
+            this.bnt_modifier.selected = false;
+            this.bnt_modifier.Size = new System.Drawing.Size(118, 35);
+            this.bnt_modifier.TabIndex = 73;
+            this.bnt_modifier.Text = "            Modifier";
+            this.bnt_modifier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bnt_modifier.Textcolor = System.Drawing.Color.White;
+            this.bnt_modifier.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt_modifier.Visible = false;
+            // 
+            // bnt_supprimer
+            // 
+            this.bnt_supprimer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
+            this.bnt_supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.bnt_supprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bnt_supprimer.BorderRadius = 0;
+            this.bnt_supprimer.ButtonText = "          Supprimer";
+            this.bnt_supprimer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bnt_supprimer.DisabledColor = System.Drawing.Color.Gray;
+            this.bnt_supprimer.Iconcolor = System.Drawing.Color.Transparent;
+            this.bnt_supprimer.Iconimage = null;
+            this.bnt_supprimer.Iconimage_right = null;
+            this.bnt_supprimer.Iconimage_right_Selected = null;
+            this.bnt_supprimer.Iconimage_Selected = null;
+            this.bnt_supprimer.IconMarginLeft = 0;
+            this.bnt_supprimer.IconMarginRight = 0;
+            this.bnt_supprimer.IconRightVisible = true;
+            this.bnt_supprimer.IconRightZoom = 0D;
+            this.bnt_supprimer.IconVisible = true;
+            this.bnt_supprimer.IconZoom = 90D;
+            this.bnt_supprimer.IsTab = false;
+            this.bnt_supprimer.Location = new System.Drawing.Point(202, 21);
+            this.bnt_supprimer.Name = "bnt_supprimer";
+            this.bnt_supprimer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.bnt_supprimer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
+            this.bnt_supprimer.OnHoverTextColor = System.Drawing.Color.White;
+            this.bnt_supprimer.selected = false;
+            this.bnt_supprimer.Size = new System.Drawing.Size(118, 35);
+            this.bnt_supprimer.TabIndex = 74;
+            this.bnt_supprimer.Text = "          Supprimer";
+            this.bnt_supprimer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bnt_supprimer.Textcolor = System.Drawing.Color.White;
+            this.bnt_supprimer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt_supprimer.Visible = false;
+            // 
             // compte_a_terme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 678);
+            this.ClientSize = new System.Drawing.Size(433, 678);
+            this.Controls.Add(this.lbltype);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.btnlancer);
+            this.Controls.Add(this.txtmontant);
+            this.Controls.Add(this.petitPanel);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.label15);
+            this.Controls.Add(this.lblmontant);
             this.Controls.Add(this.label14);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel9);
+            this.Controls.Add(this.lbldate);
             this.Controls.Add(this.txtdelai);
+            this.Controls.Add(this.dtdate);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.label13);
+            this.Controls.Add(this.lbldevise);
             this.Controls.Add(this.panel8);
+            this.Controls.Add(this.cmbdevise);
             this.Controls.Add(this.txtprenom);
+            this.Controls.Add(this.cmbtypecompte);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.txtpostnom);
             this.Controls.Add(this.bunifuFlatButton3);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.cmbtypecompte);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.bunifuFlatButton2);
-            this.Controls.Add(this.cmbdevise);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.dtdate);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.txtmontant);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -559,10 +645,12 @@
             this.Name = "compte_a_terme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "compte_a_terme";
+            this.Load += new System.EventHandler(this.compte_a_terme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.petitPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -577,23 +665,20 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtpostnom;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbtypecompte;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private System.Windows.Forms.ComboBox cmbdevise;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbldevise;
         private System.Windows.Forms.Panel panel7;
         private MetroFramework.Controls.MetroDateTime dtdate;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbldate;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblmontant;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtmontant;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbltype;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -602,10 +687,14 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbltitre;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox txtdelai;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel petitPanel;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlancer;
+        private Bunifu.Framework.UI.BunifuFlatButton bnt_supprimer;
+        private Bunifu.Framework.UI.BunifuFlatButton bnt_modifier;
     }
 }

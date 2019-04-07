@@ -21,6 +21,7 @@ namespace Confidence
         public CreerCompte()
         {
             InitializeComponent();
+            lbltitre.Text = "Compte courant";
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
@@ -40,7 +41,14 @@ namespace Confidence
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            personnesA.ShowDialog();
+            //personnesA.ShowDialog();
+            littele_panel.Visible = false;
+            bunifuFlatButton3.Visible = false;
+            btnlancer.Visible = true;
+            bunifuFlatButton2.Visible = false;
+            lbltitre.Text = "Recherche";
+            
+
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -78,6 +86,50 @@ namespace Confidence
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void btnlancer_Click(object sender, EventArgs e)
+        {
+            lbltitre.Text = "Compte courant";
+            littele_panel.Visible = true;
+            bunifuFlatButton3.Visible = true;
+            btnlancer.Visible = false;
+            bunifuFlatButton2.Visible = true;
+            btn_supprimer.Visible = true;
+            bnt_modifier.Visible = true;
+
+            SqlConnection con = new SqlConnection(cs);
+            string query = string.Format("SELECT * FROM RECHERCHE_COMPTE_CC('" + this.txtnom.Text + "','" + this.txtpostnom.Text + "','" + this.txtprenom.Text + "')");
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader sdr;
+
+            try
+            {
+                con.Open();
+                sdr = cmd.ExecuteReader();
+
+                while (sdr.Read())
+                {
+                    if (string.IsNullOrWhiteSpace(txtnom.Text))
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Veuillez saisir le nom du client a rechercher", "Warning Message", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+
+                    }
+                    else
+                    {
+                        txtnom.Text = sdr["nom"].ToString();
+                        txtpostnom.Text = sdr["postnom"].ToString();
+                        txtpostnom.Text = sdr["postnom"].ToString();
+                        txtmontant.Text = sdr["montant"].ToString();
+                        cmbdevise.Text = sdr["devise"].ToString();
+                        dtdate.Value = Convert.ToDateTime(sdr["date_creation"].ToString());
+                    }
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }

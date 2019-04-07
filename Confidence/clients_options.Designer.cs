@@ -64,7 +64,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(211, 197);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(879, 405);
+            this.dataGridView2.Size = new System.Drawing.Size(879, 432);
             this.dataGridView2.TabIndex = 8;
             this.dataGridView2.Visible = false;
             // 

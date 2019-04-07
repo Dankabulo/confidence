@@ -34,3 +34,4 @@ C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.lister.resources
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.listage.resources
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.visionG.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.recherche.resources
