@@ -15,6 +15,7 @@ namespace Confidence
         Form operation = new operation();
         Form courant = new CreerCompte();
         Form terme = new compte_a_terme();
+        Form fermeture = new Authentification();
         public Form1()
         {
             InitializeComponent();
@@ -55,6 +56,7 @@ namespace Confidence
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+            fermeture.ShowDialog();
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
