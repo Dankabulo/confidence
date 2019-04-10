@@ -34,8 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtmontant = new System.Windows.Forms.TextBox();
@@ -47,7 +45,6 @@
             this.cmbdevise = new System.Windows.Forms.ComboBox();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.cmbtypecompte = new System.Windows.Forms.ComboBox();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -117,29 +114,11 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Nom client :";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(51, 237);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Type du compte :\r\n";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel3.Location = new System.Drawing.Point(182, 252);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(159, 2);
-            this.panel3.TabIndex = 4;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(51, 276);
+            this.label6.Location = new System.Drawing.Point(49, 228);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 17);
             this.label6.TabIndex = 11;
@@ -148,7 +127,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel4.Location = new System.Drawing.Point(172, 291);
+            this.panel4.Location = new System.Drawing.Point(170, 243);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(159, 2);
             this.panel4.TabIndex = 10;
@@ -158,7 +137,7 @@
             this.txtmontant.BackColor = System.Drawing.SystemColors.Control;
             this.txtmontant.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtmontant.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtmontant.Location = new System.Drawing.Point(172, 274);
+            this.txtmontant.Location = new System.Drawing.Point(170, 226);
             this.txtmontant.Name = "txtmontant";
             this.txtmontant.Size = new System.Drawing.Size(156, 16);
             this.txtmontant.TabIndex = 4;
@@ -167,7 +146,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(51, 352);
+            this.label8.Location = new System.Drawing.Point(49, 304);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 17);
             this.label8.TabIndex = 17;
@@ -176,7 +155,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel6.Location = new System.Drawing.Point(172, 372);
+            this.panel6.Location = new System.Drawing.Point(170, 324);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(159, 2);
             this.panel6.TabIndex = 16;
@@ -185,7 +164,7 @@
             // 
             this.dtdate.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F);
             this.dtdate.CalendarMonthBackground = System.Drawing.SystemColors.Control;
-            this.dtdate.Location = new System.Drawing.Point(172, 343);
+            this.dtdate.Location = new System.Drawing.Point(170, 295);
             this.dtdate.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtdate.Name = "dtdate";
             this.dtdate.Size = new System.Drawing.Size(161, 29);
@@ -195,7 +174,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(51, 313);
+            this.label9.Location = new System.Drawing.Point(49, 265);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 17);
             this.label9.TabIndex = 21;
@@ -204,7 +183,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel7.Location = new System.Drawing.Point(172, 328);
+            this.panel7.Location = new System.Drawing.Point(170, 280);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(96, 2);
             this.panel7.TabIndex = 20;
@@ -216,7 +195,7 @@
             this.cmbdevise.Items.AddRange(new object[] {
             "USD",
             "CFD"});
-            this.cmbdevise.Location = new System.Drawing.Point(172, 303);
+            this.cmbdevise.Location = new System.Drawing.Point(170, 255);
             this.cmbdevise.Name = "cmbdevise";
             this.cmbdevise.Size = new System.Drawing.Size(94, 25);
             this.cmbdevise.TabIndex = 5;
@@ -289,18 +268,6 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // cmbtypecompte
-            // 
-            this.cmbtypecompte.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cmbtypecompte.FormattingEnabled = true;
-            this.cmbtypecompte.Items.AddRange(new object[] {
-            "Compte courant",
-            "Compte a terme"});
-            this.cmbtypecompte.Location = new System.Drawing.Point(185, 226);
-            this.cmbtypecompte.Name = "cmbtypecompte";
-            this.cmbtypecompte.Size = new System.Drawing.Size(156, 25);
-            this.cmbtypecompte.TabIndex = 3;
             // 
             // bunifuFlatButton3
             // 
@@ -564,8 +531,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 665);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.littele_panel);
             this.Controls.Add(this.txtmontant);
             this.Controls.Add(this.btnlancer);
@@ -588,7 +553,6 @@
             this.Controls.Add(this.cmbdevise);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cmbtypecompte);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtnom);
@@ -614,8 +578,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtmontant;
@@ -627,7 +589,6 @@
         private System.Windows.Forms.ComboBox cmbdevise;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private System.Windows.Forms.ComboBox cmbtypecompte;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel5;

@@ -36,7 +36,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtpostnom = new System.Windows.Forms.TextBox();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.cmbtypecompte = new System.Windows.Forms.ComboBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.cmbdevise = new System.Windows.Forms.ComboBox();
@@ -48,8 +47,6 @@
             this.lblmontant = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtmontant = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbltype = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,9 +61,9 @@
             this.txtdelai = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.petitPanel = new System.Windows.Forms.Panel();
-            this.btnlancer = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bnt_modifier = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bnt_supprimer = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bnt_modifier = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnlancer = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -164,18 +161,6 @@
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
-            // cmbtypecompte
-            // 
-            this.cmbtypecompte.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cmbtypecompte.FormattingEnabled = true;
-            this.cmbtypecompte.Items.AddRange(new object[] {
-            "Compte courant",
-            "Compte a terme"});
-            this.cmbtypecompte.Location = new System.Drawing.Point(216, 261);
-            this.cmbtypecompte.Name = "cmbtypecompte";
-            this.cmbtypecompte.Size = new System.Drawing.Size(156, 25);
-            this.cmbtypecompte.TabIndex = 41;
-            // 
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
@@ -253,7 +238,7 @@
             this.cmbdevise.Items.AddRange(new object[] {
             "USD",
             "CFD"});
-            this.cmbdevise.Location = new System.Drawing.Point(203, 338);
+            this.cmbdevise.Location = new System.Drawing.Point(203, 290);
             this.cmbdevise.Name = "cmbdevise";
             this.cmbdevise.Size = new System.Drawing.Size(94, 25);
             this.cmbdevise.TabIndex = 46;
@@ -262,7 +247,7 @@
             // 
             this.lbldevise.AutoSize = true;
             this.lbldevise.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldevise.Location = new System.Drawing.Point(82, 348);
+            this.lbldevise.Location = new System.Drawing.Point(82, 300);
             this.lbldevise.Name = "lbldevise";
             this.lbldevise.Size = new System.Drawing.Size(58, 17);
             this.lbldevise.TabIndex = 58;
@@ -271,7 +256,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel7.Location = new System.Drawing.Point(203, 363);
+            this.panel7.Location = new System.Drawing.Point(203, 315);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(96, 2);
             this.panel7.TabIndex = 57;
@@ -280,7 +265,7 @@
             // 
             this.dtdate.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F);
             this.dtdate.CalendarMonthBackground = System.Drawing.SystemColors.Control;
-            this.dtdate.Location = new System.Drawing.Point(203, 378);
+            this.dtdate.Location = new System.Drawing.Point(203, 330);
             this.dtdate.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtdate.Name = "dtdate";
             this.dtdate.Size = new System.Drawing.Size(161, 29);
@@ -290,7 +275,7 @@
             // 
             this.lbldate.AutoSize = true;
             this.lbldate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldate.Location = new System.Drawing.Point(82, 387);
+            this.lbldate.Location = new System.Drawing.Point(82, 339);
             this.lbldate.Name = "lbldate";
             this.lbldate.Size = new System.Drawing.Size(106, 17);
             this.lbldate.TabIndex = 56;
@@ -299,7 +284,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel6.Location = new System.Drawing.Point(203, 407);
+            this.panel6.Location = new System.Drawing.Point(203, 359);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(159, 2);
             this.panel6.TabIndex = 55;
@@ -308,7 +293,7 @@
             // 
             this.lblmontant.AutoSize = true;
             this.lblmontant.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmontant.Location = new System.Drawing.Point(82, 311);
+            this.lblmontant.Location = new System.Drawing.Point(82, 263);
             this.lblmontant.Name = "lblmontant";
             this.lblmontant.Size = new System.Drawing.Size(71, 17);
             this.lblmontant.TabIndex = 54;
@@ -317,7 +302,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel4.Location = new System.Drawing.Point(203, 326);
+            this.panel4.Location = new System.Drawing.Point(203, 278);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(159, 2);
             this.panel4.TabIndex = 53;
@@ -327,28 +312,10 @@
             this.txtmontant.BackColor = System.Drawing.SystemColors.Control;
             this.txtmontant.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtmontant.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtmontant.Location = new System.Drawing.Point(203, 309);
+            this.txtmontant.Location = new System.Drawing.Point(203, 261);
             this.txtmontant.Name = "txtmontant";
             this.txtmontant.Size = new System.Drawing.Size(156, 16);
             this.txtmontant.TabIndex = 45;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel3.Location = new System.Drawing.Point(213, 287);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(159, 2);
-            this.panel3.TabIndex = 44;
-            // 
-            // lbltype
-            // 
-            this.lbltype.AutoSize = true;
-            this.lbltype.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltype.Location = new System.Drawing.Point(82, 272);
-            this.lbltype.Name = "lbltype";
-            this.lbltype.Size = new System.Drawing.Size(121, 17);
-            this.lbltype.TabIndex = 50;
-            this.lbltype.Text = "Type du compte :\r\n";
             // 
             // label4
             // 
@@ -497,41 +464,40 @@
             this.petitPanel.Size = new System.Drawing.Size(365, 80);
             this.petitPanel.TabIndex = 71;
             // 
-            // btnlancer
+            // bnt_supprimer
             // 
-            this.btnlancer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
-            this.btnlancer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
-            this.btnlancer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnlancer.BorderRadius = 0;
-            this.btnlancer.ButtonText = "              Lancer";
-            this.btnlancer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlancer.DisabledColor = System.Drawing.Color.Gray;
-            this.btnlancer.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnlancer.Iconimage = null;
-            this.btnlancer.Iconimage_right = null;
-            this.btnlancer.Iconimage_right_Selected = null;
-            this.btnlancer.Iconimage_Selected = null;
-            this.btnlancer.IconMarginLeft = 0;
-            this.btnlancer.IconMarginRight = 0;
-            this.btnlancer.IconRightVisible = true;
-            this.btnlancer.IconRightZoom = 0D;
-            this.btnlancer.IconVisible = true;
-            this.btnlancer.IconZoom = 90D;
-            this.btnlancer.IsTab = false;
-            this.btnlancer.Location = new System.Drawing.Point(295, 537);
-            this.btnlancer.Name = "btnlancer";
-            this.btnlancer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
-            this.btnlancer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
-            this.btnlancer.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnlancer.selected = false;
-            this.btnlancer.Size = new System.Drawing.Size(118, 35);
-            this.btnlancer.TabIndex = 72;
-            this.btnlancer.Text = "              Lancer";
-            this.btnlancer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlancer.Textcolor = System.Drawing.Color.White;
-            this.btnlancer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlancer.Visible = false;
-            this.btnlancer.Click += new System.EventHandler(this.btnlancer_Click);
+            this.bnt_supprimer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
+            this.bnt_supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.bnt_supprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bnt_supprimer.BorderRadius = 0;
+            this.bnt_supprimer.ButtonText = "          Supprimer";
+            this.bnt_supprimer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bnt_supprimer.DisabledColor = System.Drawing.Color.Gray;
+            this.bnt_supprimer.Iconcolor = System.Drawing.Color.Transparent;
+            this.bnt_supprimer.Iconimage = null;
+            this.bnt_supprimer.Iconimage_right = null;
+            this.bnt_supprimer.Iconimage_right_Selected = null;
+            this.bnt_supprimer.Iconimage_Selected = null;
+            this.bnt_supprimer.IconMarginLeft = 0;
+            this.bnt_supprimer.IconMarginRight = 0;
+            this.bnt_supprimer.IconRightVisible = true;
+            this.bnt_supprimer.IconRightZoom = 0D;
+            this.bnt_supprimer.IconVisible = true;
+            this.bnt_supprimer.IconZoom = 90D;
+            this.bnt_supprimer.IsTab = false;
+            this.bnt_supprimer.Location = new System.Drawing.Point(202, 21);
+            this.bnt_supprimer.Name = "bnt_supprimer";
+            this.bnt_supprimer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.bnt_supprimer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
+            this.bnt_supprimer.OnHoverTextColor = System.Drawing.Color.White;
+            this.bnt_supprimer.selected = false;
+            this.bnt_supprimer.Size = new System.Drawing.Size(118, 35);
+            this.bnt_supprimer.TabIndex = 74;
+            this.bnt_supprimer.Text = "          Supprimer";
+            this.bnt_supprimer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bnt_supprimer.Textcolor = System.Drawing.Color.White;
+            this.bnt_supprimer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt_supprimer.Visible = false;
             // 
             // bnt_modifier
             // 
@@ -568,48 +534,47 @@
             this.bnt_modifier.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_modifier.Visible = false;
             // 
-            // bnt_supprimer
+            // btnlancer
             // 
-            this.bnt_supprimer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
-            this.bnt_supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
-            this.bnt_supprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bnt_supprimer.BorderRadius = 0;
-            this.bnt_supprimer.ButtonText = "          Supprimer";
-            this.bnt_supprimer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bnt_supprimer.DisabledColor = System.Drawing.Color.Gray;
-            this.bnt_supprimer.Iconcolor = System.Drawing.Color.Transparent;
-            this.bnt_supprimer.Iconimage = null;
-            this.bnt_supprimer.Iconimage_right = null;
-            this.bnt_supprimer.Iconimage_right_Selected = null;
-            this.bnt_supprimer.Iconimage_Selected = null;
-            this.bnt_supprimer.IconMarginLeft = 0;
-            this.bnt_supprimer.IconMarginRight = 0;
-            this.bnt_supprimer.IconRightVisible = true;
-            this.bnt_supprimer.IconRightZoom = 0D;
-            this.bnt_supprimer.IconVisible = true;
-            this.bnt_supprimer.IconZoom = 90D;
-            this.bnt_supprimer.IsTab = false;
-            this.bnt_supprimer.Location = new System.Drawing.Point(202, 21);
-            this.bnt_supprimer.Name = "bnt_supprimer";
-            this.bnt_supprimer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
-            this.bnt_supprimer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
-            this.bnt_supprimer.OnHoverTextColor = System.Drawing.Color.White;
-            this.bnt_supprimer.selected = false;
-            this.bnt_supprimer.Size = new System.Drawing.Size(118, 35);
-            this.bnt_supprimer.TabIndex = 74;
-            this.bnt_supprimer.Text = "          Supprimer";
-            this.bnt_supprimer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bnt_supprimer.Textcolor = System.Drawing.Color.White;
-            this.bnt_supprimer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnt_supprimer.Visible = false;
+            this.btnlancer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
+            this.btnlancer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.btnlancer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlancer.BorderRadius = 0;
+            this.btnlancer.ButtonText = "              Lancer";
+            this.btnlancer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlancer.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlancer.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlancer.Iconimage = null;
+            this.btnlancer.Iconimage_right = null;
+            this.btnlancer.Iconimage_right_Selected = null;
+            this.btnlancer.Iconimage_Selected = null;
+            this.btnlancer.IconMarginLeft = 0;
+            this.btnlancer.IconMarginRight = 0;
+            this.btnlancer.IconRightVisible = true;
+            this.btnlancer.IconRightZoom = 0D;
+            this.btnlancer.IconVisible = true;
+            this.btnlancer.IconZoom = 90D;
+            this.btnlancer.IsTab = false;
+            this.btnlancer.Location = new System.Drawing.Point(295, 537);
+            this.btnlancer.Name = "btnlancer";
+            this.btnlancer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.btnlancer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
+            this.btnlancer.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlancer.selected = false;
+            this.btnlancer.Size = new System.Drawing.Size(118, 35);
+            this.btnlancer.TabIndex = 72;
+            this.btnlancer.Text = "              Lancer";
+            this.btnlancer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlancer.Textcolor = System.Drawing.Color.White;
+            this.btnlancer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlancer.Visible = false;
+            this.btnlancer.Click += new System.EventHandler(this.btnlancer_Click);
             // 
             // compte_a_terme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 678);
-            this.Controls.Add(this.lbltype);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnlancer);
             this.Controls.Add(this.txtmontant);
             this.Controls.Add(this.petitPanel);
@@ -629,7 +594,6 @@
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.cmbdevise);
             this.Controls.Add(this.txtprenom);
-            this.Controls.Add(this.cmbtypecompte);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.txtpostnom);
@@ -665,7 +629,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtpostnom;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private System.Windows.Forms.ComboBox cmbtypecompte;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private System.Windows.Forms.ComboBox cmbdevise;
@@ -677,8 +640,6 @@
         private System.Windows.Forms.Label lblmontant;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtmontant;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lbltype;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

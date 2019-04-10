@@ -57,8 +57,7 @@ namespace Confidence
             SqlConnection con = new SqlConnection(cs);
             string query = "INSERT INTO proprietaire(nom, postnom, prenom) VALUES('"+this.txtnom.Text+"', '"+this.txtpostnom.Text+"', '"
                             +this.txtprenom.Text+"'); INSERT INTO compte(idproprietaire, type_compte)VALUES((SELECT idproprietaire FROM proprietaire WHERE nom= '"+this.txtnom.Text+"' AND postnom = '"
-                            +this.txtpostnom.Text+"' AND prenom= '"+this.txtprenom.Text+"'), '"
-                            +this.cmbtypecompte.SelectedItem+ "'); INSERT INTO compte_courant(idcompte_cc, date_creation,montant, devise) VALUES((SELECT idcompte FROM compte WHERE idproprietaire =(SELECT idproprietaire FROM proprietaire WHERE nom= '" 
+                            +this.txtpostnom.Text+"' AND prenom= '"+this.txtprenom.Text+"'), 'Compte courant'); INSERT INTO compte_courant(idcompte_cc, date_creation,montant, devise) VALUES((SELECT idcompte FROM compte WHERE idproprietaire =(SELECT idproprietaire FROM proprietaire WHERE nom= '" 
                             +this.txtnom.Text + "' AND postnom = '"
                             +this.txtpostnom.Text + "' AND prenom= '" + this.txtprenom.Text + "') ), '"+this.dtdate.Value.ToShortDateString()+"', '"
                             +this.txtmontant.Text+"', '"+this.cmbdevise.SelectedItem+"')";

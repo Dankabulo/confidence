@@ -21,7 +21,7 @@ namespace Confidence
         {
             Form1 n = new Form1();
             n.Show();
-            //this.Hide();
+            this.Hide();
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
