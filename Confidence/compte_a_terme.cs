@@ -15,6 +15,7 @@ namespace Confidence
 {
     public partial class compte_a_terme : Form
     {
+        Form operation = new operation();
         Form personnesA = new PersonnesAt();
         string cs = ConfigurationManager.ConnectionStrings["GESTION"].ConnectionString;
         public compte_a_terme()
@@ -150,6 +151,7 @@ namespace Confidence
         {
             lbltitre.Text = "Compte a terme";
             petitPanel.Visible = true;
+            bunifuFlatButton1.Visible = false;
             btnlancer.Visible = false;
             //bunifuFlatButton3.Visible = true;
             bunifuFlatButton2.Visible = true;
@@ -194,6 +196,84 @@ namespace Confidence
         private void compte_a_terme_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bnt_supprimer_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC DEL_CA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "'";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                MetroFramework.MetroMessageBox.Show(this, "Compte supprimer avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                while (sdr.Read())
+                {
+                    if (sdr.Read())
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bnt_modifier_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = true;
+            bnt_supprimer.Visible = false;
+            bunifuFlatButton2.Visible = false;
+            bunifuFlatButton4.Visible = true;
+            panel11.Visible = true;
+            bunifuFlatButton5.Visible = true;
+            bnt_modifier.Visible = false;
+
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            operation.ShowDialog();
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "UPDTAE_CA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "', '" 
+                    + this.txtdelai.Text + "', '" + this.dtdate.Value.ToShortDateString() +"', '"+this.cmbdevise.SelectedItem+"', '"+this.txt_idcompte.Text+"'";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                MetroFramework.MetroMessageBox.Show(this, "Les modifications ont etes enregistrees avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                while (sdr.Read())
+                {
+                    if (sdr.Read())
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

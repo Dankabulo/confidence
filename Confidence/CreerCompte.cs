@@ -130,5 +130,69 @@ namespace Confidence
 
             }
         }
+
+        private void btn_supprimer_Click(object sender, EventArgs e)
+        {
+            // suppresion d'un compte courant
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC DEL_CC '" + this.txtnom.Text+"', '"+this.txtpostnom.Text+"', '"+this.txtprenom.Text+"'";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                MetroFramework.MetroMessageBox.Show(this, "Compte supprimer avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                while (sdr.Read())
+                {
+                    if (sdr.Read())
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void bnt_modifier_Click(object sender, EventArgs e)
+        {
+            // modification des infos du compte
+
+            SqlConnection con = new SqlConnection(cs);
+            string query = "";
+                            
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                while (sdr.Read())
+                {
+                    if (sdr.Read())
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

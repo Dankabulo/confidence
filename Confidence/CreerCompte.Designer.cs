@@ -490,6 +490,7 @@
             this.btn_supprimer.Textcolor = System.Drawing.Color.White;
             this.btn_supprimer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_supprimer.Visible = false;
+            this.btn_supprimer.Click += new System.EventHandler(this.btn_supprimer_Click);
             // 
             // bnt_modifier
             // 
@@ -525,6 +526,7 @@
             this.bnt_modifier.Textcolor = System.Drawing.Color.White;
             this.bnt_modifier.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_modifier.Visible = false;
+            this.bnt_modifier.Click += new System.EventHandler(this.bnt_modifier_Click);
             // 
             // CreerCompte
             // 

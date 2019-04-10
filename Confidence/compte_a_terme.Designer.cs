@@ -64,10 +64,21 @@
             this.bnt_supprimer = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bnt_modifier = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnlancer = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.txt_idcompte = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.petitPanel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // label13
@@ -265,10 +276,10 @@
             // 
             this.dtdate.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F);
             this.dtdate.CalendarMonthBackground = System.Drawing.SystemColors.Control;
-            this.dtdate.Location = new System.Drawing.Point(203, 330);
+            this.dtdate.Location = new System.Drawing.Point(203, 325);
             this.dtdate.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtdate.Name = "dtdate";
-            this.dtdate.Size = new System.Drawing.Size(161, 29);
+            this.dtdate.Size = new System.Drawing.Size(170, 29);
             this.dtdate.TabIndex = 48;
             // 
             // lbldate
@@ -284,9 +295,9 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel6.Location = new System.Drawing.Point(203, 359);
+            this.panel6.Location = new System.Drawing.Point(203, 355);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(159, 2);
+            this.panel6.Size = new System.Drawing.Size(170, 2);
             this.panel6.TabIndex = 55;
             // 
             // lblmontant
@@ -457,9 +468,11 @@
             // 
             // petitPanel
             // 
+            this.petitPanel.Controls.Add(this.bunifuFlatButton5);
+            this.petitPanel.Controls.Add(this.bunifuFlatButton4);
             this.petitPanel.Controls.Add(this.bnt_supprimer);
             this.petitPanel.Controls.Add(this.bnt_modifier);
-            this.petitPanel.Location = new System.Drawing.Point(41, 426);
+            this.petitPanel.Location = new System.Drawing.Point(41, 451);
             this.petitPanel.Name = "petitPanel";
             this.petitPanel.Size = new System.Drawing.Size(365, 80);
             this.petitPanel.TabIndex = 71;
@@ -498,6 +511,7 @@
             this.bnt_supprimer.Textcolor = System.Drawing.Color.White;
             this.bnt_supprimer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_supprimer.Visible = false;
+            this.bnt_supprimer.Click += new System.EventHandler(this.bnt_supprimer_Click);
             // 
             // bnt_modifier
             // 
@@ -533,6 +547,7 @@
             this.bnt_modifier.Textcolor = System.Drawing.Color.White;
             this.bnt_modifier.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_modifier.Visible = false;
+            this.bnt_modifier.Click += new System.EventHandler(this.bnt_modifier_Click);
             // 
             // btnlancer
             // 
@@ -570,11 +585,155 @@
             this.btnlancer.Visible = false;
             this.btnlancer.Click += new System.EventHandler(this.btnlancer_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(12, 375);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(393, 70);
+            this.panel3.TabIndex = 73;
+            this.panel3.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(385, 17);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "Pour pouvoir effectuer cette operation nous aurons besoin";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(4, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(329, 17);
+            this.label5.TabIndex = 75;
+            this.label5.Text = "du numero du compte de la personne concernee";
+            // 
+            // bunifuFlatButton4
+            // 
+            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
+            this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton4.BorderRadius = 0;
+            this.bunifuFlatButton4.ButtonText = "            Acceder";
+            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton4.Iconimage = null;
+            this.bunifuFlatButton4.Iconimage_right = null;
+            this.bunifuFlatButton4.Iconimage_right_Selected = null;
+            this.bunifuFlatButton4.Iconimage_Selected = null;
+            this.bunifuFlatButton4.IconMarginLeft = 0;
+            this.bunifuFlatButton4.IconMarginRight = 0;
+            this.bunifuFlatButton4.IconRightVisible = true;
+            this.bunifuFlatButton4.IconRightZoom = 0D;
+            this.bunifuFlatButton4.IconVisible = true;
+            this.bunifuFlatButton4.IconZoom = 90D;
+            this.bunifuFlatButton4.IsTab = false;
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(202, 21);
+            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
+            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
+            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton4.selected = false;
+            this.bunifuFlatButton4.Size = new System.Drawing.Size(118, 35);
+            this.bunifuFlatButton4.TabIndex = 74;
+            this.bunifuFlatButton4.Text = "            Acceder";
+            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.Visible = false;
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
+            this.panel10.Location = new System.Drawing.Point(17, 71);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(93, 2);
+            this.panel10.TabIndex = 70;
+            // 
+            // txt_idcompte
+            // 
+            this.txt_idcompte.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_idcompte.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_idcompte.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_idcompte.Location = new System.Drawing.Point(17, 54);
+            this.txt_idcompte.Name = "txt_idcompte";
+            this.txt_idcompte.Size = new System.Drawing.Size(90, 16);
+            this.txt_idcompte.TabIndex = 69;
+            this.txt_idcompte.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(9, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 17);
+            this.label6.TabIndex = 74;
+            this.label6.Text = "Code Compte ";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label6);
+            this.panel11.Controls.Add(this.txt_idcompte);
+            this.panel11.Controls.Add(this.panel10);
+            this.panel11.Location = new System.Drawing.Point(7, 77);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(122, 85);
+            this.panel11.TabIndex = 75;
+            this.panel11.Visible = false;
+            // 
+            // bunifuFlatButton5
+            // 
+            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
+            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton5.BorderRadius = 0;
+            this.bunifuFlatButton5.ButtonText = "        Confirmer";
+            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton5.Iconimage = null;
+            this.bunifuFlatButton5.Iconimage_right = null;
+            this.bunifuFlatButton5.Iconimage_right_Selected = null;
+            this.bunifuFlatButton5.Iconimage_Selected = null;
+            this.bunifuFlatButton5.IconMarginLeft = 0;
+            this.bunifuFlatButton5.IconMarginRight = 0;
+            this.bunifuFlatButton5.IconRightVisible = true;
+            this.bunifuFlatButton5.IconRightZoom = 0D;
+            this.bunifuFlatButton5.IconVisible = true;
+            this.bunifuFlatButton5.IconZoom = 90D;
+            this.bunifuFlatButton5.IsTab = false;
+            this.bunifuFlatButton5.Location = new System.Drawing.Point(56, 21);
+            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
+            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
+            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
+            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton5.selected = false;
+            this.bunifuFlatButton5.Size = new System.Drawing.Size(118, 35);
+            this.bunifuFlatButton5.TabIndex = 75;
+            this.bunifuFlatButton5.Text = "        Confirmer";
+            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton5.Visible = false;
+            this.bunifuFlatButton5.Click += new System.EventHandler(this.bunifuFlatButton5_Click);
+            // 
             // compte_a_terme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 678);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnlancer);
             this.Controls.Add(this.txtmontant);
             this.Controls.Add(this.petitPanel);
@@ -615,6 +774,10 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.petitPanel.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -657,5 +820,14 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnlancer;
         private Bunifu.Framework.UI.BunifuFlatButton bnt_supprimer;
         private Bunifu.Framework.UI.BunifuFlatButton bnt_modifier;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TextBox txt_idcompte;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel11;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
     }
 }
