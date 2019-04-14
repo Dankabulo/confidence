@@ -75,10 +75,10 @@ namespace Confidence
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            
+
             SqlConnection con = new SqlConnection(cs);
-            string query = "INSERT INTO operation(idcompte_operation, type_operation, solde, date_operation)VALUES('"+this.txtcompte.Text+"', '"
-                            +this.cmboperation.SelectedItem+"', '"+this.txtsolde.Text+"', '"+this.dtdate_creation.Value.ToShortDateString()+"')";
+            string query = "INSERT INTO operation(idcompte_operation, type_operation, solde, date_operation)VALUES('" + this.txtcompte.Text + "', '"
+                            + this.cmboperation.SelectedItem + "', '" + this.txtsolde.Text + "', '" + this.dtdate_creation.Value.ToShortDateString() + "')";
             SqlCommand cmd = new SqlCommand(query, con);
 
             SqlDataReader sdr;
@@ -104,6 +104,7 @@ namespace Confidence
             }
 
             // Incrementation ou decrementation du solde 
+
 
         }
     }

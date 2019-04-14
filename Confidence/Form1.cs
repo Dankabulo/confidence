@@ -55,8 +55,7 @@ namespace Confidence
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            fermeture.ShowDialog();
+            Application.Exit();
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
