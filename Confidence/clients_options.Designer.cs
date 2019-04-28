@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clients_options));
             this.main3 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -40,20 +42,35 @@
             this.cmbcategorie = new MetroFramework.Controls.MetroComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbtype = new MetroFramework.Controls.MetroComboBox();
+            this.btn_rapport = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lblprogresseBar = new System.Windows.Forms.Label();
+            this.panel_progression = new System.Windows.Forms.Panel();
+            this.metroProgressBar = new MetroFramework.Controls.MetroProgressBar();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.txtnom_rapport = new System.Windows.Forms.TextBox();
             this.main3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_rapport)).BeginInit();
+            this.panel_progression.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // main3
             // 
+            this.main3.Controls.Add(this.groupBox1);
+            this.main3.Controls.Add(this.panel_progression);
+            this.main3.Controls.Add(this.btn_rapport);
             this.main3.Controls.Add(this.dataGridView2);
             this.main3.Controls.Add(this.panel2);
             this.main3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.main3.Location = new System.Drawing.Point(0, 0);
             this.main3.Name = "main3";
-            this.main3.Size = new System.Drawing.Size(1319, 699);
+            this.main3.Size = new System.Drawing.Size(1278, 792);
             this.main3.TabIndex = 7;
+            this.main3.Paint += new System.Windows.Forms.PaintEventHandler(this.main3_Paint);
             // 
             // dataGridView2
             // 
@@ -204,17 +221,100 @@
             this.cmbtype.TabIndex = 0;
             this.cmbtype.UseSelectable = true;
             // 
+            // btn_rapport
+            // 
+            this.btn_rapport.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_rapport.Image = ((System.Drawing.Image)(resources.GetObject("btn_rapport.Image")));
+            this.btn_rapport.ImageActive = null;
+            this.btn_rapport.Location = new System.Drawing.Point(1019, 635);
+            this.btn_rapport.Name = "btn_rapport";
+            this.btn_rapport.Size = new System.Drawing.Size(71, 71);
+            this.btn_rapport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_rapport.TabIndex = 9;
+            this.btn_rapport.TabStop = false;
+            this.btn_rapport.Zoom = 10;
+            this.btn_rapport.Click += new System.EventHandler(this.btn_rapport_Click);
+            // 
+            // lblprogresseBar
+            // 
+            this.lblprogresseBar.AutoSize = true;
+            this.lblprogresseBar.BackColor = System.Drawing.SystemColors.Control;
+            this.lblprogresseBar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprogresseBar.Location = new System.Drawing.Point(151, 12);
+            this.lblprogresseBar.Name = "lblprogresseBar";
+            this.lblprogresseBar.Size = new System.Drawing.Size(110, 17);
+            this.lblprogresseBar.TabIndex = 10;
+            this.lblprogresseBar.Text = "chargement 0%...";
+            // 
+            // panel_progression
+            // 
+            this.panel_progression.Controls.Add(this.metroProgressBar);
+            this.panel_progression.Controls.Add(this.lblprogresseBar);
+            this.panel_progression.Location = new System.Drawing.Point(508, 673);
+            this.panel_progression.Name = "panel_progression";
+            this.panel_progression.Size = new System.Drawing.Size(420, 66);
+            this.panel_progression.TabIndex = 25;
+            this.panel_progression.Visible = false;
+            // 
+            // metroProgressBar
+            // 
+            this.metroProgressBar.Location = new System.Drawing.Point(51, 32);
+            this.metroProgressBar.Name = "metroProgressBar";
+            this.metroProgressBar.Size = new System.Drawing.Size(317, 23);
+            this.metroProgressBar.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtnom_rapport);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.groupBox1.Location = new System.Drawing.Point(123, 640);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(344, 99);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Notation rapport";
+            this.groupBox1.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(32, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 17);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Nom rapport :";
+            // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
+            // 
+            // txtnom_rapport
+            // 
+            this.txtnom_rapport.Location = new System.Drawing.Point(128, 50);
+            this.txtnom_rapport.Name = "txtnom_rapport";
+            this.txtnom_rapport.Size = new System.Drawing.Size(174, 22);
+            this.txtnom_rapport.TabIndex = 27;
+            // 
             // clients_options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.main3);
             this.Name = "clients_options";
-            this.Size = new System.Drawing.Size(1319, 699);
+            this.Size = new System.Drawing.Size(1278, 792);
             this.main3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_rapport)).EndInit();
+            this.panel_progression.ResumeLayout(false);
+            this.panel_progression.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -232,5 +332,13 @@
         private MetroFramework.Controls.MetroComboBox cmbcategorie;
         private System.Windows.Forms.Label label3;
         private MetroFramework.Controls.MetroComboBox cmbtype;
+        private System.Windows.Forms.Panel panel_progression;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar;
+        private System.Windows.Forms.Label lblprogresseBar;
+        private Bunifu.Framework.UI.BunifuImageButton btn_rapport;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.TextBox txtnom_rapport;
     }
 }
