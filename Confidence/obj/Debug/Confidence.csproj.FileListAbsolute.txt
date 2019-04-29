@@ -12,3 +12,6 @@ C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\bin
 C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.Design.dll
 C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.dll
 C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\bin\Debug\Confidence.exe.config
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.exe
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.pdb
