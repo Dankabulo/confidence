@@ -25,106 +25,145 @@ namespace Confidence
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
+            // insertion cas d'un compte type a terme   
+            txt_compte_existae.Text = "";
+            txt_idproprietaire.Text = "";   // mise a vide du champ txt_idproprietaire
 
             SqlConnection con = new SqlConnection(cs);
-            string id;
+            string query = "SELECT idproprietaire FROM proprietaire WHERE nom= '"
+                + this.txtnom.Text + "' AND postnom = '" + this.txtpostnom.Text + "' AND prenom = '"
+                + this.txtprenom.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, con);
 
+            SqlDataReader sdr;
             try
             {
-                SqlConnection conn = new SqlConnection(cs);
-                string queryn = string.Format("SELECT idproprietaire FROM proprietaire WHERE nom= '"+this.txtnom.Text+"' AND postnom ='"+this.txtpostnom.Text+"' AND prenom='"+this.txtprenom.Text+"'");
-                SqlCommand cmdn = new SqlCommand(queryn, conn);
-                SqlDataReader sdrn;
+                con.Open();
 
-                try
+                sdr = cmd.ExecuteReader();
+                //MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                while (sdr.Read())
                 {
-                    conn.Open();
-                    sdrn = cmdn.ExecuteReader();
+                    txt_idproprietaire.Text = sdr["idproprietaire"].ToString();
 
-                    while (sdrn.Read())
+                    
+                }
+                con.Close();
+                if (txt_idproprietaire.Text == "")
+                {
+                    SqlConnection con1 = new SqlConnection(cs);
+                    string query1 = "INSERT INTO proprietaire(nom, postnom, prenom)VALUES('" + this.txtnom.Text + "', '"
+                        + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "'); DECLARE @i INT; SELECT @i = idproprietaire FROM proprietaire WHERE nom= '"
+                        + this.txtnom.Text + "' AND postnom = '" + this.txtpostnom.Text + "' AND prenom = '"
+                        + this.txtprenom.Text + "'; INSERT INTO compte(idproprietaire, type_compte)VALUES(@i, 'Comte a terme'); DECLARE @idcompte INT; SELECT @idcompte = idcompte FROM compte WHERE idproprietaire =(SELECT idproprietaire FROM proprietaire WHERE nom= '"
+                        + this.txtnom.Text + "' AND postnom = '" + this.txtpostnom.Text + "' AND prenom = '"
+                        + this.txtprenom.Text + "'); INSERT INTO compte_a_terme(idcompte_ca, date_creation,delai,montant,devise)VALUES(@idcompte, '"
+                        + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "', '" + this.txtmontant.Text + "', '" + this.cmbdevise.SelectedItem + "')  ";
+                   
+                    SqlCommand cmd1 = new SqlCommand(query1, con1);
+                    
+
+                    SqlDataReader sdr1;
+                    
+                    try
                     {
-                        id = sdrn["idproprietaire"].ToString();
+                        con1.Open();
 
-                        if (id != "")
+                        sdr1 = cmd1.ExecuteReader();
+                        
+                        MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        while (sdr1.Read())
                         {
-
-                            string query = "INSERT INTO compte(idproprietaire, type_compte)VALUES((SELECT idproprietaire FROM proprietaire WHERE nom= '" + this.txtnom.Text + "' AND postnom = '"
-                         + this.txtpostnom.Text + "' AND prenom= '" + this.txtprenom.Text + "'), 'Compte a terme'); INSERT INTO compte_a_terme(idcompte_ca, date_creation,delai, montant, devise) VALUES((SELECT idcompte FROM compte WHERE idproprietaire ='"+id+"' AND type_compte = 'Compte a terme' ), '" + this.dtdate.Value.ToShortDateString() + "', '"
-                         + this.txtdelai.Text + "','" + this.txtmontant.Text + "', '" + this.cmbdevise.SelectedItem + "')";
-
-
-                            SqlCommand cmd = new SqlCommand(query, con);
-
-                            SqlDataReader sdr;
-                            try
+                            if (sdr1.Read())
                             {
-                                con.Open();
-
-                                sdr = cmd.ExecuteReader();
-                                MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                while (sdr.Read())
-                                {
-                                    if (sdr.Read())
-                                    {
-                                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
-                                    }
-                                }
-                                con.Close();
+                                MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
                             }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message);
-                            }
-
                         }
-                        else {
-
-                            string query = "INSERT INTO proprietaire(nom, postnom, prenom) VALUES('" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '"
-                            + this.txtprenom.Text + "'); INSERT INTO compte(idproprietaire, type_compte)VALUES((SELECT idproprietaire FROM proprietaire WHERE nom= '" + this.txtnom.Text + "' AND postnom = '"
-                            + this.txtpostnom.Text + "' AND prenom= '" + this.txtprenom.Text + "'), 'Compte a terme'); INSERT INTO compte_a_terme(idcompte, date_creation,delai, montant, devise) VALUES((SELECT idcompte FROM compte WHERE idproprietaire =(SELECT idproprietaire FROM proprietaire WHERE nom= '" + this.txtnom.Text + "' AND postnom = '"
-                            + this.txtpostnom.Text + "' AND prenom= '" + this.txtprenom.Text + "') ), '" + this.dtdate.Value.ToShortDateString() + "', '"
-                            + this.txtdelai.Text + "','" + this.txtmontant.Text + "', '" + this.cmbdevise.SelectedItem + "')";
-
-
-                            SqlCommand cmd = new SqlCommand(query, con);
-
-                            SqlDataReader sdr;
-                            try
-                            {
-                                con.Open();
-
-                                sdr = cmd.ExecuteReader();
-                                MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                while (sdr.Read())
-                                {
-                                    if (sdr.Read())
-                                    {
-                                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
-                                    }
-                                }
-                                con.Close();
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message);
-                            }
-
-                        }
+                        con1.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
                     }
                 }
-                catch (Exception ex)
+                else
                 {
+                    SqlConnection con1 = new SqlConnection(cs);
+                    string query1 = "SELECT idcompte FROM compte WHERE idproprietaire IN(SELECT idproprietaire FROM proprietaire WHERE nom= '"
+                        + this.txtnom.Text + "' AND postnom = '" + this.txtpostnom.Text + "' AND prenom = '"
+                        + this.txtprenom.Text + "') AND type_compte = 'compte_a_terme' ";
+                    SqlCommand cmd1 = new SqlCommand(query1, con1);
 
-                    MessageBox.Show(ex.Message);
+                    SqlDataReader sdr1;
+                    try
+                    {
+                        con1.Open();
+
+                        sdr1 = cmd1.ExecuteReader();
+
+                        while (sdr1.Read())
+                        {
+                            txt_compte_existae.Text = sdr["idcompte"].ToString();
+                        }
+                        con1.Close();
+
+                        if (txt_compte_existae.Text == "")
+                        {
+                            SqlConnection con11 = new SqlConnection(cs);
+                            string query11 = "DECLARE @i INT; SELECT @i = idproprietaire FROM proprietaire WHERE nom= '"
+                                + this.txtnom.Text + "' AND postnom = '" + this.txtpostnom.Text + "' AND prenom = '"
+                                + this.txtprenom.Text + "'; INSERT INTO compte(idproprietaire, type_compte)VALUES(@i, 'Comte a terme'); DECLARE @idcompte INT; SELECT @idcompte = idcompte FROM compte WHERE idproprietaire =(SELECT idproprietaire FROM proprietaire WHERE nom= '"
+                                + this.txtnom.Text + "' AND postnom = '" + this.txtpostnom.Text + "' AND prenom = '"
+                                + this.txtprenom.Text + "'); INSERT INTO compte_a_terme(idcompte_ca, date_creation,delai,montant,devise)VALUES(@idcompte, '"
+                                + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "', '" + this.txtmontant.Text + "', '" + this.cmbdevise.SelectedItem + "')  ";
+
+                            SqlCommand cmd11 = new SqlCommand(query11, con11);
+
+
+                            SqlDataReader sdr11;
+
+                            try
+                            {
+                                con11.Open();
+
+                                sdr11 = cmd11.ExecuteReader();
+
+                                MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                while (sdr11.Read())
+                                {
+                                    if (sdr11.Read())
+                                    {
+                                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
+                                    }
+                                }
+                                con11.Close();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+
+                        else
+                        {
+                            MetroFramework.MetroMessageBox.Show(this, "Ce client pocede deja un compte de ce type, veuillez changer de client ou le type du compte", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
-            }   
+            }
+
+
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)

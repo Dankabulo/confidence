@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listage));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -44,11 +45,23 @@
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.metroProgressBar = new MetroFramework.Controls.MetroProgressBar();
+            this.lblprogresseBar = new System.Windows.Forms.Label();
+            this.panel_progression = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtnom_rapport = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.txt_requete = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.panel_progression.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -60,7 +73,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(241, 252);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(879, 398);
+            this.dataGridView2.Size = new System.Drawing.Size(879, 339);
             this.dataGridView2.TabIndex = 57;
             this.dataGridView2.Visible = false;
             // 
@@ -251,11 +264,98 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Operations";
             // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(1048, 619);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(71, 71);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 60;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Visible = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // metroProgressBar
+            // 
+            this.metroProgressBar.Location = new System.Drawing.Point(51, 32);
+            this.metroProgressBar.Name = "metroProgressBar";
+            this.metroProgressBar.Size = new System.Drawing.Size(317, 23);
+            this.metroProgressBar.TabIndex = 9;
+            // 
+            // lblprogresseBar
+            // 
+            this.lblprogresseBar.AutoSize = true;
+            this.lblprogresseBar.BackColor = System.Drawing.SystemColors.Control;
+            this.lblprogresseBar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprogresseBar.Location = new System.Drawing.Point(147, 12);
+            this.lblprogresseBar.Name = "lblprogresseBar";
+            this.lblprogresseBar.Size = new System.Drawing.Size(110, 17);
+            this.lblprogresseBar.TabIndex = 10;
+            this.lblprogresseBar.Text = "chargement 0%...";
+            // 
+            // panel_progression
+            // 
+            this.panel_progression.Controls.Add(this.metroProgressBar);
+            this.panel_progression.Controls.Add(this.lblprogresseBar);
+            this.panel_progression.Location = new System.Drawing.Point(516, 619);
+            this.panel_progression.Name = "panel_progression";
+            this.panel_progression.Size = new System.Drawing.Size(420, 66);
+            this.panel_progression.TabIndex = 61;
+            this.panel_progression.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtnom_rapport);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.groupBox1.Location = new System.Drawing.Point(185, 614);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(291, 100);
+            this.groupBox1.TabIndex = 62;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Nom rapport";
+            // 
+            // txtnom_rapport
+            // 
+            this.txtnom_rapport.Location = new System.Drawing.Point(118, 49);
+            this.txtnom_rapport.Name = "txtnom_rapport";
+            this.txtnom_rapport.Size = new System.Drawing.Size(150, 22);
+            this.txtnom_rapport.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Designation :";
+            // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
+            // 
+            // txt_requete
+            // 
+            this.txt_requete.Location = new System.Drawing.Point(1144, 528);
+            this.txt_requete.Name = "txt_requete";
+            this.txt_requete.Size = new System.Drawing.Size(161, 20);
+            this.txt_requete.TabIndex = 63;
+            // 
             // listage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1317, 777);
+            this.Controls.Add(this.txt_requete);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel_progression);
+            this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.panel2);
@@ -263,6 +363,7 @@
             this.Name = "listage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listage";
+            this.Load += new System.EventHandler(this.listage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -270,7 +371,13 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.panel_progression.ResumeLayout(false);
+            this.panel_progression.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -290,5 +397,14 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar;
+        private System.Windows.Forms.Label lblprogresseBar;
+        private System.Windows.Forms.Panel panel_progression;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtnom_rapport;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.TextBox txt_requete;
     }
 }

@@ -117,7 +117,7 @@ namespace Confidence
                         }
                         catch (Exception ex)
                         {
-                            //MetroFramework.MetroMessageBox.Show(this, ex.Message, "Message error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MetroFramework.MetroMessageBox.Show(this, ex.Message, "Message error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
 
@@ -172,7 +172,7 @@ namespace Confidence
             }
             catch (Exception ex)
             {
-              //  MetroFramework.MetroMessageBox.Show(this, ex.Message, "Message error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+             MetroFramework.MetroMessageBox.Show(this, ex.Message, "Message error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -227,9 +227,7 @@ namespace Confidence
                     connectionstring = cs;
                     cnn = new SqlConnection(connectionstring);
                     cnn.Open();
-                    sql = " SELECT nom,postnom, prenom, designation, montant, date_payement, pseudo FROM eleve e INNER JOIN classe c ON e.id_classe = c.id_classe INNER JOIN payement p ON e.id_eleve = p.id_eleve INNER JOIN utilisateur u ON u.id_utilisateur = p.id_utilisateur WHERE motif = '"
-                            + this.cmb_motif.SelectedItem + "' AND designation = '" + this.cmb_classe.SelectedValue.ToString() + "' AND date_payement BETWEEN '"
-                            + this.dt_fin.Value.ToShortDateString() + "' AND  '" + this.dt_debut.Value.ToShortDateString() + "' ";
+                    sql = "";
 
                     SqlDataAdapter dscmd = new SqlDataAdapter(sql, cnn);
                     DataSet ds = new DataSet();
@@ -294,6 +292,7 @@ namespace Confidence
 
 
             }
+        }
 
         private void main3_Paint(object sender, PaintEventArgs e)
         {

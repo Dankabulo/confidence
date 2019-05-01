@@ -55,12 +55,7 @@ namespace Confidence
         {
  
             SqlConnection con = new SqlConnection(cs);
-            string query = "INSERT INTO proprietaire(nom, postnom, prenom) VALUES('"+this.txtnom.Text+"', '"+this.txtpostnom.Text+"', '"
-                            +this.txtprenom.Text+"'); INSERT INTO compte(idproprietaire, type_compte)VALUES((SELECT idproprietaire FROM proprietaire WHERE nom= '"+this.txtnom.Text+"' AND postnom = '"
-                            +this.txtpostnom.Text+"' AND prenom= '"+this.txtprenom.Text+"'), 'Compte courant'); INSERT INTO compte_courant(idcompte_cc, date_creation,montant, devise) VALUES((SELECT idcompte FROM compte WHERE idproprietaire =(SELECT idproprietaire FROM proprietaire WHERE nom= '" 
-                            +this.txtnom.Text + "' AND postnom = '"
-                            +this.txtpostnom.Text + "' AND prenom= '" + this.txtprenom.Text + "') ), '"+this.dtdate.Value.ToShortDateString()+"', '"
-                            +this.txtmontant.Text+"', '"+this.cmbdevise.SelectedItem+"')";
+            string query = "SELECT idproprietaire FROM";
             SqlCommand cmd = new SqlCommand(query, con);
 
             SqlDataReader sdr;
@@ -166,33 +161,12 @@ namespace Confidence
         private void bnt_modifier_Click(object sender, EventArgs e)
         {
             // modification des infos du compte
+            panel3.Visible = true;
+            bnt_modifier.Visible = false;
+            btn_supprimer.Visible = false;
+            bunifuFlatButton4.Visible = true;
+            bunifuFlatButton5.Visible = true;
 
-            SqlConnection con = new SqlConnection(cs);
-            string query = "";
-                            
-            SqlCommand cmd = new SqlCommand(query, con);
-
-            SqlDataReader sdr;
-            try
-            {
-                con.Open();
-
-                sdr = cmd.ExecuteReader();
-                MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                while (sdr.Read())
-                {
-                    if (sdr.Read())
-                    {
-                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
-                    }
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
     }
 }
