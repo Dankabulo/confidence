@@ -60,7 +60,7 @@ namespace Confidence
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void txtTexte_Click(object sender, EventArgs e)

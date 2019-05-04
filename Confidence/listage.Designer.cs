@@ -50,10 +50,9 @@
             this.lblprogresseBar = new System.Windows.Forms.Label();
             this.panel_progression = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtnom_rapport = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtnom_rapport = new System.Windows.Forms.TextBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.txt_requete = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -319,13 +318,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nom rapport";
             // 
-            // txtnom_rapport
-            // 
-            this.txtnom_rapport.Location = new System.Drawing.Point(118, 49);
-            this.txtnom_rapport.Name = "txtnom_rapport";
-            this.txtnom_rapport.Size = new System.Drawing.Size(150, 22);
-            this.txtnom_rapport.TabIndex = 0;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -335,24 +327,23 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Designation :";
             // 
+            // txtnom_rapport
+            // 
+            this.txtnom_rapport.Location = new System.Drawing.Point(118, 49);
+            this.txtnom_rapport.Name = "txtnom_rapport";
+            this.txtnom_rapport.Size = new System.Drawing.Size(150, 22);
+            this.txtnom_rapport.TabIndex = 0;
+            // 
             // notifyIcon
             // 
             this.notifyIcon.Text = "notifyIcon1";
             this.notifyIcon.Visible = true;
-            // 
-            // txt_requete
-            // 
-            this.txt_requete.Location = new System.Drawing.Point(1144, 528);
-            this.txt_requete.Name = "txt_requete";
-            this.txt_requete.Size = new System.Drawing.Size(161, 20);
-            this.txt_requete.TabIndex = 63;
             // 
             // listage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1317, 777);
-            this.Controls.Add(this.txt_requete);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel_progression);
             this.Controls.Add(this.bunifuImageButton1);
@@ -377,7 +368,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -405,6 +395,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnom_rapport;
         private System.Windows.Forms.NotifyIcon notifyIcon;
-        private System.Windows.Forms.TextBox txt_requete;
     }
 }
