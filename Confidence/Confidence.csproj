@@ -44,7 +44,13 @@
     <Reference Include="MetroFramework.Fonts">
       <HintPath>H:\Files\Logiciels\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,19 +68,109 @@
     <Compile Include="Authentification.Designer.cs">
       <DependentUpon>Authentification.cs</DependentUpon>
     </Compile>
+    <Compile Include="clients_options.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="clients_options.Designer.cs">
+      <DependentUpon>clients_options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="compte_a_terme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compte_a_terme.Designer.cs">
+      <DependentUpon>compte_a_terme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONFIDENCEXDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CONFIDENCEXDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CreerCompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreerCompte.Designer.cs">
+      <DependentUpon>CreerCompte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="entree.Designer.cs">
+      <DependentUpon>entree.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="listage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listage.Designer.cs">
+      <DependentUpon>listage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lister.Designer.cs">
+      <DependentUpon>lister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operation.Designer.cs">
+      <DependentUpon>operation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnesAt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnesAt.Designer.cs">
+      <DependentUpon>PersonnesAt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgressReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recherche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recherche.Designer.cs">
+      <DependentUpon>recherche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visionG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="visionG.Designer.cs">
+      <DependentUpon>visionG.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="clients_options.resx">
+      <DependentUpon>clients_options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compte_a_terme.resx">
+      <DependentUpon>compte_a_terme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreerCompte.resx">
+      <DependentUpon>CreerCompte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entree.resx">
+      <DependentUpon>entree.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listage.resx">
+      <DependentUpon>listage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lister.resx">
+      <DependentUpon>lister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operation.resx">
+      <DependentUpon>operation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnesAt.resx">
+      <DependentUpon>PersonnesAt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,6 +181,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="recherche.resx">
+      <DependentUpon>recherche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visionG.resx">
+      <DependentUpon>visionG.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CONFIDENCEXDataSet.xsc">
+      <DependentUpon>CONFIDENCEXDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CONFIDENCEXDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CONFIDENCEXDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONFIDENCEXDataSet.xss">
+      <DependentUpon>CONFIDENCEXDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,7 +209,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

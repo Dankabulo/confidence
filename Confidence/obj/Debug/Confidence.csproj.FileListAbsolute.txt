@@ -12,6 +12,29 @@ C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\bin
 C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.Design.dll
 C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.dll
 C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\bin\Debug\MetroFramework.Fonts.dll
+<<<<<<< HEAD
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\bin\Debug\Confidence.exe.config
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.exe
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.pdb
+=======
+C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.AskCompte.resources
+C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.AskCreerCompte.resources
+C:\Users\PrisKas\Documents\Visual Studio 2012\Projects\Confidence\Confidence\obj\Debug\Confidence.CreerCompte.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\bin\Debug\Confidence.exe
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\bin\Debug\Confidence.pdb
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.Authentification.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.CreerCompte.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.Form1.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.PersonnesAt.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.Properties.Resources.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.csproj.GenerateResource.Cache
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.compte_a_terme.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.clients_options.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.operation.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.entree.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.lister.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.listage.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.visionG.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.recherche.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.csprojResolveAssemblyReference.cache
+>>>>>>> dan1
