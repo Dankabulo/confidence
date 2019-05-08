@@ -40,7 +40,7 @@
             this.cmbcategorie = new MetroFramework.Controls.MetroComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbtype = new MetroFramework.Controls.MetroComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.oanel_tools = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -54,7 +54,7 @@
             this.txtnom_rapport = new System.Windows.Forms.TextBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.oanel_tools.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
@@ -195,22 +195,22 @@
             this.cmbtype.TabIndex = 0;
             this.cmbtype.UseSelectable = true;
             // 
-            // panel2
+            // oanel_tools
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.bunifuFlatButton2);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.dtfin);
-            this.panel2.Controls.Add(this.dtdebut);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.cmbcategorie);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.cmbtype);
-            this.panel2.Location = new System.Drawing.Point(64, 109);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1187, 100);
-            this.panel2.TabIndex = 56;
+            this.oanel_tools.BackColor = System.Drawing.Color.White;
+            this.oanel_tools.Controls.Add(this.bunifuFlatButton2);
+            this.oanel_tools.Controls.Add(this.label6);
+            this.oanel_tools.Controls.Add(this.label5);
+            this.oanel_tools.Controls.Add(this.dtfin);
+            this.oanel_tools.Controls.Add(this.dtdebut);
+            this.oanel_tools.Controls.Add(this.label4);
+            this.oanel_tools.Controls.Add(this.cmbcategorie);
+            this.oanel_tools.Controls.Add(this.label3);
+            this.oanel_tools.Controls.Add(this.cmbtype);
+            this.oanel_tools.Location = new System.Drawing.Point(64, 109);
+            this.oanel_tools.Name = "oanel_tools";
+            this.oanel_tools.Size = new System.Drawing.Size(1187, 100);
+            this.oanel_tools.TabIndex = 56;
             // 
             // panel4
             // 
@@ -349,15 +349,15 @@
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.oanel_tools);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "listage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listage";
             this.Load += new System.EventHandler(this.listage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.oanel_tools.ResumeLayout(false);
+            this.oanel_tools.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
@@ -382,7 +382,7 @@
         private MetroFramework.Controls.MetroComboBox cmbcategorie;
         private System.Windows.Forms.Label label3;
         private MetroFramework.Controls.MetroComboBox cmbtype;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel oanel_tools;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;

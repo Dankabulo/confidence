@@ -103,7 +103,7 @@ namespace Confidence
                     {
                         try
                         {
-                            string requete = "SELECT date_operation, idcompte, type_compte,nom, prenom,type_operation, solde FROM [CONFIDENCEX].[dbo].proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join operation o on c.idcompte = o.idcompte_operation WHERE type_operation = 'Retrait' ";
+                            string requete = "SELECT date_operation, idcompte, type_compte,nom,postnom, prenom,type_operation, solde FROM [CONFIDENCEX].[dbo].proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join operation o on c.idcompte = o.idcompte_operation WHERE type_operation = 'Retrait' ";
                             SqlConnection con = new SqlConnection(cs);
                             string query = requete;  //string.Format("SELECT * FROM proprietaire");
                             SqlCommand cmd = new SqlCommand(query, con);
@@ -124,7 +124,7 @@ namespace Confidence
                     }
                     else if (this.cmbcategorie.Text == "Operation d'entrees")
                     {
-                        string requete = "SELECT date_operation, idcompte, type_compte,nom, prenom,type_operation, solde FROM [CONFIDENCEX].[dbo].proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join operation o on c.idcompte = o.idcompte_operation WHERE type_operation = 'Depot' AND date_operation BETWEEN '" + dtdebut.Value.ToShortDateString() + "' AND '" + this.dtfin.Value.ToShortDateString() + "' ";
+                        string requete = "SELECT date_operation, idcompte, type_compte,nom,postnom, prenom,type_operation, solde FROM [CONFIDENCEX].[dbo].proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join operation o on c.idcompte = o.idcompte_operation WHERE type_operation = 'Depot' AND date_operation BETWEEN '" + dtdebut.Value.ToShortDateString() + "' AND '" + this.dtfin.Value.ToShortDateString() + "' ";
                         SqlConnection con = new SqlConnection(cs);
                         string query = requete;  //string.Format("SELECT * FROM proprietaire");
                         SqlCommand cmd = new SqlCommand(query, con);

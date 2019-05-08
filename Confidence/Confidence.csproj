@@ -35,6 +35,9 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>H:\Files\Logiciels\MySql.Data\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\essaie\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework">
       <HintPath>H:\Files\Logiciels\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.dll</HintPath>
     </Reference>
@@ -121,6 +124,12 @@
     <Compile Include="operation.Designer.cs">
       <DependentUpon>operation.cs</DependentUpon>
     </Compile>
+    <Compile Include="operationss_client.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="operationss_client.Designer.cs">
+      <DependentUpon>operationss_client.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonnesAt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +144,12 @@
     </Compile>
     <Compile Include="recherche.Designer.cs">
       <DependentUpon>recherche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recherche_op_client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recherche_op_client.Designer.cs">
+      <DependentUpon>Recherche_op_client.cs</DependentUpon>
     </Compile>
     <Compile Include="visionG.cs">
       <SubType>UserControl</SubType>
@@ -169,6 +184,9 @@
     <EmbeddedResource Include="operation.resx">
       <DependentUpon>operation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="operationss_client.resx">
+      <DependentUpon>operationss_client.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PersonnesAt.resx">
       <DependentUpon>PersonnesAt.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +201,9 @@
     </Compile>
     <EmbeddedResource Include="recherche.resx">
       <DependentUpon>recherche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recherche_op_client.resx">
+      <DependentUpon>Recherche_op_client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="visionG.resx">
       <DependentUpon>visionG.cs</DependentUpon>

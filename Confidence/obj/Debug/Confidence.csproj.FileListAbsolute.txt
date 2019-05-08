@@ -38,3 +38,6 @@ C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.recherche.resources
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.csprojResolveAssemblyReference.cache
 >>>>>>> dan1
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.operationss_client.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\bin\Debug\MaterialSkin.dll
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\Confidence\Confidence\obj\Debug\Confidence.Recherche_op_client.resources

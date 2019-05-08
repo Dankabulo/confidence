@@ -39,7 +39,7 @@
             this.lblprogresseBar = new System.Windows.Forms.Label();
             this.btn_rapport = new Bunifu.Framework.UI.BunifuImageButton();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_tools = new System.Windows.Forms.Panel();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@
             this.panel_progression.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_rapport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panel_tools.SuspendLayout();
             this.SuspendLayout();
             // 
             // main3
@@ -64,7 +64,7 @@
             this.main3.Controls.Add(this.panel_progression);
             this.main3.Controls.Add(this.btn_rapport);
             this.main3.Controls.Add(this.dataGridView2);
-            this.main3.Controls.Add(this.panel2);
+            this.main3.Controls.Add(this.panel_tools);
             this.main3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.main3.Location = new System.Drawing.Point(0, 0);
             this.main3.Name = "main3";
@@ -158,22 +158,22 @@
             this.dataGridView2.TabIndex = 8;
             this.dataGridView2.Visible = false;
             // 
-            // panel2
+            // panel_tools
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.bunifuFlatButton2);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.dtfin);
-            this.panel2.Controls.Add(this.dtdebut);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.cmbcategorie);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.cmbtype);
-            this.panel2.Location = new System.Drawing.Point(69, 36);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1174, 100);
-            this.panel2.TabIndex = 7;
+            this.panel_tools.BackColor = System.Drawing.Color.White;
+            this.panel_tools.Controls.Add(this.bunifuFlatButton2);
+            this.panel_tools.Controls.Add(this.label6);
+            this.panel_tools.Controls.Add(this.label5);
+            this.panel_tools.Controls.Add(this.dtfin);
+            this.panel_tools.Controls.Add(this.dtdebut);
+            this.panel_tools.Controls.Add(this.label4);
+            this.panel_tools.Controls.Add(this.cmbcategorie);
+            this.panel_tools.Controls.Add(this.label3);
+            this.panel_tools.Controls.Add(this.cmbtype);
+            this.panel_tools.Location = new System.Drawing.Point(69, 36);
+            this.panel_tools.Name = "panel_tools";
+            this.panel_tools.Size = new System.Drawing.Size(1174, 100);
+            this.panel_tools.TabIndex = 7;
             // 
             // bunifuFlatButton2
             // 
@@ -313,8 +313,8 @@
             this.panel_progression.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_rapport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel_tools.ResumeLayout(false);
+            this.panel_tools.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -322,7 +322,7 @@
         #endregion
         private System.Windows.Forms.Panel main3;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel_tools;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

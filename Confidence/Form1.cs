@@ -83,6 +83,7 @@ namespace Confidence
             {
                 mmainpale.Height = 730;
             }
+            btn_lancer_recherche.Visible = true;
             btncompteA.Visible = false;
             btncompteC.Visible = false;
             btnListe_clients.Visible = true;
@@ -103,7 +104,25 @@ namespace Confidence
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            txtTexte.Text = "Parametres";
+            //descativation des autres boutons
+            btncompteA.Visible = false;
+            btncompteC.Visible = false;
+            btnListe_clients.Visible = false;
+            btnoperation.Visible = false;
+            btnvision.Visible = false;
+            btn_lancer_recherche.Visible = true;
+
+            txtTexte.Text = "Operations par client";
+            if (!mmainpale.Controls.Contains(operationss_client.Instance))
+            {
+                mmainpale.Controls.Add(operationss_client.Instance);
+                operationss_client.Instance.Dock = DockStyle.Fill;
+                operationss_client.Instance.BringToFront();
+            }
+            else
+            {
+                operationss_client.Instance.BringToFront();
+            }
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
@@ -121,6 +140,7 @@ namespace Confidence
             
             mmainpale.Height = 575;
 
+            btn_lancer_recherche.Visible = false;
             btncompteA.Visible = true;
             btncompteC.Visible = true;
             btnListe_clients.Visible = false;
@@ -185,6 +205,20 @@ namespace Confidence
             else
             {
                 visionG.Instance.BringToFront();
+            }
+        }
+
+        private void btn_lancer_recherche_Click(object sender, EventArgs e)
+        {
+            if (!mmainpale.Controls.Contains(operationss_client.Instance))
+            {
+                mmainpale.Controls.Add(operationss_client.Instance);
+                operationss_client.Instance.Dock = DockStyle.Fill;
+                operationss_client.Instance.BringToFront();
+            }
+            else
+            {
+                operationss_client.Instance.BringToFront();
             }
         }
     }
