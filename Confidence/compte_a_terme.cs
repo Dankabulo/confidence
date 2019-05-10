@@ -39,18 +39,15 @@ namespace Confidence
             try
             {
                 con.Open();
-
                 sdr = cmd.ExecuteReader();
                 //MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 while (sdr.Read())
                 {
                     txt_idproprietaire.Text = sdr["idproprietaire"].ToString();
-
-                    
                 }
                 con.Close();
-                if (txt_idproprietaire.Text == "")
+                if (this.txt_idproprietaire.Text == "")
                 {
                     SqlConnection con1 = new SqlConnection(cs);
                     string query1 = "INSERT INTO proprietaire(nom, postnom, prenom)VALUES('" + this.txtnom.Text + "', '"
