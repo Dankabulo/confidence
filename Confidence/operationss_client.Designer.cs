@@ -38,23 +38,28 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_nom = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_compte_a_terme = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.lbl_message_compte = new System.Windows.Forms.Label();
+            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_compte_courant = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.lbl_message_compte = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_compte_a_terme = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btn_generer_rapport = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel_nouvelle_operation = new System.Windows.Forms.Panel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_montant_banque = new System.Windows.Forms.GroupBox();
+            this.materialRaisedButton11 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.materialRaisedButton10 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtcompte = new System.Windows.Forms.TextBox();
             this.dtdate_creation = new MetroFramework.Controls.MetroDateTime();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -64,11 +69,6 @@
             this.cmboperation = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.materialRaisedButton10 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtcompte = new System.Windows.Forms.TextBox();
-            this.materialRaisedButton11 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel_progression = new System.Windows.Forms.Panel();
             this.metroProgressBar = new MetroFramework.Controls.MetroProgressBar();
             this.lblprogresseBar = new System.Windows.Forms.Label();
@@ -77,12 +77,14 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.txt_requete = new System.Windows.Forms.TextBox();
+            this.txt_ctrl = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel_nouvelle_operation.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.txt_montant_banque.SuspendLayout();
             this.panel_progression.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
@@ -207,29 +209,70 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Comptes existants";
             // 
-            // label1
+            // materialRaisedButton8
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Comptes a termes :";
+            this.materialRaisedButton8.Depth = 0;
+            this.materialRaisedButton8.Location = new System.Drawing.Point(301, 95);
+            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton8.Name = "materialRaisedButton8";
+            this.materialRaisedButton8.Primary = true;
+            this.materialRaisedButton8.Size = new System.Drawing.Size(113, 38);
+            this.materialRaisedButton8.TabIndex = 71;
+            this.materialRaisedButton8.Text = "effectuer";
+            this.materialRaisedButton8.UseVisualStyleBackColor = true;
+            this.materialRaisedButton8.Visible = false;
+            this.materialRaisedButton8.Click += new System.EventHandler(this.materialRaisedButton8_Click);
             // 
-            // txt_compte_a_terme
+            // lbl_message_compte
             // 
-            this.txt_compte_a_terme.Depth = 0;
-            this.txt_compte_a_terme.Hint = "";
-            this.txt_compte_a_terme.Location = new System.Drawing.Point(159, 54);
-            this.txt_compte_a_terme.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txt_compte_a_terme.Name = "txt_compte_a_terme";
-            this.txt_compte_a_terme.PasswordChar = '\0';
-            this.txt_compte_a_terme.SelectedText = "";
-            this.txt_compte_a_terme.SelectionLength = 0;
-            this.txt_compte_a_terme.SelectionStart = 0;
-            this.txt_compte_a_terme.Size = new System.Drawing.Size(122, 23);
-            this.txt_compte_a_terme.TabIndex = 6;
-            this.txt_compte_a_terme.UseSystemPasswordChar = false;
+            this.lbl_message_compte.AutoSize = true;
+            this.lbl_message_compte.Location = new System.Drawing.Point(6, 173);
+            this.lbl_message_compte.Name = "lbl_message_compte";
+            this.lbl_message_compte.Size = new System.Drawing.Size(134, 17);
+            this.lbl_message_compte.TabIndex = 66;
+            this.lbl_message_compte.Text = "Compte message !!";
+            // 
+            // materialRaisedButton7
+            // 
+            this.materialRaisedButton7.Depth = 0;
+            this.materialRaisedButton7.Location = new System.Drawing.Point(301, 49);
+            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton7.Name = "materialRaisedButton7";
+            this.materialRaisedButton7.Primary = true;
+            this.materialRaisedButton7.Size = new System.Drawing.Size(113, 38);
+            this.materialRaisedButton7.TabIndex = 68;
+            this.materialRaisedButton7.Text = "effectuer";
+            this.materialRaisedButton7.UseVisualStyleBackColor = true;
+            this.materialRaisedButton7.Visible = false;
+            this.materialRaisedButton7.Click += new System.EventHandler(this.materialRaisedButton7_Click);
+            // 
+            // materialRaisedButton3
+            // 
+            this.materialRaisedButton3.Depth = 0;
+            this.materialRaisedButton3.Location = new System.Drawing.Point(301, 95);
+            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton3.Name = "materialRaisedButton3";
+            this.materialRaisedButton3.Primary = true;
+            this.materialRaisedButton3.Size = new System.Drawing.Size(113, 38);
+            this.materialRaisedButton3.TabIndex = 67;
+            this.materialRaisedButton3.Text = "lancer";
+            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.materialRaisedButton3.Visible = false;
+            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
+            // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(301, 49);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(113, 38);
+            this.materialRaisedButton2.TabIndex = 66;
+            this.materialRaisedButton2.Text = "lancer";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Visible = false;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
             // 
             // label5
             // 
@@ -255,42 +298,29 @@
             this.txt_compte_courant.TabIndex = 8;
             this.txt_compte_courant.UseSystemPasswordChar = false;
             // 
-            // materialRaisedButton2
+            // label1
             // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(301, 49);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(113, 38);
-            this.materialRaisedButton2.TabIndex = 66;
-            this.materialRaisedButton2.Text = "lancer";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
-            this.materialRaisedButton2.Visible = false;
-            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Comptes a termes :";
             // 
-            // materialRaisedButton3
+            // txt_compte_a_terme
             // 
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(301, 95);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(113, 38);
-            this.materialRaisedButton3.TabIndex = 67;
-            this.materialRaisedButton3.Text = "lancer";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
-            this.materialRaisedButton3.Visible = false;
-            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
-            // 
-            // lbl_message_compte
-            // 
-            this.lbl_message_compte.AutoSize = true;
-            this.lbl_message_compte.Location = new System.Drawing.Point(6, 173);
-            this.lbl_message_compte.Name = "lbl_message_compte";
-            this.lbl_message_compte.Size = new System.Drawing.Size(134, 17);
-            this.lbl_message_compte.TabIndex = 66;
-            this.lbl_message_compte.Text = "Compte message !!";
+            this.txt_compte_a_terme.Depth = 0;
+            this.txt_compte_a_terme.Hint = "";
+            this.txt_compte_a_terme.Location = new System.Drawing.Point(159, 54);
+            this.txt_compte_a_terme.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_compte_a_terme.Name = "txt_compte_a_terme";
+            this.txt_compte_a_terme.PasswordChar = '\0';
+            this.txt_compte_a_terme.SelectedText = "";
+            this.txt_compte_a_terme.SelectionLength = 0;
+            this.txt_compte_a_terme.SelectionStart = 0;
+            this.txt_compte_a_terme.Size = new System.Drawing.Size(122, 23);
+            this.txt_compte_a_terme.TabIndex = 6;
+            this.txt_compte_a_terme.UseSystemPasswordChar = false;
             // 
             // dataGridView2
             // 
@@ -318,19 +348,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Recentes oprtations";
             // 
-            // materialRaisedButton4
-            // 
-            this.materialRaisedButton4.Depth = 0;
-            this.materialRaisedButton4.Location = new System.Drawing.Point(195, 434);
-            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton4.Name = "materialRaisedButton4";
-            this.materialRaisedButton4.Primary = true;
-            this.materialRaisedButton4.Size = new System.Drawing.Size(127, 38);
-            this.materialRaisedButton4.TabIndex = 68;
-            this.materialRaisedButton4.Text = "supprimer";
-            this.materialRaisedButton4.UseVisualStyleBackColor = true;
-            this.materialRaisedButton4.Visible = false;
-            // 
             // btn_generer_rapport
             // 
             this.btn_generer_rapport.Depth = 0;
@@ -345,6 +362,19 @@
             this.btn_generer_rapport.Visible = false;
             this.btn_generer_rapport.Click += new System.EventHandler(this.btn_generer_rapport_Click);
             // 
+            // materialRaisedButton4
+            // 
+            this.materialRaisedButton4.Depth = 0;
+            this.materialRaisedButton4.Location = new System.Drawing.Point(195, 434);
+            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton4.Name = "materialRaisedButton4";
+            this.materialRaisedButton4.Primary = true;
+            this.materialRaisedButton4.Size = new System.Drawing.Size(127, 38);
+            this.materialRaisedButton4.TabIndex = 68;
+            this.materialRaisedButton4.Text = "supprimer";
+            this.materialRaisedButton4.UseVisualStyleBackColor = true;
+            this.materialRaisedButton4.Visible = false;
+            // 
             // materialRaisedButton6
             // 
             this.materialRaisedButton6.Depth = 0;
@@ -357,34 +387,6 @@
             this.materialRaisedButton6.Text = "nouvelle operation";
             this.materialRaisedButton6.UseVisualStyleBackColor = true;
             this.materialRaisedButton6.Click += new System.EventHandler(this.materialRaisedButton6_Click);
-            // 
-            // materialRaisedButton7
-            // 
-            this.materialRaisedButton7.Depth = 0;
-            this.materialRaisedButton7.Location = new System.Drawing.Point(301, 49);
-            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton7.Name = "materialRaisedButton7";
-            this.materialRaisedButton7.Primary = true;
-            this.materialRaisedButton7.Size = new System.Drawing.Size(113, 38);
-            this.materialRaisedButton7.TabIndex = 68;
-            this.materialRaisedButton7.Text = "effectuer";
-            this.materialRaisedButton7.UseVisualStyleBackColor = true;
-            this.materialRaisedButton7.Visible = false;
-            this.materialRaisedButton7.Click += new System.EventHandler(this.materialRaisedButton7_Click);
-            // 
-            // materialRaisedButton8
-            // 
-            this.materialRaisedButton8.Depth = 0;
-            this.materialRaisedButton8.Location = new System.Drawing.Point(301, 95);
-            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton8.Name = "materialRaisedButton8";
-            this.materialRaisedButton8.Primary = true;
-            this.materialRaisedButton8.Size = new System.Drawing.Size(113, 38);
-            this.materialRaisedButton8.TabIndex = 71;
-            this.materialRaisedButton8.Text = "effectuer";
-            this.materialRaisedButton8.UseVisualStyleBackColor = true;
-            this.materialRaisedButton8.Visible = false;
-            this.materialRaisedButton8.Click += new System.EventHandler(this.materialRaisedButton8_Click);
             // 
             // materialRaisedButton9
             // 
@@ -402,36 +404,92 @@
             // 
             // panel_nouvelle_operation
             // 
-            this.panel_nouvelle_operation.Controls.Add(this.groupBox4);
+            this.panel_nouvelle_operation.Controls.Add(this.txt_montant_banque);
             this.panel_nouvelle_operation.Location = new System.Drawing.Point(553, 47);
             this.panel_nouvelle_operation.Name = "panel_nouvelle_operation";
             this.panel_nouvelle_operation.Size = new System.Drawing.Size(591, 518);
             this.panel_nouvelle_operation.TabIndex = 72;
             this.panel_nouvelle_operation.Visible = false;
             // 
-            // groupBox4
+            // txt_montant_banque
             // 
-            this.groupBox4.Controls.Add(this.materialRaisedButton11);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.materialRaisedButton10);
-            this.groupBox4.Controls.Add(this.panel3);
-            this.groupBox4.Controls.Add(this.txtcompte);
-            this.groupBox4.Controls.Add(this.dtdate_creation);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.panel7);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.panel6);
-            this.groupBox4.Controls.Add(this.txtsolde);
-            this.groupBox4.Controls.Add(this.cmboperation);
-            this.groupBox4.Controls.Add(this.panel4);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.groupBox4.Location = new System.Drawing.Point(25, 27);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(399, 466);
-            this.groupBox4.TabIndex = 0;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "nouvelle operation";
+            this.txt_montant_banque.Controls.Add(this.textBox1);
+            this.txt_montant_banque.Controls.Add(this.txt_ctrl);
+            this.txt_montant_banque.Controls.Add(this.materialRaisedButton11);
+            this.txt_montant_banque.Controls.Add(this.label9);
+            this.txt_montant_banque.Controls.Add(this.materialRaisedButton10);
+            this.txt_montant_banque.Controls.Add(this.panel3);
+            this.txt_montant_banque.Controls.Add(this.txtcompte);
+            this.txt_montant_banque.Controls.Add(this.dtdate_creation);
+            this.txt_montant_banque.Controls.Add(this.label8);
+            this.txt_montant_banque.Controls.Add(this.panel7);
+            this.txt_montant_banque.Controls.Add(this.label6);
+            this.txt_montant_banque.Controls.Add(this.panel6);
+            this.txt_montant_banque.Controls.Add(this.txtsolde);
+            this.txt_montant_banque.Controls.Add(this.cmboperation);
+            this.txt_montant_banque.Controls.Add(this.panel4);
+            this.txt_montant_banque.Controls.Add(this.label7);
+            this.txt_montant_banque.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_montant_banque.Location = new System.Drawing.Point(25, 27);
+            this.txt_montant_banque.Name = "txt_montant_banque";
+            this.txt_montant_banque.Size = new System.Drawing.Size(399, 466);
+            this.txt_montant_banque.TabIndex = 0;
+            this.txt_montant_banque.TabStop = false;
+            this.txt_montant_banque.Text = "nouvelle operation";
+            // 
+            // materialRaisedButton11
+            // 
+            this.materialRaisedButton11.Depth = 0;
+            this.materialRaisedButton11.Location = new System.Drawing.Point(267, 404);
+            this.materialRaisedButton11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton11.Name = "materialRaisedButton11";
+            this.materialRaisedButton11.Primary = true;
+            this.materialRaisedButton11.Size = new System.Drawing.Size(113, 38);
+            this.materialRaisedButton11.TabIndex = 73;
+            this.materialRaisedButton11.Text = "fermer";
+            this.materialRaisedButton11.UseVisualStyleBackColor = true;
+            this.materialRaisedButton11.Click += new System.EventHandler(this.materialRaisedButton11_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(50, 44);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(71, 17);
+            this.label9.TabIndex = 73;
+            this.label9.Text = "Compte :";
+            // 
+            // materialRaisedButton10
+            // 
+            this.materialRaisedButton10.Depth = 0;
+            this.materialRaisedButton10.Location = new System.Drawing.Point(267, 245);
+            this.materialRaisedButton10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton10.Name = "materialRaisedButton10";
+            this.materialRaisedButton10.Primary = true;
+            this.materialRaisedButton10.Size = new System.Drawing.Size(113, 38);
+            this.materialRaisedButton10.TabIndex = 73;
+            this.materialRaisedButton10.Text = "valider";
+            this.materialRaisedButton10.UseVisualStyleBackColor = true;
+            this.materialRaisedButton10.Click += new System.EventHandler(this.materialRaisedButton10_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
+            this.panel3.Location = new System.Drawing.Point(171, 59);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(159, 2);
+            this.panel3.TabIndex = 72;
+            // 
+            // txtcompte
+            // 
+            this.txtcompte.BackColor = System.Drawing.SystemColors.Control;
+            this.txtcompte.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtcompte.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtcompte.Location = new System.Drawing.Point(171, 42);
+            this.txtcompte.Name = "txtcompte";
+            this.txtcompte.Size = new System.Drawing.Size(156, 16);
+            this.txtcompte.TabIndex = 71;
             // 
             // dtdate_creation
             // 
@@ -519,60 +577,6 @@
             this.label7.TabIndex = 64;
             this.label7.Text = "Type operation :";
             // 
-            // materialRaisedButton10
-            // 
-            this.materialRaisedButton10.Depth = 0;
-            this.materialRaisedButton10.Location = new System.Drawing.Point(267, 245);
-            this.materialRaisedButton10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton10.Name = "materialRaisedButton10";
-            this.materialRaisedButton10.Primary = true;
-            this.materialRaisedButton10.Size = new System.Drawing.Size(113, 38);
-            this.materialRaisedButton10.TabIndex = 73;
-            this.materialRaisedButton10.Text = "valider";
-            this.materialRaisedButton10.UseVisualStyleBackColor = true;
-            this.materialRaisedButton10.Click += new System.EventHandler(this.materialRaisedButton10_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(50, 44);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 17);
-            this.label9.TabIndex = 73;
-            this.label9.Text = "Compte :";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel3.Location = new System.Drawing.Point(171, 59);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(159, 2);
-            this.panel3.TabIndex = 72;
-            // 
-            // txtcompte
-            // 
-            this.txtcompte.BackColor = System.Drawing.SystemColors.Control;
-            this.txtcompte.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcompte.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtcompte.Location = new System.Drawing.Point(171, 42);
-            this.txtcompte.Name = "txtcompte";
-            this.txtcompte.Size = new System.Drawing.Size(156, 16);
-            this.txtcompte.TabIndex = 71;
-            // 
-            // materialRaisedButton11
-            // 
-            this.materialRaisedButton11.Depth = 0;
-            this.materialRaisedButton11.Location = new System.Drawing.Point(267, 404);
-            this.materialRaisedButton11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton11.Name = "materialRaisedButton11";
-            this.materialRaisedButton11.Primary = true;
-            this.materialRaisedButton11.Size = new System.Drawing.Size(113, 38);
-            this.materialRaisedButton11.TabIndex = 73;
-            this.materialRaisedButton11.Text = "fermer";
-            this.materialRaisedButton11.UseVisualStyleBackColor = true;
-            this.materialRaisedButton11.Click += new System.EventHandler(this.materialRaisedButton11_Click);
-            // 
             // panel_progression
             // 
             this.panel_progression.Controls.Add(this.metroProgressBar);
@@ -652,6 +656,22 @@
             this.txt_requete.TabIndex = 74;
             this.txt_requete.Visible = false;
             // 
+            // txt_ctrl
+            // 
+            this.txt_ctrl.Location = new System.Drawing.Point(21, 253);
+            this.txt_ctrl.Name = "txt_ctrl";
+            this.txt_ctrl.Size = new System.Drawing.Size(100, 23);
+            this.txt_ctrl.TabIndex = 74;
+            this.txt_ctrl.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(21, 282);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 75;
+            this.textBox1.Visible = false;
+            // 
             // operationss_client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -675,8 +695,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.panel_nouvelle_operation.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.txt_montant_banque.ResumeLayout(false);
+            this.txt_montant_banque.PerformLayout();
             this.panel_progression.ResumeLayout(false);
             this.panel_progression.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -713,7 +733,7 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton9;
         private System.Windows.Forms.Panel panel_nouvelle_operation;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox txt_montant_banque;
         private MetroFramework.Controls.MetroDateTime dtdate_creation;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel7;
@@ -736,5 +756,7 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.TextBox txt_requete;
+        private System.Windows.Forms.TextBox txt_ctrl;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

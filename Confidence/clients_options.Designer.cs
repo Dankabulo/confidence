@@ -157,6 +157,7 @@
             this.dataGridView2.Size = new System.Drawing.Size(879, 432);
             this.dataGridView2.TabIndex = 8;
             this.dataGridView2.Visible = false;
+            this.dataGridView2.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView2_DataError);
             // 
             // panel_tools
             // 
