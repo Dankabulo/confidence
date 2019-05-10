@@ -303,5 +303,11 @@ namespace Confidence
         {
 
         }
+
+        private void dataGridView2_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
+            notifyIcon.ShowBalloonTip(200, "Aucune donnee", "Aucune information n'a ete trouvee", ToolTipIcon.Error);
+        }
     }
 }
