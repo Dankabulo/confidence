@@ -172,9 +172,12 @@ namespace Confidence
 
         private void materialRaisedButton10_Click(object sender, EventArgs e)
         {
+            txt_ctrl.Text = "";
+            txt_montant_banque.Text = "";
+
             SqlConnection con = new SqlConnection(cs);
-            string query = "INSERT INTO operation(idcompte_operation, type_operation, solde, date_operation)VALUES('" + this.txtcompte.Text + "', '"
-                            + this.cmboperation.SelectedItem + "', '" + this.txtsolde.Text + "', '" + this.dtdate_creation.Value.ToShortDateString() + "')";
+            string query = "EXEC op " + this.txtcompte.Text + ", '"+ this.cmboperation.SelectedItem + "', " 
+                + this.txtsolde.Text + ", '" + this.dtdate_creation.Value.ToShortDateString() + "'";
             SqlCommand cmd = new SqlCommand(query, con);
 
             SqlDataReader sdr;
@@ -183,16 +186,23 @@ namespace Confidence
                 con.Open();
 
                 sdr = cmd.ExecuteReader();
-                MetroFramework.MetroMessageBox.Show(this, "Operation effectuee avec success", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // 
 
                 while (sdr.Read())
                 {
-                    if (sdr.Read())
-                    {
-                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
-                    }
+                    txt_ctrl.Text = sdr["nombre"].ToString();
+                    txt_montant_banque.Text = sdr["deux"].ToString();
                 }
                 con.Close();
+
+                if (txt_ctrl.Text != "111"  || txt_ctrl.Text == "")
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Operation effectuee avec success", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (txt_ctrl.Text == "111")
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Operation non effectuee, le solde en caisse : "+this.txt_montant_banque.Text+" est inferieur a : "+this.txtsolde.Text+"", "Solde insuffisant", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
