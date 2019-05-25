@@ -53,27 +53,114 @@ namespace Confidence
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
- 
-            SqlConnection con = new SqlConnection(cs);
-            string query = "SELECT idproprietaire FROM";
-            SqlCommand cmd = new SqlCommand(query, con);
+            txt_meme_compte.Text = "";
+            txt_utilisateur_compte.Text = "";
 
+            // verification de l'existance de l'utilisateur dans la data
+
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC CC_recherche '"+this.txtnom.Text+"', '"+this.txtpostnom.Text+"', '"+this.txtprenom.Text+"'";
+            SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader sdr;
             try
             {
                 con.Open();
                 
                 sdr = cmd.ExecuteReader();
-                MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                //MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (sdr.Read())
                 {
-                    if (sdr.Read())
-                    {
-                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
-                    }
+                    txt_utilisateur_compte.Text = sdr["idproprietaire"].ToString();
                 }
                 con.Close();
+
+                //conditions 
+
+                if (txt_utilisateur_compte.Text == "")
+                {
+                    // s'il n'existe pas dans la data => INSERTTION GLOABALE utiliateur + compte
+
+                    SqlConnection conn = new SqlConnection(cs);
+                    string queryn = "EXEC CC_insertion '" + this.txtnom.Text + "', '" 
+                        + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "', " + this.txtmontant.Text+", '"
+                        +this.cmbdevise.SelectedItem+"', '"+this.dtdate.Value.ToShortDateString()+"'";
+                    SqlCommand cmdn = new SqlCommand(queryn, conn);
+                    SqlDataReader sdrn;
+                    try
+                    {
+                        conn.Open();
+                        sdrn = cmdn.ExecuteReader();
+                        MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conn.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                }
+                else
+                {
+                    // s'il esxiste dans la data
+                    // A deja un compte courant 
+
+                    SqlConnection conn = new SqlConnection(cs);
+                    string queryn = "EXEC CC_recherche_compte '" + this.txtnom.Text + "', '"
+                        + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "'";
+                    SqlCommand cmdn = new SqlCommand(queryn, conn);
+                    SqlDataReader sdrn;
+                    try
+                    {
+                        conn.Open();
+                        sdrn = cmdn.ExecuteReader();
+                        //
+                        //recuperation de la valeur retournee
+                        while (sdrn.Read())
+                        {
+                            txt_meme_compte.Text = sdrn["idproprietaire"].ToString();
+                        }
+                        conn.Close();
+
+                        // conditions 
+
+                        if (txt_meme_compte.Text != "")
+                        {
+                            //message d'erreur
+                            MetroFramework.MetroMessageBox.Show(this, "Ce client dispose deja d'un compte de ce type", "Message erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            // insertion sans utilisateur
+                            // existe mais sans un compte de ce type
+                            SqlConnection cond = new SqlConnection(cs);
+                            string querynd = "EXEC CC_insertion_mini '" + this.txtnom.Text + "', '"
+                        + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '"
+                        + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "'";
+                            SqlCommand cmdnd = new SqlCommand(querynd, conn);
+                            SqlDataReader sdrnd;
+                            try
+                            {
+                                cond.Open();
+                                sdrnd = cmdnd.ExecuteReader();
+                                //
+                                //recuperation de la valeur retournee
+                                MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                cond.Close();
+
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+
+                }
             }
             catch (Exception ex)
             {

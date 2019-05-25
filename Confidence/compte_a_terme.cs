@@ -30,9 +30,7 @@ namespace Confidence
             txt_idproprietaire.Text = "";   // mise a vide du champ txt_idproprietaire
 
             SqlConnection con = new SqlConnection(cs);
-            string query = "SELECT idproprietaire FROM proprietaire WHERE nom= '"
-                + this.txtnom.Text + "' AND postnom = '" + this.txtpostnom.Text + "' AND prenom = '"
-                + this.txtprenom.Text + "'";
+            string query = "EXEC CC_recherche '" + this.txtnom.Text+"', '"+this.txtpostnom.Text+"', '"+this.txtprenom.Text+"'";
             SqlCommand cmd = new SqlCommand(query, con);
 
             SqlDataReader sdr;
@@ -40,27 +38,19 @@ namespace Confidence
             {
                 con.Open();
                 sdr = cmd.ExecuteReader();
-                //MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 while (sdr.Read())
                 {
                     txt_idproprietaire.Text = sdr["idproprietaire"].ToString();
                 }
                 con.Close();
+
                 if (this.txt_idproprietaire.Text == "")
                 {
                     SqlConnection con1 = new SqlConnection(cs);
-                    string query1 = "INSERT INTO proprietaire(nom, postnom, prenom)VALUES('" + this.txtnom.Text + "', '"
-                        + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "'); DECLARE @i INT; SELECT @i = idproprietaire FROM proprietaire WHERE nom= '"
-                        + this.txtnom.Text + "' AND postnom = '" + this.txtpostnom.Text + "' AND prenom = '"
-                        + this.txtprenom.Text + "'; INSERT INTO compte(idproprietaire, type_compte)VALUES(@i, 'Comte a terme'); DECLARE @idcompte INT; SELECT @idcompte = idcompte FROM compte WHERE idproprietaire =(SELECT idproprietaire FROM proprietaire WHERE nom= '"
-                        + this.txtnom.Text + "' AND postnom = '" + this.txtpostnom.Text + "' AND prenom = '"
-                        + this.txtprenom.Text + "'); INSERT INTO compte_a_terme(idcompte_ca, date_creation,delai,montant,devise)VALUES(@idcompte, '"
-                        + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "', '" + this.txtmontant.Text + "', '" + this.cmbdevise.SelectedItem + "')  ";
+                    string query1 = "EXEC CC_insertionCA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '" 
+                        + this.txtprenom.Text + "', "+this.txtmontant.Text+", '"+this.cmbdevise.SelectedItem+"', '"+this.dtdate.Value.ToShortDateString()+"', '"+this.txtdelai.Text+"' ";
                    
                     SqlCommand cmd1 = new SqlCommand(query1, con1);
-                    
-
                     SqlDataReader sdr1;
                     
                     try
@@ -71,13 +61,7 @@ namespace Confidence
                         
                         MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        while (sdr1.Read())
-                        {
-                            if (sdr1.Read())
-                            {
-                                MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
-                            }
-                        }
+                       
                         con1.Close();
                     }
                     catch (Exception ex)
@@ -88,9 +72,7 @@ namespace Confidence
                 else
                 {
                     SqlConnection con1 = new SqlConnection(cs);
-                    string query1 = "SELECT idcompte FROM compte WHERE idproprietaire IN(SELECT idproprietaire FROM proprietaire WHERE nom= '"
-                        + this.txtnom.Text + "' AND postnom = '" + this.txtpostnom.Text + "' AND prenom = '"
-                        + this.txtprenom.Text + "') AND type_compte = 'compte_a_terme' ";
+                    string query1 = "EXEC CC_recherche_compteCA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "' ";
                     SqlCommand cmd1 = new SqlCommand(query1, con1);
 
                     SqlDataReader sdr1;
@@ -102,19 +84,15 @@ namespace Confidence
 
                         while (sdr1.Read())
                         {
-                            txt_compte_existae.Text = sdr["idcompte"].ToString();
+                            txt_compte_existae.Text = sdr1["idcompte"].ToString();
                         }
                         con1.Close();
 
                         if (txt_compte_existae.Text == "")
                         {
                             SqlConnection con11 = new SqlConnection(cs);
-                            string query11 = "DECLARE @i INT; SELECT @i = idproprietaire FROM proprietaire WHERE nom= '"
-                                + this.txtnom.Text + "' AND postnom = '" + this.txtpostnom.Text + "' AND prenom = '"
-                                + this.txtprenom.Text + "'; INSERT INTO compte(idproprietaire, type_compte)VALUES(@i, 'Comte a terme'); DECLARE @idcompte INT; SELECT @idcompte = idcompte FROM compte WHERE idproprietaire =(SELECT idproprietaire FROM proprietaire WHERE nom= '"
-                                + this.txtnom.Text + "' AND postnom = '" + this.txtpostnom.Text + "' AND prenom = '"
-                                + this.txtprenom.Text + "'); INSERT INTO compte_a_terme(idcompte_ca, date_creation,delai,montant,devise)VALUES(@idcompte, '"
-                                + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "', '" + this.txtmontant.Text + "', '" + this.cmbdevise.SelectedItem + "')  ";
+                            string query11 = "EXEC CC_insertion_miniCA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '"
+                        + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '" + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "' ";
 
                             SqlCommand cmd11 = new SqlCommand(query11, con11);
 
@@ -129,13 +107,7 @@ namespace Confidence
 
                                 MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                while (sdr11.Read())
-                                {
-                                    if (sdr11.Read())
-                                    {
-                                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
-                                    }
-                                }
+                               
                                 con11.Close();
                             }
                             catch (Exception ex)

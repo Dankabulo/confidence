@@ -69,6 +69,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txt_utilisateur_compte = new System.Windows.Forms.TextBox();
+            this.txt_meme_compte = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -305,7 +307,7 @@
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
             this.bunifuFlatButton3.Location = new System.Drawing.Point(345, 157);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
@@ -448,7 +450,7 @@
             this.btnlancer.IconZoom = 90D;
             this.btnlancer.IsTab = false;
             this.btnlancer.Location = new System.Drawing.Point(343, 157);
-            this.btnlancer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlancer.Margin = new System.Windows.Forms.Padding(4);
             this.btnlancer.Name = "btnlancer";
             this.btnlancer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(113)))));
             this.btnlancer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))));
@@ -708,11 +710,29 @@
             this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton5.Visible = false;
             // 
+            // txt_utilisateur_compte
+            // 
+            this.txt_utilisateur_compte.Location = new System.Drawing.Point(12, 494);
+            this.txt_utilisateur_compte.Name = "txt_utilisateur_compte";
+            this.txt_utilisateur_compte.Size = new System.Drawing.Size(100, 20);
+            this.txt_utilisateur_compte.TabIndex = 80;
+            this.txt_utilisateur_compte.Visible = false;
+            // 
+            // txt_meme_compte
+            // 
+            this.txt_meme_compte.Location = new System.Drawing.Point(12, 520);
+            this.txt_meme_compte.Name = "txt_meme_compte";
+            this.txt_meme_compte.Size = new System.Drawing.Size(100, 20);
+            this.txt_meme_compte.TabIndex = 81;
+            this.txt_meme_compte.Visible = false;
+            // 
             // CreerCompte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 592);
+            this.Controls.Add(this.txt_meme_compte);
+            this.Controls.Add(this.txt_utilisateur_compte);
             this.Controls.Add(this.bunifuFlatButton5);
             this.Controls.Add(this.bunifuFlatButton4);
             this.Controls.Add(this.groupBox4);
@@ -742,6 +762,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -786,5 +807,7 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
+        private System.Windows.Forms.TextBox txt_utilisateur_compte;
+        private System.Windows.Forms.TextBox txt_meme_compte;
     }
 }
