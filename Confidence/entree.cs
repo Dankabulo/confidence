@@ -14,6 +14,7 @@ namespace Confidence
     {
         Form courant = new CreerCompte();
         Form terme = new compte_a_terme();
+        recherche recherche = new recherche();
         private static entree _instance;
         public static entree Instance
         {
@@ -37,6 +38,11 @@ namespace Confidence
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
             terme.ShowDialog();
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            recherche.ShowDialog();
         }
     }
 }

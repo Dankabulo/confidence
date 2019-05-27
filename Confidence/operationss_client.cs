@@ -66,7 +66,7 @@ namespace Confidence
 
                 //conditions en cas des valeurs nulles
 
-                if (txt_compte_courant.Text == "" && txt_compte_a_terme.Text == "")
+                if (this.txt_compte_courant.Text == "" && this.txt_compte_a_terme.Text == "")
                 {
                     txt_compte_courant.Text = "";
                     txt_compte_a_terme.Text = "";
@@ -74,19 +74,23 @@ namespace Confidence
                     materialRaisedButton3.Visible = false;
                     materialRaisedButton2.Visible = false;
                 }
-                else if (txt_compte_courant.Text == "" && txt_compte_a_terme.Text != "")
+                else if (this.txt_compte_courant.Text == "" && this.txt_compte_a_terme.Text != "")
                 {
                     txt_compte_courant.Text = "Aucun compte";
                     materialRaisedButton3.Visible = false;
                     materialRaisedButton2.Visible = true;
                 }
-                else if (txt_compte_a_terme.Text == "" && txt_compte_courant.Text != "")
+                else if (txt_compte_a_terme.Text == "" && this.txt_compte_courant.Text != "")
                 {
                     txt_compte_a_terme.Text = "Aucun compte";
                     materialRaisedButton2.Visible = false;
                     materialRaisedButton3.Visible = true;
                 }
-                // else if(txt)
+                else if (txt_compte_a_terme.Text != "" && this.txt_compte_courant.Text != "")
+                {
+                    materialRaisedButton2.Visible = true;
+                    materialRaisedButton3.Visible = true;
+                }
             }
             catch (Exception ex)
             {
@@ -152,6 +156,9 @@ namespace Confidence
 
         private void materialRaisedButton6_Click(object sender, EventArgs e)
         {
+            materialRaisedButton2.Visible = false;
+            materialRaisedButton3.Visible = false;
+
             materialRaisedButton7.Visible = true;
             materialRaisedButton8.Visible = true;
             materialRaisedButton9.Visible = true;
@@ -162,6 +169,9 @@ namespace Confidence
             materialRaisedButton7.Visible = false;
             materialRaisedButton8.Visible = false;
             materialRaisedButton9.Visible = false;
+
+            materialRaisedButton2.Visible = true;
+            materialRaisedButton3.Visible = true;
         }
 
         private void materialRaisedButton7_Click(object sender, EventArgs e)
@@ -170,44 +180,110 @@ namespace Confidence
             txtcompte.Text = this.txt_compte_a_terme.Text;
         }
 
-        private void materialRaisedButton10_Click(object sender, EventArgs e)
+        public List<string> execution(string procedure)
         {
-            txt_ctrl.Text = "";
-            txt_montant_banque.Text = "";
-
             SqlConnection con = new SqlConnection(cs);
-            string query = "EXEC op " + this.txtcompte.Text + ", '"+ this.cmboperation.SelectedItem + "', " 
+            string query = "EXEC "+procedure+" " + this.txtcompte.Text + ", '" + this.cmboperation.SelectedItem + "', "
                 + this.txtsolde.Text + ", '" + this.dtdate_creation.Value.ToShortDateString() + "'";
             SqlCommand cmd = new SqlCommand(query, con);
 
             SqlDataReader sdr;
+            List<string> retour = new List<string>();
             try
             {
                 con.Open();
 
                 sdr = cmd.ExecuteReader();
-               // 
-
                 while (sdr.Read())
                 {
-                    txt_ctrl.Text = sdr["nombre"].ToString();
-                    txt_montant_banque.Text = sdr["deux"].ToString();
+                    //txt_ctrl.Text = sdr["nombre"].ToString();
+                    //txt_montant_banque.Text = sdr["deux"].ToString();
+                    retour.Add(sdr["nombre"].ToString());
+                    retour.Add(sdr["deux"].ToString());
                 }
                 con.Close();
-
-                if (txt_ctrl.Text != "111"  || txt_ctrl.Text == "")
-                {
-                    MetroFramework.MetroMessageBox.Show(this, "Operation effectuee avec success", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (txt_ctrl.Text == "111")
-                {
-                    MetroFramework.MetroMessageBox.Show(this, "Operation non effectuee, le solde en caisse : "+this.txt_montant_banque.Text+" est inferieur a : "+this.txtsolde.Text+"", "Solde insuffisant", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
+            return retour;
+        }
+
+        public string type_compte(string compte)
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC type_compte '"+this.txtcompte.Text+"'";
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            string[] retour = new string[1];
+            SqlDataReader sdr;
+            
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                while (sdr.Read())
+                {
+                    retour[0]=  sdr["trois"].ToString();
+                }
+                con.Close();
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return retour[0];
+        }
+
+        private void materialRaisedButton10_Click(object sender, EventArgs e)
+        {
+            txt_ctrl.Text = "";
+            txt_montant_banque.Text = "";
+
+            if (cmboperation.SelectedItem.ToString() == "Retrait")
+            {
+                string type = type_compte(txtcompte.Text);
+                if (type == "compte courant")
+                {
+                    List<string> k = execution("premier");
+                    string[] t = k.ToArray();
+
+                    if (t[0] == "111")
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Operation non effectuee, le solde : " + this.txtsolde.Text + " >  : " + t[1], "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (t[0] == "")
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Operation effectuee  ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else if (type == "Compte a terme")
+                {
+                    List<string> k = execution("deuxieme");
+                    string[] t = k.ToArray();
+
+                    if (t[0] == "111")
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Operation non effectuee, le solde : " + this.txtsolde.Text + " >  : " + t[1], "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (t[0] == "")
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Operation effectuee  ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            else if (cmboperation.SelectedItem.ToString() == "Depot")
+            {
+                execution("op");
+                MetroFramework.MetroMessageBox.Show(this, "Operation effectuee  ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
 
         private void materialRaisedButton8_Click(object sender, EventArgs e)
@@ -346,7 +422,7 @@ namespace Confidence
                     border.Weight = 2d;
 
                     //setting the background color for the tiltle bar
-                    formatage = xlWorkSheet.get_Range("A1", "G1");
+                    formatage = xlWorkSheet.get_Range("A1", "J1");
 
                     formatage.Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Cyan);
 
@@ -359,15 +435,20 @@ namespace Confidence
                     releaseObject(xlWorkBook);
                     releaseObject(xlapp);
 
-                    MetroFramework.MetroMessageBox.Show(this, "Excel file create," + " you can find the file C:\\User\\Username\\MesDocuments\\'" + this.txtnom_rapport.Text + "'.xls.xls", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroFramework.MetroMessageBox.Show(this, "Un fichier Excel a ete cree," + " vous pouvez l'ouvrir dans C:\\User\\Username\\MesDocuments\\'" + this.txtnom_rapport.Text + "'.xls.xls", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 }
                 catch (Exception ex)
                 {
-                    MetroFramework.MetroMessageBox.Show(this, ex + "Please move your '" + this.txtnom_rapport.Text + "'.xls and Retry again...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this, ex + "Cet emplacement contient un autre fichier sous ce nom, veuillez le deplacer ou le renommer '" + this.txtnom_rapport.Text + "'.xls and Retry again...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void dataGridView2_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }

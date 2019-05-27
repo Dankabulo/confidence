@@ -89,9 +89,34 @@ namespace Confidence
             lister.Show();
         }
 
+        public void access_data(string quer)
+        {
+            try
+            {
+                string requete = quer;
+                SqlConnection con = new SqlConnection(cs);
+                string query = requete;  //string.Format("SELECT * FROM proprietaire");
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                SqlDataReader sdr = cmd.ExecuteReader();
+                BindingSource source = new BindingSource();
+                source.DataSource = sdr;
+                dataGridView2.DataSource = source;
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, ex.Message, "Message error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void bunifuFlatButton2_Click_1(object sender, EventArgs e)
         {
             dataGridView2.Visible = true;
+            txt_query.Text = "";
+            string and_date = "AND date_operation BETWEEN '" + dtdebut.Value.ToShortDateString() + "' AND '" + this.dtfin.Value.ToShortDateString() + "'";
+            string where_date = "WHERE date_creation BETWEEN '" + dtdebut.Value.ToShortDateString() + "' AND '" + this.dtfin.Value.ToShortDateString() + "'";
 
             try
             {
@@ -101,71 +126,71 @@ namespace Confidence
 
                     if (this.cmbcategorie.Text == "Operation de sorties")
                     {
-                        try
+                        string requete = "SELECT date_operation, idcompte, type_compte,nom,postnom, prenom,type_operation, solde FROM [CONFIDENCEX].[dbo].proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join operation o on c.idcompte = o.idcompte_operation WHERE type_operation = 'Retrait' ";
+
+                        if (txt_consideration.SelectedItem.ToString() == "considerer la marge de la date")
                         {
-                            string requete = "SELECT date_operation, idcompte, type_compte,nom,postnom, prenom,type_operation, solde FROM [CONFIDENCEX].[dbo].proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join operation o on c.idcompte = o.idcompte_operation WHERE type_operation = 'Retrait' ";
-                            SqlConnection con = new SqlConnection(cs);
-                            string query = requete;  //string.Format("SELECT * FROM proprietaire");
-                            SqlCommand cmd = new SqlCommand(query, con);
-                            con.Open();
-                            SqlDataReader sdr = cmd.ExecuteReader();
-                            BindingSource source = new BindingSource();
-                            source.DataSource = sdr;
-                            dataGridView2.DataSource = source;
-
-                            con.Close();
+                            string requete2 = requete + "" + and_date + " ";
+                            access_data(requete2);
+                            txt_query.Text = requete2;
                         }
-                        catch (Exception ex)
+                        else if (txt_consideration.SelectedItem.ToString() == "deconsiderer la marge de la date")
                         {
-                            MetroFramework.MetroMessageBox.Show(this, ex.Message, "Message error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            access_data(requete);
+                            txt_query.Text = requete;
                         }
-
-
                     }
                     else if (this.cmbcategorie.Text == "Operation d'entrees")
                     {
-                        string requete = "SELECT date_operation, idcompte, type_compte,nom,postnom, prenom,type_operation, solde FROM [CONFIDENCEX].[dbo].proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join operation o on c.idcompte = o.idcompte_operation WHERE type_operation = 'Depot' AND date_operation BETWEEN '" + dtdebut.Value.ToShortDateString() + "' AND '" + this.dtfin.Value.ToShortDateString() + "' ";
-                        SqlConnection con = new SqlConnection(cs);
-                        string query = requete;  //string.Format("SELECT * FROM proprietaire");
-                        SqlCommand cmd = new SqlCommand(query, con);
-                        con.Open();
-                        SqlDataReader sdr = cmd.ExecuteReader();
-                        BindingSource source = new BindingSource();
-                        source.DataSource = sdr;
-                        dataGridView2.DataSource = source;
+                        string requete = "SELECT date_operation, idcompte, type_compte,nom,postnom, prenom,type_operation, solde FROM [CONFIDENCEX].[dbo].proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join operation o on c.idcompte = o.idcompte_operation WHERE type_operation = 'Depot'";
 
-                        con.Close();
+                        if (txt_consideration.SelectedItem.ToString() == "considerer la marge de la date")
+                        {
+                            string requete2 = requete + "" + and_date + " ";
+                            access_data(requete2);
+                            txt_query.Text = requete2;
+                        }
+                        else if (txt_consideration.SelectedItem.ToString() == "deconsiderer la marge de la date")
+                        {
+                            access_data(requete);
+                            txt_query.Text = requete;
+                        }
                     }
                 }
                 else if (this.cmbtype.Text == "comptes")
                 {
                     if (this.cmbcategorie.Text == "Comptes courants")
                     {
-                        string requete = "SELECT idcompte, type_compte,devise, nom, postnom, prenom, date_creation,montant FROM proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join compte_courant cc on c.idcompte = cc.idcompte_cc WHERE date_creation BETWEEN '" + dtdebut.Value.ToShortDateString() + "' AND '" + this.dtfin.Value.ToShortDateString() + "' ; ";
-                        SqlConnection con = new SqlConnection(cs);
-                        string query = requete;  //string.Format("SELECT * FROM proprietaire");
-                        SqlCommand cmd = new SqlCommand(query, con);
-                        con.Open();
-                        SqlDataReader sdr = cmd.ExecuteReader();
-                        BindingSource source = new BindingSource();
-                        source.DataSource = sdr;
-                        dataGridView2.DataSource = source;
+                        string requete = "SELECT idcompte, type_compte,devise, nom, postnom, prenom, date_creation,montant FROM proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join compte_courant cc on c.idcompte = cc.idcompte_cc  ";
 
-                        con.Close();
+                        if (txt_consideration.SelectedItem.ToString() == "considerer la marge de la date")
+                        {
+                            string requete2 = requete + "" + where_date + " ";
+                            access_data(requete2);
+                            txt_query.Text = requete2;
+                        }
+                        else if (txt_consideration.SelectedItem.ToString() == "deconsiderer la marge de la date")
+                        {
+                            access_data(requete);
+                            txt_query.Text = requete;
+                        }
+
                     }
                     else if (this.cmbcategorie.Text == "Comptes  a termes")
                     {
-                        string requete = "SELECT idcompte, type_compte,devise, nom, postnom, prenom, date_creation,montant,delai FROM proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join compte_a_terme ca on c.idcompte = ca.idcompte_ca WHERE date_creation BETWEEN '" + dtdebut.Value.ToShortDateString() + "' AND '" + this.dtfin.Value.ToShortDateString() + "'; ";
-                        SqlConnection con = new SqlConnection(cs);
-                        string query = requete;  //string.Format("SELECT * FROM proprietaire");
-                        SqlCommand cmd = new SqlCommand(query, con);
-                        con.Open();
-                        SqlDataReader sdr = cmd.ExecuteReader();
-                        BindingSource source = new BindingSource();
-                        source.DataSource = sdr;
-                        dataGridView2.DataSource = source;
+                        string requete = "SELECT idcompte, type_compte,devise, nom, postnom, prenom, date_creation,montant,delai FROM proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join compte_a_terme ca on c.idcompte = ca.idcompte_ca ";
 
-                        con.Close();
+                        if (txt_consideration.SelectedItem.ToString() == "considerer la marge de la date")
+                        {
+                            string requete2 = requete + "" + where_date + " ";
+                            access_data(requete2);
+                            txt_query.Text = requete2;
+                        }
+                        else if (txt_consideration.SelectedItem.ToString() == "deconsiderer la marge de la date")
+                        {
+                            access_data(requete);
+                            txt_query.Text = requete;
+                        }
                     }
                 }
 
@@ -227,7 +252,7 @@ namespace Confidence
                     connectionstring = cs;
                     cnn = new SqlConnection(connectionstring);
                     cnn.Open();
-                    sql = "";
+                    sql = txt_query.Text;
 
                     SqlDataAdapter dscmd = new SqlDataAdapter(sql, cnn);
                     DataSet ds = new DataSet();
@@ -308,6 +333,20 @@ namespace Confidence
         {
             e.Cancel = true;
             notifyIcon.ShowBalloonTip(200, "Aucune donnee", "Aucune information n'a ete trouvee", ToolTipIcon.Error);
+        }
+
+        private void txt_consideration_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (txt_consideration.SelectedItem.ToString() == "deconsiderer la marge de la date")
+            {
+                panel_date.Visible = false;
+                panel_texte.Visible = true;
+            }
+            else
+            {
+                panel_date.Visible = true;
+                panel_texte.Visible = false;
+            }
         }
     }
 }

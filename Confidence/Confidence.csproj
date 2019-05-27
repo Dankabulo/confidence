@@ -145,11 +145,11 @@
     <Compile Include="recherche.Designer.cs">
       <DependentUpon>recherche.cs</DependentUpon>
     </Compile>
-    <Compile Include="Recherche_op_client.cs">
+    <Compile Include="suppression.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Recherche_op_client.Designer.cs">
-      <DependentUpon>Recherche_op_client.cs</DependentUpon>
+    <Compile Include="suppression.Designer.cs">
+      <DependentUpon>suppression.cs</DependentUpon>
     </Compile>
     <Compile Include="visionG.cs">
       <SubType>UserControl</SubType>
@@ -167,6 +167,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="compte_a_terme.resx">
       <DependentUpon>compte_a_terme.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CreerCompte.resx">
       <DependentUpon>CreerCompte.cs</DependentUpon>
@@ -204,8 +205,8 @@
     <EmbeddedResource Include="recherche.resx">
       <DependentUpon>recherche.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Recherche_op_client.resx">
-      <DependentUpon>Recherche_op_client.cs</DependentUpon>
+    <EmbeddedResource Include="suppression.resx">
+      <DependentUpon>suppression.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="visionG.resx">
       <DependentUpon>visionG.cs</DependentUpon>

@@ -70,11 +70,23 @@ namespace Confidence
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            txtTexte.Text = "Tableau de bord et de fous";
+            txtTexte.Text = "Tableau de bord";
+            if (!mmainpale.Controls.Contains(visionG.Instance))
+            {
+                mmainpale.Controls.Add(visionG.Instance);
+                visionG.Instance.Dock = DockStyle.Fill;
+                visionG.Instance.BringToFront();
+            }
+            else
+            {
+                visionG.Instance.BringToFront();
+            }
+            barre.Visible = false;
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
+            barre.Visible = true;
             if (barre.Height == 0)
             {
                 barre.Height = 97;
@@ -83,12 +95,13 @@ namespace Confidence
             {
                 mmainpale.Height = 730;
             }
+            btn_recherche.Visible = false;
             btn_lancer_recherche.Visible = true;
             btncompteA.Visible = false;
             btncompteC.Visible = false;
             btnListe_clients.Visible = true;
-            btnoperation.Visible = true;
-            btnvision.Visible = true;
+           // btnoperation.Visible = true;
+            //btnvision.Visible = true;
             if (!mmainpale.Controls.Contains(lister.Instance))
             {
                 mmainpale.Controls.Add(lister.Instance);
@@ -105,12 +118,7 @@ namespace Confidence
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             //descativation des autres boutons
-            btncompteA.Visible = false;
-            btncompteC.Visible = false;
-            btnListe_clients.Visible = false;
-            btnoperation.Visible = false;
-            btnvision.Visible = false;
-            btn_lancer_recherche.Visible = true;
+            barre.Visible = false;
 
             txtTexte.Text = "Operations par client";
             if (!mmainpale.Controls.Contains(operationss_client.Instance))
@@ -140,6 +148,7 @@ namespace Confidence
             
             mmainpale.Height = 575;
 
+            btn_recherche.Visible = true;
             btn_lancer_recherche.Visible = false;
             btncompteA.Visible = true;
             btncompteC.Visible = true;

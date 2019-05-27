@@ -39,19 +39,39 @@ namespace Confidence
 
         }
 
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        private void btn_supprimer_Click(object sender, EventArgs e)
         {
-            //personnesA.ShowDialog();
-            littele_panel.Visible = false;
-            bunifuFlatButton3.Visible = false;
-            btnlancer.Visible = true;
-            bunifuFlatButton2.Visible = false;
-            lbltitre.Text = "Recherche";
-            
+            // suppresion d'un compte courant
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC DEL_CC '" + this.txtnom.Text+"', '"+this.txtpostnom.Text+"', '"+this.txtprenom.Text+"'";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                MetroFramework.MetroMessageBox.Show(this, "Compte supprimer avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                while (sdr.Read())
+                {
+                    if (sdr.Read())
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
             txt_meme_compte.Text = "";
             txt_utilisateur_compte.Text = "";
@@ -59,13 +79,13 @@ namespace Confidence
             // verification de l'existance de l'utilisateur dans la data
 
             SqlConnection con = new SqlConnection(cs);
-            string query = "EXEC CC_recherche '"+this.txtnom.Text+"', '"+this.txtpostnom.Text+"', '"+this.txtprenom.Text+"'";
+            string query = "EXEC CC_recherche '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader sdr;
             try
             {
                 con.Open();
-                
+
                 sdr = cmd.ExecuteReader();
                 //MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (sdr.Read())
@@ -81,9 +101,9 @@ namespace Confidence
                     // s'il n'existe pas dans la data => INSERTTION GLOABALE utiliateur + compte
 
                     SqlConnection conn = new SqlConnection(cs);
-                    string queryn = "EXEC CC_insertion '" + this.txtnom.Text + "', '" 
-                        + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "', " + this.txtmontant.Text+", '"
-                        +this.cmbdevise.SelectedItem+"', '"+this.dtdate.Value.ToShortDateString()+"'";
+                    string queryn = "EXEC CC_insertion '" + this.txtnom.Text + "', '"
+                        + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '"
+                        + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "'";
                     SqlCommand cmdn = new SqlCommand(queryn, conn);
                     SqlDataReader sdrn;
                     try
@@ -166,94 +186,11 @@ namespace Confidence
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
-        private void btnlancer_Click(object sender, EventArgs e)
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
         {
-            lbltitre.Text = "Compte courant";
-            littele_panel.Visible = true;
-            bunifuFlatButton3.Visible = true;
-            btnlancer.Visible = false;
-            bunifuFlatButton2.Visible = true;
-            btn_supprimer.Visible = true;
-            bnt_modifier.Visible = true;
-
-            SqlConnection con = new SqlConnection(cs);
-            string query = string.Format("SELECT * FROM RECHERCHE_COMPTE_CC('" + this.txtnom.Text + "','" + this.txtpostnom.Text + "','" + this.txtprenom.Text + "')");
-            SqlCommand cmd = new SqlCommand(query, con);
-            SqlDataReader sdr;
-
-            try
-            {
-                con.Open();
-                sdr = cmd.ExecuteReader();
-
-                while (sdr.Read())
-                {
-                    if (string.IsNullOrWhiteSpace(txtnom.Text))
-                    {
-                        MetroFramework.MetroMessageBox.Show(this, "Veuillez saisir le nom du client a rechercher", "Warning Message", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-
-                    }
-                    else
-                    {
-                        txtnom.Text = sdr["nom"].ToString();
-                        txtpostnom.Text = sdr["postnom"].ToString();
-                        txtpostnom.Text = sdr["postnom"].ToString();
-                        txtmontant.Text = sdr["montant"].ToString();
-                        cmbdevise.Text = sdr["devise"].ToString();
-                        dtdate.Value = Convert.ToDateTime(sdr["date_creation"].ToString());
-                    }
-                }
-            }
-            catch
-            {
-
-            }
-        }
-
-        private void btn_supprimer_Click(object sender, EventArgs e)
-        {
-            // suppresion d'un compte courant
-            SqlConnection con = new SqlConnection(cs);
-            string query = "EXEC DEL_CC '" + this.txtnom.Text+"', '"+this.txtpostnom.Text+"', '"+this.txtprenom.Text+"'";
-
-            SqlCommand cmd = new SqlCommand(query, con);
-
-            SqlDataReader sdr;
-            try
-            {
-                con.Open();
-
-                sdr = cmd.ExecuteReader();
-                MetroFramework.MetroMessageBox.Show(this, "Compte supprimer avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                while (sdr.Read())
-                {
-                    if (sdr.Read())
-                    {
-                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
-                    }
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void bnt_modifier_Click(object sender, EventArgs e)
-        {
-            // modification des infos du compte
-            panel3.Visible = true;
-            bnt_modifier.Visible = false;
-            btn_supprimer.Visible = false;
-            bunifuFlatButton4.Visible = true;
-            bunifuFlatButton5.Visible = true;
-
+            this.Close();
         }
     }
 }

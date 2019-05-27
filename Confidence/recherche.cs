@@ -14,7 +14,7 @@ using System.Configuration;
 namespace Confidence
 {
     public partial class recherche : Form
-    {
+    { 
         string cs = ConfigurationManager.ConnectionStrings["GESTION"].ConnectionString;
         public recherche()
         {
@@ -26,41 +26,100 @@ namespace Confidence
             this.Close();
         }
 
-        private void recherche_Load(object sender, EventArgs e)
+        private void txtnom_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'cONFIDENCEXDataSet.compte' table. You can move, or remove it, as needed.
-            this.compteTableAdapter.Fill(this.cONFIDENCEXDataSet.compte);
-            // TODO: This line of code loads data into the 'cONFIDENCEXDataSet.compte' table. You can move, or remove it, as needed.
-            this.compteTableAdapter.Fill(this.cONFIDENCEXDataSet.compte);
+            try
+            {
+                string requete =string.Format("SELECT * FROM proprietaire WHERE nom LIKE'%{0}%'", this.txtnom.Text);
+                SqlConnection con = new SqlConnection(cs);
+                string query = requete;  //string.Format("SELECT * FROM proprietaire");
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                SqlDataReader sdr = cmd.ExecuteReader();
+                BindingSource source = new BindingSource();
+                source.DataSource = sdr;
+                metroGrid1.DataSource = source;
 
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, ex.Message, "Message error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void cmbcode_SelectedIndexChanged(object sender, EventArgs e)
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
+
+            txt_id_proprietaire.Text = "";
+
             SqlConnection con = new SqlConnection(cs);
-            string query = string.Format("SELECT nom,postnom,prenom, type_compte FROM proprietaire p inner join compte c on p.idproprietaire = c.idproprietaire inner join compte_a_terme ca on c.idcompte = ca.idcompte_ca inner join compte_courant cc on c.idcompte = cc.idcompte_cc WHERE idcompte = '" + this.cmbcode.Text + "' ");
+            string query = "EXEC check_proprietaire '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader sdr;
-
             try
             {
                 con.Open();
+
                 sdr = cmd.ExecuteReader();
+                //MetroFramework.MetroMessageBox.Show(this, "Compte supprimer avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 while (sdr.Read())
                 {
-                    txtnom.Text = sdr["nom"].ToString();
-                    txtpostnom.Text = sdr["postnom"].ToString();
-                    txtprenom.Text = sdr["prenom"].ToString();
-                    txtType.Text = sdr["type_compte"].ToString();
-                    lblsolde.Text = sdr["montant"].ToString();
+                    txt_id_proprietaire.Text = sdr["nombre"].ToString();
+                }
+                con.Close();
 
+                if (txt_id_proprietaire.Text != "")
+                {
+                    lbl_message.Visible = true;
+                    lbl_wrong.Visible = false;
+                    lbl_message.Text = "Trouvé !!";
+                    materialRaisedButton2.Visible = true;
+                    materialRaisedButton3.Visible = true;
+                }
+                else
+                {
+                    lbl_message.Visible = false;
+                    lbl_wrong.Visible = true;
+                    lbl_wrong.Text = "Client inconnu.";
+
+                    materialRaisedButton2.Visible = false;
+                    materialRaisedButton3.Visible = false;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC update_proprietaire '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '" 
+                + this.txtprenom.Text + "', '"+this.txt_id_proprietaire.Text+"'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                MetroFramework.MetroMessageBox.Show(this, " "+this.txtnom.Text+" a ete modifie avec success", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void materialRaisedButton3_Click(object sender, EventArgs e)
+        {
+            suppression n = new suppression();
+            n.Set_id(txt_id_proprietaire.Text);
+            n.ShowDialog();
         }
     }
 }

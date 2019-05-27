@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Panelmenu = new System.Windows.Forms.Panel();
             this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -56,6 +56,7 @@
             this.btnvision = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnoperation = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnListe_clients = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_recherche = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Panelmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hidephoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
@@ -199,7 +200,7 @@
             this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
             this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "Operations par client";
+            this.bunifuFlatButton3.ButtonText = "   Operations par client";
             this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.paneltransition.SetDecoration(this.bunifuFlatButton3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
@@ -223,7 +224,7 @@
             this.bunifuFlatButton3.selected = false;
             this.bunifuFlatButton3.Size = new System.Drawing.Size(221, 48);
             this.bunifuFlatButton3.TabIndex = 2;
-            this.bunifuFlatButton3.Text = "Operations par client";
+            this.bunifuFlatButton3.Text = "   Operations par client";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -518,22 +519,22 @@
             // 
             this.paneltransition.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.paneltransition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 1F;
-            this.paneltransition.DefaultAnimation = animation2;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 1F;
+            this.paneltransition.DefaultAnimation = animation3;
             // 
             // barre
             // 
@@ -541,9 +542,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.barre.BackColor = System.Drawing.SystemColors.Control;
-            this.barre.Controls.Add(this.btn_lancer_recherche);
-            this.barre.Controls.Add(this.btncompteA);
+            this.barre.Controls.Add(this.btn_recherche);
             this.barre.Controls.Add(this.btnvision);
+            this.barre.Controls.Add(this.btncompteA);
+            this.barre.Controls.Add(this.btn_lancer_recherche);
             this.barre.Controls.Add(this.btncompteC);
             this.barre.Controls.Add(this.btnoperation);
             this.barre.Controls.Add(this.btnListe_clients);
@@ -559,7 +561,7 @@
             this.btn_lancer_recherche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(128)))), ((int)(((byte)(179)))));
             this.btn_lancer_recherche.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_lancer_recherche.BorderRadius = 0;
-            this.btn_lancer_recherche.ButtonText = "Lancer la recherche";
+            this.btn_lancer_recherche.ButtonText = "Nouvelle operation";
             this.btn_lancer_recherche.Cursor = System.Windows.Forms.Cursors.Hand;
             this.paneltransition.SetDecoration(this.btn_lancer_recherche, BunifuAnimatorNS.DecorationType.None);
             this.btn_lancer_recherche.DisabledColor = System.Drawing.Color.Gray;
@@ -576,7 +578,7 @@
             this.btn_lancer_recherche.IconVisible = true;
             this.btn_lancer_recherche.IconZoom = 90D;
             this.btn_lancer_recherche.IsTab = false;
-            this.btn_lancer_recherche.Location = new System.Drawing.Point(699, 23);
+            this.btn_lancer_recherche.Location = new System.Drawing.Point(254, 23);
             this.btn_lancer_recherche.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_lancer_recherche.Name = "btn_lancer_recherche";
             this.btn_lancer_recherche.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(128)))), ((int)(((byte)(179)))));
@@ -585,7 +587,7 @@
             this.btn_lancer_recherche.selected = false;
             this.btn_lancer_recherche.Size = new System.Drawing.Size(216, 56);
             this.btn_lancer_recherche.TabIndex = 77;
-            this.btn_lancer_recherche.Text = "Lancer la recherche";
+            this.btn_lancer_recherche.Text = "Nouvelle operation";
             this.btn_lancer_recherche.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_lancer_recherche.Textcolor = System.Drawing.Color.White;
             this.btn_lancer_recherche.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -615,7 +617,7 @@
             this.btnvision.IconVisible = true;
             this.btnvision.IconZoom = 90D;
             this.btnvision.IsTab = false;
-            this.btnvision.Location = new System.Drawing.Point(485, 23);
+            this.btnvision.Location = new System.Drawing.Point(485, 25);
             this.btnvision.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnvision.Name = "btnvision";
             this.btnvision.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(128)))), ((int)(((byte)(179)))));
@@ -654,14 +656,14 @@
             this.btnoperation.IconVisible = true;
             this.btnoperation.IconZoom = 90D;
             this.btnoperation.IsTab = false;
-            this.btnoperation.Location = new System.Drawing.Point(254, 23);
+            this.btnoperation.Location = new System.Drawing.Point(485, 25);
             this.btnoperation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnoperation.Name = "btnoperation";
             this.btnoperation.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(128)))), ((int)(((byte)(179)))));
             this.btnoperation.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(98)))), ((int)(((byte)(135)))));
             this.btnoperation.OnHoverTextColor = System.Drawing.Color.White;
             this.btnoperation.selected = false;
-            this.btnoperation.Size = new System.Drawing.Size(216, 56);
+            this.btnoperation.Size = new System.Drawing.Size(208, 56);
             this.btnoperation.TabIndex = 75;
             this.btnoperation.Text = "operations";
             this.btnoperation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -708,6 +710,44 @@
             this.btnListe_clients.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListe_clients.Visible = false;
             this.btnListe_clients.Click += new System.EventHandler(this.btnListe_clients_Click);
+            // 
+            // btn_recherche
+            // 
+            this.btn_recherche.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_recherche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(128)))), ((int)(((byte)(179)))));
+            this.btn_recherche.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_recherche.BorderRadius = 0;
+            this.btn_recherche.ButtonText = "Rechercher un compte";
+            this.btn_recherche.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.paneltransition.SetDecoration(this.btn_recherche, BunifuAnimatorNS.DecorationType.None);
+            this.btn_recherche.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_recherche.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_recherche.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_recherche.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_recherche.Iconimage")));
+            this.btn_recherche.Iconimage_right = null;
+            this.btn_recherche.Iconimage_right_Selected = null;
+            this.btn_recherche.Iconimage_Selected = null;
+            this.btn_recherche.IconMarginLeft = 0;
+            this.btn_recherche.IconMarginRight = 0;
+            this.btn_recherche.IconRightVisible = true;
+            this.btn_recherche.IconRightZoom = 0D;
+            this.btn_recherche.IconVisible = true;
+            this.btn_recherche.IconZoom = 90D;
+            this.btn_recherche.IsTab = false;
+            this.btn_recherche.Location = new System.Drawing.Point(485, 25);
+            this.btn_recherche.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_recherche.Name = "btn_recherche";
+            this.btn_recherche.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(128)))), ((int)(((byte)(179)))));
+            this.btn_recherche.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(98)))), ((int)(((byte)(135)))));
+            this.btn_recherche.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_recherche.selected = false;
+            this.btn_recherche.Size = new System.Drawing.Size(208, 56);
+            this.btn_recherche.TabIndex = 78;
+            this.btn_recherche.Text = "Rechercher un compte";
+            this.btn_recherche.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_recherche.Textcolor = System.Drawing.Color.White;
+            this.btn_recherche.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_recherche.Visible = false;
             // 
             // Form1
             // 
@@ -766,6 +806,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btncompteA;
         private Bunifu.Framework.UI.BunifuFlatButton btncompteC;
         private Bunifu.Framework.UI.BunifuFlatButton btn_lancer_recherche;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_recherche;
     }
 }
 

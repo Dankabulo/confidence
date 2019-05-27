@@ -55,6 +55,8 @@
             this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel_nouvelle_operation = new System.Windows.Forms.Panel();
             this.txt_montant_banque = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_ctrl = new System.Windows.Forms.TextBox();
             this.materialRaisedButton11 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label9 = new System.Windows.Forms.Label();
             this.materialRaisedButton10 = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -77,8 +79,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.txt_requete = new System.Windows.Forms.TextBox();
-            this.txt_ctrl = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -140,6 +140,7 @@
             this.txt_prenom.SelectionStart = 0;
             this.txt_prenom.Size = new System.Drawing.Size(176, 23);
             this.txt_prenom.TabIndex = 4;
+            this.txt_prenom.Text = "BOANERGES";
             this.txt_prenom.UseSystemPasswordChar = false;
             // 
             // label3
@@ -164,6 +165,7 @@
             this.txt_postnom.SelectionStart = 0;
             this.txt_postnom.Size = new System.Drawing.Size(176, 23);
             this.txt_postnom.TabIndex = 2;
+            this.txt_postnom.Text = "MWANA KABULO";
             this.txt_postnom.UseSystemPasswordChar = false;
             // 
             // label2
@@ -188,6 +190,7 @@
             this.txt_nom.SelectionStart = 0;
             this.txt_nom.Size = new System.Drawing.Size(176, 23);
             this.txt_nom.TabIndex = 0;
+            this.txt_nom.Text = "KABULO";
             this.txt_nom.UseSystemPasswordChar = false;
             // 
             // groupBox2
@@ -334,6 +337,7 @@
             this.dataGridView2.Size = new System.Drawing.Size(535, 372);
             this.dataGridView2.TabIndex = 66;
             this.dataGridView2.Visible = false;
+            this.dataGridView2.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView2_DataError);
             // 
             // groupBox3
             // 
@@ -405,7 +409,7 @@
             // panel_nouvelle_operation
             // 
             this.panel_nouvelle_operation.Controls.Add(this.txt_montant_banque);
-            this.panel_nouvelle_operation.Location = new System.Drawing.Point(553, 47);
+            this.panel_nouvelle_operation.Location = new System.Drawing.Point(547, 41);
             this.panel_nouvelle_operation.Name = "panel_nouvelle_operation";
             this.panel_nouvelle_operation.Size = new System.Drawing.Size(591, 518);
             this.panel_nouvelle_operation.TabIndex = 72;
@@ -436,6 +440,22 @@
             this.txt_montant_banque.TabIndex = 0;
             this.txt_montant_banque.TabStop = false;
             this.txt_montant_banque.Text = "nouvelle operation";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(21, 282);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 75;
+            this.textBox1.Visible = false;
+            // 
+            // txt_ctrl
+            // 
+            this.txt_ctrl.Location = new System.Drawing.Point(21, 253);
+            this.txt_ctrl.Name = "txt_ctrl";
+            this.txt_ctrl.Size = new System.Drawing.Size(100, 23);
+            this.txt_ctrl.TabIndex = 74;
+            this.txt_ctrl.Visible = false;
             // 
             // materialRaisedButton11
             // 
@@ -655,22 +675,6 @@
             this.txt_requete.Size = new System.Drawing.Size(100, 20);
             this.txt_requete.TabIndex = 74;
             this.txt_requete.Visible = false;
-            // 
-            // txt_ctrl
-            // 
-            this.txt_ctrl.Location = new System.Drawing.Point(21, 253);
-            this.txt_ctrl.Name = "txt_ctrl";
-            this.txt_ctrl.Size = new System.Drawing.Size(100, 23);
-            this.txt_ctrl.TabIndex = 74;
-            this.txt_ctrl.Visible = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(21, 282);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 75;
-            this.textBox1.Visible = false;
             // 
             // operationss_client
             // 
