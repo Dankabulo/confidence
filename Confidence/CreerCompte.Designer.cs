@@ -142,7 +142,7 @@
             this.txtmontant.Location = new System.Drawing.Point(171, 44);
             this.txtmontant.Name = "txtmontant";
             this.txtmontant.Size = new System.Drawing.Size(156, 16);
-            this.txtmontant.TabIndex = 4;
+            this.txtmontant.TabIndex = 0;
             // 
             // label8
             // 
@@ -170,7 +170,7 @@
             this.dtdate.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtdate.Name = "dtdate";
             this.dtdate.Size = new System.Drawing.Size(161, 29);
-            this.dtdate.TabIndex = 6;
+            this.dtdate.TabIndex = 2;
             // 
             // label9
             // 
@@ -200,7 +200,7 @@
             this.cmbdevise.Location = new System.Drawing.Point(171, 73);
             this.cmbdevise.Name = "cmbdevise";
             this.cmbdevise.Size = new System.Drawing.Size(94, 25);
-            this.cmbdevise.TabIndex = 5;
+            this.cmbdevise.TabIndex = 1;
             // 
             // label12
             // 
@@ -383,7 +383,7 @@
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
             this.materialRaisedButton1.Size = new System.Drawing.Size(142, 55);
-            this.materialRaisedButton1.TabIndex = 82;
+            this.materialRaisedButton1.TabIndex = 0;
             this.materialRaisedButton1.Text = "creer";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
             this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
@@ -396,7 +396,7 @@
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
             this.materialRaisedButton2.Size = new System.Drawing.Size(139, 55);
-            this.materialRaisedButton2.TabIndex = 83;
+            this.materialRaisedButton2.TabIndex = 1;
             this.materialRaisedButton2.Text = "annuler";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
             this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);

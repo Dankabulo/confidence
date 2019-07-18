@@ -50,11 +50,11 @@ namespace Confidence
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-
-            txt_id_proprietaire.Text = "";
+            lbl_message.Text = "";
+            txt_id_trouve.Text = "";
 
             SqlConnection con = new SqlConnection(cs);
-            string query = "EXEC check_proprietaire '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "'";
+            string query = "EXEC check_proprietaire '" + this.txt_id_proprietaire.Text + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader sdr;
             try
@@ -66,17 +66,24 @@ namespace Confidence
 
                 while (sdr.Read())
                 {
-                    txt_id_proprietaire.Text = sdr["nombre"].ToString();
+                    txtnom.Text = sdr["nom"].ToString();
+                    txtpostnom.Text = sdr["postnom"].ToString();
+                    txtprenom.Text = sdr["prenom"].ToString();
                 }
                 con.Close();
 
-                if (txt_id_proprietaire.Text != "")
+                if (txtnom.Text != "" || txtpostnom.Text != "" || txtprenom.Text != "")
                 {
-                    lbl_message.Visible = true;
-                    lbl_wrong.Visible = false;
-                    lbl_message.Text = "Trouvé !!";
-                    materialRaisedButton2.Visible = true;
-                    materialRaisedButton3.Visible = true;
+                    txt_id_trouve.Text = this.txt_id_proprietaire.Text;
+
+                    if (txt_id_trouve.Text != "")
+                    {
+                        lbl_message.Visible = true;
+                        lbl_wrong.Visible = false;
+                        lbl_message.Text = "Client trouvé !!";
+                        materialRaisedButton2.Visible = true;
+                        materialRaisedButton3.Visible = true;
+                    }
                 }
                 else
                 {
@@ -87,6 +94,8 @@ namespace Confidence
                     materialRaisedButton2.Visible = false;
                     materialRaisedButton3.Visible = false;
                 }
+
+                
             }
             catch (Exception ex)
             {
@@ -120,6 +129,16 @@ namespace Confidence
             suppression n = new suppression();
             n.Set_id(txt_id_proprietaire.Text);
             n.ShowDialog();
+        }
+
+        private void metroGrid1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
+        }
+
+        private void metroGrid1_DataError_1(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }

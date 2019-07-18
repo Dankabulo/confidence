@@ -110,112 +110,119 @@ namespace Confidence
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            // insertion cas d'un compte type a terme   
-            txt_compte_existae.Text = "";
-            txt_idproprietaire.Text = "";   // mise a vide du champ txt_idproprietaire
-
-            SqlConnection con = new SqlConnection(cs);
-            string query = "EXEC CC_recherche '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "'";
-            SqlCommand cmd = new SqlCommand(query, con);
-
-            SqlDataReader sdr;
-            try
+            if (txtnom.Text == "" || txtpostnom.Text == "" || txtprenom.Text == "" || txtmontant.Text == "" || cmbdevise.Text == "" || dtdate.Text == "")
             {
-                con.Open();
-                sdr = cmd.ExecuteReader();
-                while (sdr.Read())
-                {
-                    txt_idproprietaire.Text = sdr["idproprietaire"].ToString();
-                }
-                con.Close();
-
-                if (this.txt_idproprietaire.Text == "")
-                {
-                    SqlConnection con1 = new SqlConnection(cs);
-                    string query1 = "EXEC CC_insertionCA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '"
-                        + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '" + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "' ";
-
-                    SqlCommand cmd1 = new SqlCommand(query1, con1);
-                    SqlDataReader sdr1;
-
-                    try
-                    {
-                        con1.Open();
-
-                        sdr1 = cmd1.ExecuteReader();
-
-                        MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                        con1.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
-                else
-                {
-                    SqlConnection con1 = new SqlConnection(cs);
-                    string query1 = "EXEC CC_recherche_compteCA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "' ";
-                    SqlCommand cmd1 = new SqlCommand(query1, con1);
-
-                    SqlDataReader sdr1;
-                    try
-                    {
-                        con1.Open();
-
-                        sdr1 = cmd1.ExecuteReader();
-
-                        while (sdr1.Read())
-                        {
-                            txt_compte_existae.Text = sdr1["idcompte"].ToString();
-                        }
-                        con1.Close();
-
-                        if (txt_compte_existae.Text == "")
-                        {
-                            SqlConnection con11 = new SqlConnection(cs);
-                            string query11 = "EXEC CC_insertion_miniCA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '"
-                        + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '" + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "' ";
-
-                            SqlCommand cmd11 = new SqlCommand(query11, con11);
-
-
-                            SqlDataReader sdr11;
-
-                            try
-                            {
-                                con11.Open();
-
-                                sdr11 = cmd11.ExecuteReader();
-
-                                MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                                con11.Close();
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message);
-                            }
-                        }
-
-                        else
-                        {
-                            MetroFramework.MetroMessageBox.Show(this, "Ce client pocede deja un compte de ce type, veuillez changer de client ou le type du compte", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
+                MetroFramework.MetroMessageBox.Show(this, "Veuillez renseigner tous les champs avant de continuer", "Certains champs sont vides", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-            }
+                // insertion cas d'un compte type a terme   
+                txt_compte_existae.Text = "";
+                txt_idproprietaire.Text = "";   // mise a vide du champ txt_idproprietaire
+
+                SqlConnection con = new SqlConnection(cs);
+                string query = "EXEC CC_recherche '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                SqlDataReader sdr;
+                try
+                {
+                    con.Open();
+                    sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        txt_idproprietaire.Text = sdr["idproprietaire"].ToString();
+                    }
+                    con.Close();
+
+                    if (this.txt_idproprietaire.Text == "")
+                    {
+                        SqlConnection con1 = new SqlConnection(cs);
+                        string query1 = "EXEC CC_insertionCA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '"
+                            + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '" + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "' ";
+
+                        SqlCommand cmd1 = new SqlCommand(query1, con1);
+                        SqlDataReader sdr1;
+
+                        try
+                        {
+                            con1.Open();
+
+                            sdr1 = cmd1.ExecuteReader();
+
+                            MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                            con1.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    else
+                    {
+                        SqlConnection con1 = new SqlConnection(cs);
+                        string query1 = "EXEC CC_recherche_compteCA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "' ";
+                        SqlCommand cmd1 = new SqlCommand(query1, con1);
+
+                        SqlDataReader sdr1;
+                        try
+                        {
+                            con1.Open();
+
+                            sdr1 = cmd1.ExecuteReader();
+
+                            while (sdr1.Read())
+                            {
+                                txt_compte_existae.Text = sdr1["idcompte"].ToString();
+                            }
+                            con1.Close();
+
+                            if (txt_compte_existae.Text == "")
+                            {
+                                SqlConnection con11 = new SqlConnection(cs);
+                                string query11 = "EXEC CC_insertion_miniCA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '"
+                            + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '" + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "' ";
+
+                                SqlCommand cmd11 = new SqlCommand(query11, con11);
+
+
+                                SqlDataReader sdr11;
+
+                                try
+                                {
+                                    con11.Open();
+
+                                    sdr11 = cmd11.ExecuteReader();
+
+                                    MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                                    con11.Close();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+
+                            else
+                            {
+                                MetroFramework.MetroMessageBox.Show(this, "Ce client pocede deja un compte de ce type, veuillez changer de client ou le type du compte", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }           
         }
 
         private void materialRaisedButton2_Click(object sender, EventArgs e)

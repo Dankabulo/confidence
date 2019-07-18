@@ -103,7 +103,7 @@
             this.txtprenom.Location = new System.Drawing.Point(167, 127);
             this.txtprenom.Name = "txtprenom";
             this.txtprenom.Size = new System.Drawing.Size(156, 16);
-            this.txtprenom.TabIndex = 40;
+            this.txtprenom.TabIndex = 2;
             // 
             // label12
             // 
@@ -131,7 +131,7 @@
             this.txtpostnom.Location = new System.Drawing.Point(167, 94);
             this.txtpostnom.Name = "txtpostnom";
             this.txtpostnom.Size = new System.Drawing.Size(156, 16);
-            this.txtpostnom.TabIndex = 38;
+            this.txtpostnom.TabIndex = 1;
             // 
             // cmbdevise
             // 
@@ -143,7 +143,7 @@
             this.cmbdevise.Location = new System.Drawing.Point(168, 80);
             this.cmbdevise.Name = "cmbdevise";
             this.cmbdevise.Size = new System.Drawing.Size(94, 25);
-            this.cmbdevise.TabIndex = 46;
+            this.cmbdevise.TabIndex = 1;
             // 
             // lbldevise
             // 
@@ -171,7 +171,7 @@
             this.dtdate.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtdate.Name = "dtdate";
             this.dtdate.Size = new System.Drawing.Size(170, 29);
-            this.dtdate.TabIndex = 48;
+            this.dtdate.TabIndex = 2;
             // 
             // lbldate
             // 
@@ -217,7 +217,7 @@
             this.txtmontant.Location = new System.Drawing.Point(168, 51);
             this.txtmontant.Name = "txtmontant";
             this.txtmontant.Size = new System.Drawing.Size(156, 16);
-            this.txtmontant.TabIndex = 45;
+            this.txtmontant.TabIndex = 0;
             // 
             // label4
             // 
@@ -265,7 +265,7 @@
             this.txtnom.Location = new System.Drawing.Point(167, 57);
             this.txtnom.Name = "txtnom";
             this.txtnom.Size = new System.Drawing.Size(156, 16);
-            this.txtnom.TabIndex = 37;
+            this.txtnom.TabIndex = 0;
             // 
             // bunifuImageButton2
             // 
@@ -344,7 +344,7 @@
             this.txtdelai.Location = new System.Drawing.Point(107, 81);
             this.txtdelai.Name = "txtdelai";
             this.txtdelai.Size = new System.Drawing.Size(90, 16);
-            this.txtdelai.TabIndex = 67;
+            this.txtdelai.TabIndex = 0;
             this.txtdelai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label15
@@ -475,7 +475,7 @@
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
             this.materialRaisedButton1.Size = new System.Drawing.Size(141, 52);
-            this.materialRaisedButton1.TabIndex = 81;
+            this.materialRaisedButton1.TabIndex = 0;
             this.materialRaisedButton1.Text = "creer";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
             this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
@@ -488,7 +488,7 @@
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
             this.materialRaisedButton2.Size = new System.Drawing.Size(141, 52);
-            this.materialRaisedButton2.TabIndex = 82;
+            this.materialRaisedButton2.TabIndex = 1;
             this.materialRaisedButton2.Text = "annuler";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
             this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);

@@ -12,6 +12,7 @@ namespace Confidence
 {
     public partial class Form1 : Form
     {
+        Form recherche = new recherche();
         Form operation = new operation();
         Form courant = new CreerCompte();
         Form terme = new compte_a_terme();
@@ -70,6 +71,8 @@ namespace Confidence
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+           // btn_derniere_op.Visible = false;
+            //autre.Visible = false;
             txtTexte.Text = "Tableau de bord";
             if (!mmainpale.Controls.Contains(visionG.Instance))
             {
@@ -86,6 +89,8 @@ namespace Confidence
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
+            
+           // btn_derniere_op.Visible = false;
             barre.Visible = true;
             if (barre.Height == 0)
             {
@@ -117,7 +122,9 @@ namespace Confidence
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
+            btn_last_op.Visible = true;
             //descativation des autres boutons
+            
             barre.Visible = false;
 
             txtTexte.Text = "Operations par client";
@@ -135,7 +142,18 @@ namespace Confidence
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
-            txtTexte.Text = "A Propos";
+            btn_last_op.Visible = false;
+            if (!mmainpale.Controls.Contains(last_op.Instance))
+            {
+                mmainpale.Controls.Add(last_op.Instance);
+                last_op.Instance.Dock = DockStyle.Fill;
+                last_op.Instance.BringToFront();
+            }
+            else
+            {
+                last_op.Instance.BringToFront();
+            }
+            txtTexte.Text = "Derniere operation";
         }
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
@@ -145,7 +163,8 @@ namespace Confidence
 
         private void bunifuFlatButton6_Click(object sender, EventArgs e)
         {
-            
+            //autre.Visible = false;
+            //btn_derniere_op.Visible = false;
             mmainpale.Height = 575;
 
             btn_recherche.Visible = true;
@@ -229,6 +248,16 @@ namespace Confidence
             {
                 operationss_client.Instance.BringToFront();
             }
+        }
+
+        private void btn_recherche_Click(object sender, EventArgs e)
+        {
+            recherche.ShowDialog();
+        }
+
+        private void btn_derniere_op_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -256,7 +256,7 @@ namespace Confidence
 
                     if (t[0] == "111")
                     {
-                        MetroFramework.MetroMessageBox.Show(this, "Operation non effectuee, le solde : " + this.txtsolde.Text + " >  : " + t[1], "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this, "Operation non effectuee, le solde : " + this.txtsolde.Text + " est superieure au montant en compte  : " + t[1], "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else if (t[0] == "")
                     {
@@ -270,7 +270,7 @@ namespace Confidence
 
                     if (t[0] == "111")
                     {
-                        MetroFramework.MetroMessageBox.Show(this, "Operation non effectuee, le solde : " + this.txtsolde.Text + " >  : " + t[1], "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this, "Operation non effectuee, le solde : " + this.txtsolde.Text + " est superieure au montant en compte  : " + t[1], "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else if (t[0] == "")
                     {
@@ -447,6 +447,117 @@ namespace Confidence
         }
 
         private void dataGridView2_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
+        }
+
+        private void materialRaisedButton5_Click(object sender, EventArgs e)
+        {
+            rechercher_rapide.Visible = true;
+            materialRaisedButton1.Visible = false;
+        }
+
+        private void materialRaisedButton12_Click(object sender, EventArgs e)
+        {
+            rechercher_rapide.Visible = false;
+            materialRaisedButton1.Visible = true;
+        }
+
+        private void txt_nom_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string requete = string.Format("SELECT * FROM proprietaire WHERE nom LIKE'%{0}%'", this.txt_nom.Text);
+                SqlConnection con = new SqlConnection(cs);
+                string query = requete;  //string.Format("SELECT * FROM proprietaire");
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                SqlDataReader sdr = cmd.ExecuteReader();
+                BindingSource source = new BindingSource();
+                source.DataSource = sdr;
+                metroGrid1.DataSource = source;
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, ex.Message, "Message error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialRaisedButton13_Click(object sender, EventArgs e)
+        {
+            
+
+            //btn nouvelle operation
+
+            materialRaisedButton7.Visible = false;
+            materialRaisedButton8.Visible = false;
+
+            materialRaisedButton3.Visible = false;
+            materialRaisedButton2.Visible = false;
+            txt_compte_a_terme.Text = "";
+            txt_compte_courant.Text = "";
+
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC recherche_compte_deux '" + this.txt_id_proprietaire.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                //MetroFramework.MetroMessageBox.Show(this, "Compte supprimer avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                while (sdr.Read())
+                {
+                    txt_compte_courant.Text = sdr["nombre"].ToString();
+                    txt_compte_a_terme.Text = sdr["deux"].ToString();
+                }
+                con.Close();
+
+                //conditions en cas des valeurs nulles
+
+                if (this.txt_compte_courant.Text == "" && this.txt_compte_a_terme.Text == "")
+                {
+                    txt_compte_courant.Text = "";
+                    txt_compte_a_terme.Text = "";
+                    lbl_message_compte.Text = "Ce client n'a aucun compte, veuillez changer les informationsdu client ou ressayer";
+                    materialRaisedButton3.Visible = false;
+                    materialRaisedButton2.Visible = false;
+                }
+                else if (this.txt_compte_courant.Text == "" && this.txt_compte_a_terme.Text != "")
+                {
+                    txt_compte_courant.Text = "Aucun compte";
+                    materialRaisedButton3.Visible = false;
+                    materialRaisedButton2.Visible = true;
+                }
+                else if (txt_compte_a_terme.Text == "" && this.txt_compte_courant.Text != "")
+                {
+                    txt_compte_a_terme.Text = "Aucun compte";
+                    materialRaisedButton2.Visible = false;
+                    materialRaisedButton3.Visible = true;
+                }
+                else if (txt_compte_a_terme.Text != "" && this.txt_compte_courant.Text != "")
+                {
+                    materialRaisedButton2.Visible = true;
+                    materialRaisedButton3.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void metroGrid1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -79,6 +82,14 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.txt_requete = new System.Windows.Forms.TextBox();
+            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.rechercher_rapide = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.materialRaisedButton13 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.txt_id_proprietaire = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.label11 = new System.Windows.Forms.Label();
+            this.materialRaisedButton12 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -87,6 +98,9 @@
             this.txt_montant_banque.SuspendLayout();
             this.panel_progression.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.rechercher_rapide.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialRaisedButton1
@@ -97,7 +111,7 @@
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
             this.materialRaisedButton1.Size = new System.Drawing.Size(113, 38);
-            this.materialRaisedButton1.TabIndex = 64;
+            this.materialRaisedButton1.TabIndex = 0;
             this.materialRaisedButton1.Text = "verifier";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
             this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
@@ -117,6 +131,7 @@
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informations sur le client";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label4
             // 
@@ -139,8 +154,7 @@
             this.txt_prenom.SelectionLength = 0;
             this.txt_prenom.SelectionStart = 0;
             this.txt_prenom.Size = new System.Drawing.Size(176, 23);
-            this.txt_prenom.TabIndex = 4;
-            this.txt_prenom.Text = "BOANERGES";
+            this.txt_prenom.TabIndex = 2;
             this.txt_prenom.UseSystemPasswordChar = false;
             // 
             // label3
@@ -164,8 +178,7 @@
             this.txt_postnom.SelectionLength = 0;
             this.txt_postnom.SelectionStart = 0;
             this.txt_postnom.Size = new System.Drawing.Size(176, 23);
-            this.txt_postnom.TabIndex = 2;
-            this.txt_postnom.Text = "MWANA KABULO";
+            this.txt_postnom.TabIndex = 1;
             this.txt_postnom.UseSystemPasswordChar = false;
             // 
             // label2
@@ -190,8 +203,8 @@
             this.txt_nom.SelectionStart = 0;
             this.txt_nom.Size = new System.Drawing.Size(176, 23);
             this.txt_nom.TabIndex = 0;
-            this.txt_nom.Text = "KABULO";
             this.txt_nom.UseSystemPasswordChar = false;
+            this.txt_nom.Click += new System.EventHandler(this.txt_nom_Click);
             // 
             // groupBox2
             // 
@@ -434,7 +447,7 @@
             this.txt_montant_banque.Controls.Add(this.panel4);
             this.txt_montant_banque.Controls.Add(this.label7);
             this.txt_montant_banque.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_montant_banque.Location = new System.Drawing.Point(25, 27);
+            this.txt_montant_banque.Location = new System.Drawing.Point(12, 9);
             this.txt_montant_banque.Name = "txt_montant_banque";
             this.txt_montant_banque.Size = new System.Drawing.Size(399, 466);
             this.txt_montant_banque.TabIndex = 0;
@@ -465,7 +478,7 @@
             this.materialRaisedButton11.Name = "materialRaisedButton11";
             this.materialRaisedButton11.Primary = true;
             this.materialRaisedButton11.Size = new System.Drawing.Size(113, 38);
-            this.materialRaisedButton11.TabIndex = 73;
+            this.materialRaisedButton11.TabIndex = 5;
             this.materialRaisedButton11.Text = "fermer";
             this.materialRaisedButton11.UseVisualStyleBackColor = true;
             this.materialRaisedButton11.Click += new System.EventHandler(this.materialRaisedButton11_Click);
@@ -488,7 +501,7 @@
             this.materialRaisedButton10.Name = "materialRaisedButton10";
             this.materialRaisedButton10.Primary = true;
             this.materialRaisedButton10.Size = new System.Drawing.Size(113, 38);
-            this.materialRaisedButton10.TabIndex = 73;
+            this.materialRaisedButton10.TabIndex = 4;
             this.materialRaisedButton10.Text = "valider";
             this.materialRaisedButton10.UseVisualStyleBackColor = true;
             this.materialRaisedButton10.Click += new System.EventHandler(this.materialRaisedButton10_Click);
@@ -509,7 +522,7 @@
             this.txtcompte.Location = new System.Drawing.Point(171, 42);
             this.txtcompte.Name = "txtcompte";
             this.txtcompte.Size = new System.Drawing.Size(156, 16);
-            this.txtcompte.TabIndex = 71;
+            this.txtcompte.TabIndex = 0;
             // 
             // dtdate_creation
             // 
@@ -519,7 +532,7 @@
             this.dtdate_creation.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtdate_creation.Name = "dtdate_creation";
             this.dtdate_creation.Size = new System.Drawing.Size(161, 29);
-            this.dtdate_creation.TabIndex = 68;
+            this.dtdate_creation.TabIndex = 2;
             // 
             // label8
             // 
@@ -565,7 +578,7 @@
             this.txtsolde.Location = new System.Drawing.Point(178, 180);
             this.txtsolde.Name = "txtsolde";
             this.txtsolde.Size = new System.Drawing.Size(156, 16);
-            this.txtsolde.TabIndex = 65;
+            this.txtsolde.TabIndex = 3;
             // 
             // cmboperation
             // 
@@ -577,7 +590,7 @@
             this.cmboperation.Location = new System.Drawing.Point(178, 82);
             this.cmboperation.Name = "cmboperation";
             this.cmboperation.Size = new System.Drawing.Size(156, 25);
-            this.cmboperation.TabIndex = 62;
+            this.cmboperation.TabIndex = 1;
             // 
             // panel4
             // 
@@ -676,10 +689,147 @@
             this.txt_requete.TabIndex = 74;
             this.txt_requete.Visible = false;
             // 
+            // materialRaisedButton5
+            // 
+            this.materialRaisedButton5.Depth = 0;
+            this.materialRaisedButton5.Location = new System.Drawing.Point(369, 132);
+            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton5.Name = "materialRaisedButton5";
+            this.materialRaisedButton5.Primary = true;
+            this.materialRaisedButton5.Size = new System.Drawing.Size(172, 38);
+            this.materialRaisedButton5.TabIndex = 75;
+            this.materialRaisedButton5.Text = "recheche rapide";
+            this.materialRaisedButton5.UseVisualStyleBackColor = true;
+            this.materialRaisedButton5.Click += new System.EventHandler(this.materialRaisedButton5_Click);
+            // 
+            // rechercher_rapide
+            // 
+            this.rechercher_rapide.Controls.Add(this.groupBox4);
+            this.rechercher_rapide.Controls.Add(this.materialRaisedButton12);
+            this.rechercher_rapide.Controls.Add(this.metroGrid1);
+            this.rechercher_rapide.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.rechercher_rapide.Location = new System.Drawing.Point(547, 26);
+            this.rechercher_rapide.Name = "rechercher_rapide";
+            this.rechercher_rapide.Size = new System.Drawing.Size(621, 554);
+            this.rechercher_rapide.TabIndex = 76;
+            this.rechercher_rapide.TabStop = false;
+            this.rechercher_rapide.Text = "Correspondance de la recherce";
+            this.rechercher_rapide.Visible = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.materialRaisedButton13);
+            this.groupBox4.Controls.Add(this.txt_id_proprietaire);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Location = new System.Drawing.Point(28, 369);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(587, 115);
+            this.groupBox4.TabIndex = 78;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Validation du client";
+            // 
+            // materialRaisedButton13
+            // 
+            this.materialRaisedButton13.Depth = 0;
+            this.materialRaisedButton13.Location = new System.Drawing.Point(407, 71);
+            this.materialRaisedButton13.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton13.Name = "materialRaisedButton13";
+            this.materialRaisedButton13.Primary = true;
+            this.materialRaisedButton13.Size = new System.Drawing.Size(174, 38);
+            this.materialRaisedButton13.TabIndex = 77;
+            this.materialRaisedButton13.Text = "charger";
+            this.materialRaisedButton13.UseVisualStyleBackColor = true;
+            this.materialRaisedButton13.Click += new System.EventHandler(this.materialRaisedButton13_Click);
+            // 
+            // txt_id_proprietaire
+            // 
+            this.txt_id_proprietaire.Depth = 0;
+            this.txt_id_proprietaire.Hint = "";
+            this.txt_id_proprietaire.Location = new System.Drawing.Point(162, 40);
+            this.txt_id_proprietaire.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_id_proprietaire.Name = "txt_id_proprietaire";
+            this.txt_id_proprietaire.PasswordChar = '\0';
+            this.txt_id_proprietaire.SelectedText = "";
+            this.txt_id_proprietaire.SelectionLength = 0;
+            this.txt_id_proprietaire.SelectionStart = 0;
+            this.txt_id_proprietaire.Size = new System.Drawing.Size(183, 23);
+            this.txt_id_proprietaire.TabIndex = 27;
+            this.txt_id_proprietaire.UseSystemPasswordChar = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(21, 46);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(129, 17);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Numero proprietaire";
+            // 
+            // materialRaisedButton12
+            // 
+            this.materialRaisedButton12.Depth = 0;
+            this.materialRaisedButton12.Location = new System.Drawing.Point(341, 510);
+            this.materialRaisedButton12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton12.Name = "materialRaisedButton12";
+            this.materialRaisedButton12.Primary = true;
+            this.materialRaisedButton12.Size = new System.Drawing.Size(274, 38);
+            this.materialRaisedButton12.TabIndex = 77;
+            this.materialRaisedButton12.Text = "fermer la page de recherche";
+            this.materialRaisedButton12.UseVisualStyleBackColor = true;
+            this.materialRaisedButton12.Click += new System.EventHandler(this.materialRaisedButton12_Click);
+            // 
+            // metroGrid1
+            // 
+            this.metroGrid1.AllowUserToResizeRows = false;
+            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.metroGrid1.EnableHeadersVisualStyles = false;
+            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.Location = new System.Drawing.Point(26, 40);
+            this.metroGrid1.Name = "metroGrid1";
+            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid1.Size = new System.Drawing.Size(571, 312);
+            this.metroGrid1.TabIndex = 0;
+            this.metroGrid1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.metroGrid1_DataError);
+            // 
             // operationss_client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.rechercher_rapide);
+            this.Controls.Add(this.materialRaisedButton5);
             this.Controls.Add(this.txt_requete);
             this.Controls.Add(this.panel_nouvelle_operation);
             this.Controls.Add(this.panel_progression);
@@ -691,7 +841,7 @@
             this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.groupBox1);
             this.Name = "operationss_client";
-            this.Size = new System.Drawing.Size(1197, 677);
+            this.Size = new System.Drawing.Size(1197, 753);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -705,6 +855,10 @@
             this.panel_progression.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.rechercher_rapide.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -762,5 +916,13 @@
         private System.Windows.Forms.TextBox txt_requete;
         private System.Windows.Forms.TextBox txt_ctrl;
         private System.Windows.Forms.TextBox textBox1;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
+        private System.Windows.Forms.GroupBox rechercher_rapide;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton12;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton13;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txt_id_proprietaire;
+        private System.Windows.Forms.Label label11;
+        private MetroFramework.Controls.MetroGrid metroGrid1;
     }
 }

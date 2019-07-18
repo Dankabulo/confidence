@@ -106,6 +106,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="last_op.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="last_op.Designer.cs">
+      <DependentUpon>last_op.cs</DependentUpon>
+    </Compile>
     <Compile Include="listage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="last_op.resx">
+      <DependentUpon>last_op.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="listage.resx">
       <DependentUpon>listage.cs</DependentUpon>
