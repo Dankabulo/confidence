@@ -117,6 +117,7 @@
             this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid2.Size = new System.Drawing.Size(778, 196);
             this.metroGrid2.TabIndex = 1;
+            this.metroGrid2.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.metroGrid2_DataError);
             // 
             // last_op
             // 

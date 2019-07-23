@@ -17,6 +17,7 @@ namespace Confidence
         Form courant = new CreerCompte();
         Form terme = new compte_a_terme();
         Form fermeture = new Authentification();
+        Form compte = new account();
         public Form1()
         {
             InitializeComponent();
@@ -165,6 +166,15 @@ namespace Confidence
         {
             //autre.Visible = false;
             //btn_derniere_op.Visible = false;
+            barre.Visible = true;
+            if (barre.Height == 0)
+            {
+                barre.Height = 97;
+            }
+            if (mmainpale.Height == 575)
+            {
+                mmainpale.Height = 730;
+            }
             mmainpale.Height = 575;
 
             btn_recherche.Visible = true;
@@ -258,6 +268,11 @@ namespace Confidence
         private void btn_derniere_op_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            compte.ShowDialog();
         }
     }
 }

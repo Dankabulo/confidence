@@ -65,6 +65,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="access.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="access.Designer.cs">
+      <DependentUpon>access.cs</DependentUpon>
+    </Compile>
+    <Compile Include="account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="account.Designer.cs">
+      <DependentUpon>account.cs</DependentUpon>
+    </Compile>
     <Compile Include="Authentification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +175,12 @@
     <Compile Include="visionG.Designer.cs">
       <DependentUpon>visionG.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="access.resx">
+      <DependentUpon>access.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="account.resx">
+      <DependentUpon>account.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
       <SubType>Designer</SubType>

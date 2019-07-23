@@ -209,7 +209,7 @@ namespace Confidence
 
                             else
                             {
-                                MetroFramework.MetroMessageBox.Show(this, "Ce client pocede deja un compte de ce type, veuillez changer de client ou le type du compte", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MetroFramework.MetroMessageBox.Show(this, "Ce client pocede deja un compte de ce type, veuillez changer de client ou le type du compte", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                         catch (Exception ex)

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clients_options));
             this.main3 = new System.Windows.Forms.Panel();
+            this.txt_query = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtnom_rapport = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,24 +41,23 @@
             this.btn_rapport = new Bunifu.Framework.UI.BunifuImageButton();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel_tools = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_date = new System.Windows.Forms.Panel();
+            this.dtdebut = new MetroFramework.Controls.MetroDateTime();
+            this.dtfin = new MetroFramework.Controls.MetroDateTime();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtfin = new MetroFramework.Controls.MetroDateTime();
-            this.dtdebut = new MetroFramework.Controls.MetroDateTime();
+            this.txt_consideration = new MetroFramework.Controls.MetroComboBox();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_texte = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbcategorie = new MetroFramework.Controls.MetroComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbtype = new MetroFramework.Controls.MetroComboBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.txt_query = new System.Windows.Forms.TextBox();
-            this.txt_consideration = new MetroFramework.Controls.MetroComboBox();
-            this.panel_date = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel_texte = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.main3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel_progression.SuspendLayout();
@@ -82,6 +82,14 @@
             this.main3.Size = new System.Drawing.Size(1278, 792);
             this.main3.TabIndex = 7;
             this.main3.Paint += new System.Windows.Forms.PaintEventHandler(this.main3_Paint);
+            // 
+            // txt_query
+            // 
+            this.txt_query.Location = new System.Drawing.Point(69, 169);
+            this.txt_query.Name = "txt_query";
+            this.txt_query.Size = new System.Drawing.Size(83, 20);
+            this.txt_query.TabIndex = 29;
+            this.txt_query.Visible = false;
             // 
             // groupBox1
             // 
@@ -186,6 +194,67 @@
             this.panel_tools.Size = new System.Drawing.Size(1174, 135);
             this.panel_tools.TabIndex = 7;
             // 
+            // panel_date
+            // 
+            this.panel_date.Controls.Add(this.dtdebut);
+            this.panel_date.Controls.Add(this.dtfin);
+            this.panel_date.Controls.Add(this.label6);
+            this.panel_date.Controls.Add(this.label5);
+            this.panel_date.Location = new System.Drawing.Point(536, 11);
+            this.panel_date.Name = "panel_date";
+            this.panel_date.Size = new System.Drawing.Size(282, 71);
+            this.panel_date.TabIndex = 53;
+            // 
+            // dtdebut
+            // 
+            this.dtdebut.Location = new System.Drawing.Point(72, 3);
+            this.dtdebut.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtdebut.Name = "dtdebut";
+            this.dtdebut.Size = new System.Drawing.Size(200, 29);
+            this.dtdebut.TabIndex = 4;
+            // 
+            // dtfin
+            // 
+            this.dtfin.Location = new System.Drawing.Point(72, 38);
+            this.dtfin.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtfin.Name = "dtfin";
+            this.dtfin.Size = new System.Drawing.Size(200, 29);
+            this.dtfin.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(9, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 19);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "au :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 19);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "du :";
+            // 
+            // txt_consideration
+            // 
+            this.txt_consideration.FormattingEnabled = true;
+            this.txt_consideration.ItemHeight = 23;
+            this.txt_consideration.Items.AddRange(new object[] {
+            "considerer la marge de la date",
+            "deconsiderer la marge de la date"});
+            this.txt_consideration.Location = new System.Drawing.Point(548, 93);
+            this.txt_consideration.Name = "txt_consideration";
+            this.txt_consideration.Size = new System.Drawing.Size(259, 29);
+            this.txt_consideration.TabIndex = 30;
+            this.txt_consideration.UseSelectable = true;
+            this.txt_consideration.SelectedIndexChanged += new System.EventHandler(this.txt_consideration_SelectedIndexChanged);
+            // 
             // bunifuFlatButton2
             // 
             this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(152)))), ((int)(((byte)(229)))));
@@ -221,41 +290,61 @@
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click_1);
             // 
-            // label6
+            // panel_texte
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 44);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 19);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "au :";
+            this.panel_texte.Controls.Add(this.label9);
+            this.panel_texte.Controls.Add(this.label8);
+            this.panel_texte.Controls.Add(this.label7);
+            this.panel_texte.Controls.Add(this.label2);
+            this.panel_texte.Location = new System.Drawing.Point(548, 0);
+            this.panel_texte.Name = "panel_texte";
+            this.panel_texte.Size = new System.Drawing.Size(339, 87);
+            this.panel_texte.TabIndex = 54;
+            this.panel_texte.Visible = false;
             // 
-            // label5
+            // label9
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 19);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "du :";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Cambria", 12F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
+            this.label9.Location = new System.Drawing.Point(115, 60);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 19);
+            this.label9.TabIndex = 56;
+            this.label9.Text = "Tri par date";
             // 
-            // dtfin
+            // label8
             // 
-            this.dtfin.Location = new System.Drawing.Point(72, 38);
-            this.dtfin.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dtfin.Name = "dtfin";
-            this.dtfin.Size = new System.Drawing.Size(200, 29);
-            this.dtfin.TabIndex = 5;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cambria", 12F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
+            this.label8.Location = new System.Drawing.Point(15, 41);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(298, 19);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "changer d\'option pour naviguer en  mode";
             // 
-            // dtdebut
+            // label7
             // 
-            this.dtdebut.Location = new System.Drawing.Point(72, 3);
-            this.dtdebut.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dtdebut.Name = "dtdebut";
-            this.dtdebut.Size = new System.Drawing.Size(200, 29);
-            this.dtdebut.TabIndex = 4;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Cambria", 12F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
+            this.label7.Location = new System.Drawing.Point(24, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(284, 19);
+            this.label7.TabIndex = 54;
+            this.label7.Text = "le tri par rapport a la date est inexistant";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cambria", 12F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
+            this.label2.Location = new System.Drawing.Point(3, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(331, 19);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "L\'option de l\'intervalle du temps est desactiver";
             // 
             // label4
             // 
@@ -309,95 +398,6 @@
             // 
             this.notifyIcon.Text = "notifyIcon1";
             this.notifyIcon.Visible = true;
-            // 
-            // txt_query
-            // 
-            this.txt_query.Location = new System.Drawing.Point(69, 169);
-            this.txt_query.Name = "txt_query";
-            this.txt_query.Size = new System.Drawing.Size(83, 20);
-            this.txt_query.TabIndex = 29;
-            this.txt_query.Visible = false;
-            // 
-            // txt_consideration
-            // 
-            this.txt_consideration.FormattingEnabled = true;
-            this.txt_consideration.ItemHeight = 23;
-            this.txt_consideration.Items.AddRange(new object[] {
-            "considerer la marge de la date",
-            "deconsiderer la marge de la date"});
-            this.txt_consideration.Location = new System.Drawing.Point(548, 93);
-            this.txt_consideration.Name = "txt_consideration";
-            this.txt_consideration.Size = new System.Drawing.Size(259, 29);
-            this.txt_consideration.TabIndex = 30;
-            this.txt_consideration.UseSelectable = true;
-            this.txt_consideration.SelectedIndexChanged += new System.EventHandler(this.txt_consideration_SelectedIndexChanged);
-            // 
-            // panel_date
-            // 
-            this.panel_date.Controls.Add(this.dtdebut);
-            this.panel_date.Controls.Add(this.dtfin);
-            this.panel_date.Controls.Add(this.label6);
-            this.panel_date.Controls.Add(this.label5);
-            this.panel_date.Location = new System.Drawing.Point(536, 11);
-            this.panel_date.Name = "panel_date";
-            this.panel_date.Size = new System.Drawing.Size(282, 71);
-            this.panel_date.TabIndex = 53;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 12F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.label2.Location = new System.Drawing.Point(3, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(331, 19);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "L\'option de l\'intervalle du temps est desactiver";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cambria", 12F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.label7.Location = new System.Drawing.Point(24, 22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(284, 19);
-            this.label7.TabIndex = 54;
-            this.label7.Text = "le tri par rapport a la date est inexistant";
-            // 
-            // panel_texte
-            // 
-            this.panel_texte.Controls.Add(this.label9);
-            this.panel_texte.Controls.Add(this.label8);
-            this.panel_texte.Controls.Add(this.label7);
-            this.panel_texte.Controls.Add(this.label2);
-            this.panel_texte.Location = new System.Drawing.Point(548, 0);
-            this.panel_texte.Name = "panel_texte";
-            this.panel_texte.Size = new System.Drawing.Size(339, 87);
-            this.panel_texte.TabIndex = 54;
-            this.panel_texte.Visible = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cambria", 12F);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.label8.Location = new System.Drawing.Point(15, 41);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(298, 19);
-            this.label8.TabIndex = 55;
-            this.label8.Text = "changer d\'option pour naviguer en  mode";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cambria", 12F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.label9.Location = new System.Drawing.Point(115, 60);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 19);
-            this.label9.TabIndex = 56;
-            this.label9.Text = "Tri par date";
             // 
             // clients_options
             // 

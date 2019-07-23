@@ -529,7 +529,7 @@
             this.dtdate_creation.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F);
             this.dtdate_creation.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.dtdate_creation.Location = new System.Drawing.Point(178, 130);
-            this.dtdate_creation.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtdate_creation.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtdate_creation.Name = "dtdate_creation";
             this.dtdate_creation.Size = new System.Drawing.Size(161, 29);
             this.dtdate_creation.TabIndex = 2;
@@ -614,7 +614,7 @@
             // 
             this.panel_progression.Controls.Add(this.metroProgressBar);
             this.panel_progression.Controls.Add(this.lblprogresseBar);
-            this.panel_progression.Location = new System.Drawing.Point(557, 586);
+            this.panel_progression.Location = new System.Drawing.Point(547, 586);
             this.panel_progression.Name = "panel_progression";
             this.panel_progression.Size = new System.Drawing.Size(420, 66);
             this.panel_progression.TabIndex = 72;
@@ -642,7 +642,7 @@
             // 
             this.txtnom_rapport.Depth = 0;
             this.txtnom_rapport.Hint = "";
-            this.txtnom_rapport.Location = new System.Drawing.Point(128, 49);
+            this.txtnom_rapport.Location = new System.Drawing.Point(132, 24);
             this.txtnom_rapport.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtnom_rapport.Name = "txtnom_rapport";
             this.txtnom_rapport.PasswordChar = '\0';
@@ -658,7 +658,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(32, 53);
+            this.label10.Location = new System.Drawing.Point(36, 28);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 17);
             this.label10.TabIndex = 26;
@@ -669,9 +669,9 @@
             this.groupBox5.Controls.Add(this.txtnom_rapport);
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.groupBox5.Location = new System.Drawing.Point(68, 518);
+            this.groupBox5.Location = new System.Drawing.Point(68, 501);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(344, 99);
+            this.groupBox5.Size = new System.Drawing.Size(344, 74);
             this.groupBox5.TabIndex = 73;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Notation rapport";
@@ -710,7 +710,7 @@
             this.rechercher_rapide.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.rechercher_rapide.Location = new System.Drawing.Point(547, 26);
             this.rechercher_rapide.Name = "rechercher_rapide";
-            this.rechercher_rapide.Size = new System.Drawing.Size(621, 554);
+            this.rechercher_rapide.Size = new System.Drawing.Size(621, 530);
             this.rechercher_rapide.TabIndex = 76;
             this.rechercher_rapide.TabStop = false;
             this.rechercher_rapide.Text = "Correspondance de la recherce";
@@ -721,7 +721,7 @@
             this.groupBox4.Controls.Add(this.materialRaisedButton13);
             this.groupBox4.Controls.Add(this.txt_id_proprietaire);
             this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Location = new System.Drawing.Point(28, 369);
+            this.groupBox4.Location = new System.Drawing.Point(18, 248);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(587, 115);
             this.groupBox4.TabIndex = 78;
@@ -770,7 +770,7 @@
             // materialRaisedButton12
             // 
             this.materialRaisedButton12.Depth = 0;
-            this.materialRaisedButton12.Location = new System.Drawing.Point(341, 510);
+            this.materialRaisedButton12.Location = new System.Drawing.Point(331, 389);
             this.materialRaisedButton12.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton12.Name = "materialRaisedButton12";
             this.materialRaisedButton12.Primary = true;
@@ -820,7 +820,7 @@
             this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(571, 312);
+            this.metroGrid1.Size = new System.Drawing.Size(571, 193);
             this.metroGrid1.TabIndex = 0;
             this.metroGrid1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.metroGrid1_DataError);
             // 
