@@ -16,7 +16,7 @@ namespace Confidence
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new access());
+            Application.Run(new Form1());
         }
     }
 }

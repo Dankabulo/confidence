@@ -35,7 +35,7 @@ namespace Confidence
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(cs);
-            string query = string.Format("delete from calcul_solde; declare @i int select @i = dbo.MONTANT_TOTAL_COURANT('usd');declare @ii int select @ii = dbo.MONTANT_TOTAL_COURANT('cfd'); insert into calcul_solde(nombre,deux)values(@i, @ii) select * from calcul_solde; ");
+            string query = string.Format("EXEC total_courant");
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader sdr;
 
@@ -48,6 +48,14 @@ namespace Confidence
                 {
                     lblusd.Text = sdr["nombre"].ToString();
                     lblcfd.Text = sdr["deux"].ToString();
+                }
+                if (lblusd.Text == "")
+                {
+                    lblusd.Text = "0";
+                }
+                else if (lblcfd.Text == "")
+                {
+                    lblcfd.Text = "0";
                 }
             }
             catch

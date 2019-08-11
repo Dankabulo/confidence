@@ -106,7 +106,7 @@
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(369, 177);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(369, 159);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -125,7 +125,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txt_nom);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(68, 44);
+            this.groupBox1.Location = new System.Drawing.Point(68, 26);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(295, 171);
             this.groupBox1.TabIndex = 63;
@@ -218,9 +218,9 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txt_compte_a_terme);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.groupBox2.Location = new System.Drawing.Point(68, 234);
+            this.groupBox2.Location = new System.Drawing.Point(68, 209);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(431, 217);
+            this.groupBox2.Size = new System.Drawing.Size(431, 180);
             this.groupBox2.TabIndex = 65;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Comptes existants";
@@ -228,7 +228,7 @@
             // materialRaisedButton8
             // 
             this.materialRaisedButton8.Depth = 0;
-            this.materialRaisedButton8.Location = new System.Drawing.Point(301, 95);
+            this.materialRaisedButton8.Location = new System.Drawing.Point(301, 75);
             this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton8.Name = "materialRaisedButton8";
             this.materialRaisedButton8.Primary = true;
@@ -242,7 +242,7 @@
             // lbl_message_compte
             // 
             this.lbl_message_compte.AutoSize = true;
-            this.lbl_message_compte.Location = new System.Drawing.Point(6, 173);
+            this.lbl_message_compte.Location = new System.Drawing.Point(6, 138);
             this.lbl_message_compte.Name = "lbl_message_compte";
             this.lbl_message_compte.Size = new System.Drawing.Size(134, 17);
             this.lbl_message_compte.TabIndex = 66;
@@ -251,7 +251,7 @@
             // materialRaisedButton7
             // 
             this.materialRaisedButton7.Depth = 0;
-            this.materialRaisedButton7.Location = new System.Drawing.Point(301, 49);
+            this.materialRaisedButton7.Location = new System.Drawing.Point(301, 29);
             this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton7.Name = "materialRaisedButton7";
             this.materialRaisedButton7.Primary = true;
@@ -265,7 +265,7 @@
             // materialRaisedButton3
             // 
             this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(301, 95);
+            this.materialRaisedButton3.Location = new System.Drawing.Point(301, 75);
             this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton3.Name = "materialRaisedButton3";
             this.materialRaisedButton3.Primary = true;
@@ -279,7 +279,7 @@
             // materialRaisedButton2
             // 
             this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(301, 49);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(301, 29);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
@@ -293,7 +293,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 106);
+            this.label5.Location = new System.Drawing.Point(17, 86);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 17);
             this.label5.TabIndex = 9;
@@ -303,7 +303,7 @@
             // 
             this.txt_compte_courant.Depth = 0;
             this.txt_compte_courant.Hint = "";
-            this.txt_compte_courant.Location = new System.Drawing.Point(159, 100);
+            this.txt_compte_courant.Location = new System.Drawing.Point(159, 80);
             this.txt_compte_courant.MouseState = MaterialSkin.MouseState.HOVER;
             this.txt_compte_courant.Name = "txt_compte_courant";
             this.txt_compte_courant.PasswordChar = '\0';
@@ -317,7 +317,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 60);
+            this.label1.Location = new System.Drawing.Point(17, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 17);
             this.label1.TabIndex = 7;
@@ -327,7 +327,7 @@
             // 
             this.txt_compte_a_terme.Depth = 0;
             this.txt_compte_a_terme.Hint = "";
-            this.txt_compte_a_terme.Location = new System.Drawing.Point(159, 54);
+            this.txt_compte_a_terme.Location = new System.Drawing.Point(159, 34);
             this.txt_compte_a_terme.MouseState = MaterialSkin.MouseState.HOVER;
             this.txt_compte_a_terme.Name = "txt_compte_a_terme";
             this.txt_compte_a_terme.PasswordChar = '\0';
@@ -395,7 +395,7 @@
             // materialRaisedButton6
             // 
             this.materialRaisedButton6.Depth = 0;
-            this.materialRaisedButton6.Location = new System.Drawing.Point(325, 457);
+            this.materialRaisedButton6.Location = new System.Drawing.Point(325, 396);
             this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton6.Name = "materialRaisedButton6";
             this.materialRaisedButton6.Primary = true;
@@ -408,7 +408,7 @@
             // materialRaisedButton9
             // 
             this.materialRaisedButton9.Depth = 0;
-            this.materialRaisedButton9.Location = new System.Drawing.Point(325, 457);
+            this.materialRaisedButton9.Location = new System.Drawing.Point(325, 396);
             this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton9.Name = "materialRaisedButton9";
             this.materialRaisedButton9.Primary = true;
@@ -447,7 +447,7 @@
             this.txt_montant_banque.Controls.Add(this.panel4);
             this.txt_montant_banque.Controls.Add(this.label7);
             this.txt_montant_banque.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_montant_banque.Location = new System.Drawing.Point(12, 9);
+            this.txt_montant_banque.Location = new System.Drawing.Point(81, 25);
             this.txt_montant_banque.Name = "txt_montant_banque";
             this.txt_montant_banque.Size = new System.Drawing.Size(399, 466);
             this.txt_montant_banque.TabIndex = 0;
@@ -529,7 +529,7 @@
             this.dtdate_creation.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F);
             this.dtdate_creation.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.dtdate_creation.Location = new System.Drawing.Point(178, 130);
-            this.dtdate_creation.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtdate_creation.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtdate_creation.Name = "dtdate_creation";
             this.dtdate_creation.Size = new System.Drawing.Size(161, 29);
             this.dtdate_creation.TabIndex = 2;
@@ -614,7 +614,7 @@
             // 
             this.panel_progression.Controls.Add(this.metroProgressBar);
             this.panel_progression.Controls.Add(this.lblprogresseBar);
-            this.panel_progression.Location = new System.Drawing.Point(547, 586);
+            this.panel_progression.Location = new System.Drawing.Point(34, 520);
             this.panel_progression.Name = "panel_progression";
             this.panel_progression.Size = new System.Drawing.Size(420, 66);
             this.panel_progression.TabIndex = 72;
@@ -669,7 +669,7 @@
             this.groupBox5.Controls.Add(this.txtnom_rapport);
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.groupBox5.Location = new System.Drawing.Point(68, 501);
+            this.groupBox5.Location = new System.Drawing.Point(68, 440);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(344, 74);
             this.groupBox5.TabIndex = 73;
@@ -683,7 +683,7 @@
             // 
             // txt_requete
             // 
-            this.txt_requete.Location = new System.Drawing.Point(68, 632);
+            this.txt_requete.Location = new System.Drawing.Point(51, 697);
             this.txt_requete.Name = "txt_requete";
             this.txt_requete.Size = new System.Drawing.Size(100, 20);
             this.txt_requete.TabIndex = 74;
@@ -692,7 +692,7 @@
             // materialRaisedButton5
             // 
             this.materialRaisedButton5.Depth = 0;
-            this.materialRaisedButton5.Location = new System.Drawing.Point(369, 132);
+            this.materialRaisedButton5.Location = new System.Drawing.Point(369, 114);
             this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton5.Name = "materialRaisedButton5";
             this.materialRaisedButton5.Primary = true;
@@ -708,9 +708,9 @@
             this.rechercher_rapide.Controls.Add(this.materialRaisedButton12);
             this.rechercher_rapide.Controls.Add(this.metroGrid1);
             this.rechercher_rapide.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.rechercher_rapide.Location = new System.Drawing.Point(547, 26);
+            this.rechercher_rapide.Location = new System.Drawing.Point(308, 26);
             this.rechercher_rapide.Name = "rechercher_rapide";
-            this.rechercher_rapide.Size = new System.Drawing.Size(621, 530);
+            this.rechercher_rapide.Size = new System.Drawing.Size(203, 530);
             this.rechercher_rapide.TabIndex = 76;
             this.rechercher_rapide.TabStop = false;
             this.rechercher_rapide.Text = "Correspondance de la recherce";

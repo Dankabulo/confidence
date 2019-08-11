@@ -96,7 +96,7 @@
             this.groupBox1.Controls.Add(this.txtnom_rapport);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.groupBox1.Location = new System.Drawing.Point(123, 640);
+            this.groupBox1.Location = new System.Drawing.Point(135, 510);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(344, 99);
             this.groupBox1.TabIndex = 28;
@@ -126,7 +126,7 @@
             // 
             this.panel_progression.Controls.Add(this.metroProgressBar);
             this.panel_progression.Controls.Add(this.lblprogresseBar);
-            this.panel_progression.Location = new System.Drawing.Point(508, 673);
+            this.panel_progression.Location = new System.Drawing.Point(510, 488);
             this.panel_progression.Name = "panel_progression";
             this.panel_progression.Size = new System.Drawing.Size(420, 66);
             this.panel_progression.TabIndex = 25;
@@ -155,7 +155,7 @@
             this.btn_rapport.BackColor = System.Drawing.SystemColors.Control;
             this.btn_rapport.Image = ((System.Drawing.Image)(resources.GetObject("btn_rapport.Image")));
             this.btn_rapport.ImageActive = null;
-            this.btn_rapport.Location = new System.Drawing.Point(1019, 635);
+            this.btn_rapport.Location = new System.Drawing.Point(1031, 505);
             this.btn_rapport.Name = "btn_rapport";
             this.btn_rapport.Size = new System.Drawing.Size(71, 71);
             this.btn_rapport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -173,7 +173,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(211, 197);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(879, 432);
+            this.dataGridView2.Size = new System.Drawing.Size(879, 285);
             this.dataGridView2.TabIndex = 8;
             this.dataGridView2.Visible = false;
             this.dataGridView2.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView2_DataError);

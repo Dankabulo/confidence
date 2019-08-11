@@ -528,7 +528,7 @@ namespace Confidence
                 {
                     txt_compte_courant.Text = "";
                     txt_compte_a_terme.Text = "";
-                    lbl_message_compte.Text = "Ce client n'a aucun compte, veuillez changer les informationsdu client ou ressayer";
+                    lbl_message_compte.Text = "Ce client n'a aucun compte, veuillez changer les informations du client ou ressayer";
                     materialRaisedButton3.Visible = false;
                     materialRaisedButton2.Visible = false;
                 }

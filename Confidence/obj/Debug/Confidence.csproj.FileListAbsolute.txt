@@ -96,3 +96,32 @@ C:\Program Files (x86)\Projet_Confidence\Confidence\Confidence\obj\Debug\Confide
 C:\Program Files (x86)\Projet_Confidence\Confidence\Confidence\obj\Debug\Confidence.suppression.resources
 C:\Program Files (x86)\Projet_Confidence\Confidence\Confidence\obj\Debug\Confidence.visionG.resources
 C:\Program Files (x86)\Projet_Confidence\Confidence\Confidence\obj\Debug\Confidence.csproj.GenerateResource.Cache
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\bin\Debug\Confidence.exe.config
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.exe
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.pdb
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\bin\Debug\Confidence.exe
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\bin\Debug\Confidence.pdb
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\bin\Debug\MaterialSkin.dll
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.csprojResolveAssemblyReference.cache
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.access.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.account.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.Authentification.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.clients_options.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.compte_a_terme.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.CreerCompte.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.entree.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.Form1.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.last_op.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.listage.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.lister.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.operation.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.operationss_client.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.PersonnesAt.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.Properties.Resources.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.recherche.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.suppression.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.visionG.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.csproj.GenerateResource.Cache
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.find_client.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.details_operation.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.new_form_operation.resources

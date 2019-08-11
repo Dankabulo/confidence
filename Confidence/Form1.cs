@@ -129,15 +129,15 @@ namespace Confidence
             barre.Visible = false;
 
             txtTexte.Text = "Operations par client";
-            if (!mmainpale.Controls.Contains(operationss_client.Instance))
+            if (!mmainpale.Controls.Contains(find_client.Instance))    //find_client
             {
-                mmainpale.Controls.Add(operationss_client.Instance);
-                operationss_client.Instance.Dock = DockStyle.Fill;
-                operationss_client.Instance.BringToFront();
+                mmainpale.Controls.Add(find_client.Instance);
+                find_client.Instance.Dock = DockStyle.Fill;
+                find_client.Instance.BringToFront();
             }
             else
             {
-                operationss_client.Instance.BringToFront();
+                find_client.Instance.BringToFront();
             }
         }
 
@@ -273,6 +273,11 @@ namespace Confidence
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {
             compte.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

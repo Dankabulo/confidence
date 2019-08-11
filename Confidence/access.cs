@@ -36,7 +36,7 @@ namespace Confidence
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(cs);
-            string query = "EXEC logn '" + this.txtpseudo.Text + "', '" + this.txtpwd.Text +  "'";
+            string query = "EXEC login '" + this.txtpseudo.Text + "', '" + this.txtpwd.Text +  "'";
 
             SqlCommand cmd = new SqlCommand(query, con);
 
