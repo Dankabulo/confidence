@@ -561,5 +561,10 @@ namespace Confidence
         {
             e.Cancel = true;
         }
+
+        private void operationss_client_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,76 +11,26 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Configuration;
 
+
 namespace Confidence
 {
-    public partial class CreerCompte : Form
+    public partial class pret_form : Form
     {
-        Form personnesA = new PersonnesAt();
         string cs = ConfigurationManager.ConnectionStrings["GESTION"].ConnectionString;
-
-        public CreerCompte()
+        public pret_form()
         {
             InitializeComponent();
-            lbltitre.Text = "Compte courant";
-        }
-
-        private void bunifuImageButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void CreerCompte_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btn_supprimer_Click(object sender, EventArgs e)
-        {
-            // suppresion d'un compte courant
-            SqlConnection con = new SqlConnection(cs);
-            string query = "EXEC DEL_CC '" + this.txtnom.Text+"', '"+this.txtpostnom.Text+"', '"+this.txtprenom.Text+"'";
-
-            SqlCommand cmd = new SqlCommand(query, con);
-
-            SqlDataReader sdr;
-            try
-            {
-                con.Open();
-
-                sdr = cmd.ExecuteReader();
-                MetroFramework.MetroMessageBox.Show(this, "Compte supprimer avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                while (sdr.Read())
-                {
-                    if (sdr.Read())
-                    {
-                        MetroFramework.MetroMessageBox.Show(this, "Please fill all textbox ");
-                    }
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            
-            if (txtnom.Text == "" || txtpostnom.Text == "" || txtprenom.Text == "" || txtmontant.Text == "" || cmbdevise.Text == "" || dtdate.Text == "")
+            if (txtnom.Text == "" || txtpostnom.Text == "" || txtprenom.Text == "" || txt_montant_prete.Text == "" || cmb_type_pret.Text == "" || dt_date_debut.Text == "" || txt_nb_tranche.Text == "" || dt_date_fin.Text == "")
             {
                 MetroFramework.MetroMessageBox.Show(this, "Veuillez renseigner tous les champs avant de continuer", "Certains champs sont vides", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                txt_meme_compte.Text = "";
+                txt_montant_deja_prete_type.Text = "";
                 txt_utilisateur_compte.Text = "";
 
                 // verification de l'existance de l'utilisateur dans la data
@@ -101,23 +51,26 @@ namespace Confidence
                     }
                     con.Close();
 
-                    //conditions 
+                    //conditions OK OK OK OK
 
                     if (txt_utilisateur_compte.Text == "")
                     {
-                        // s'il n'existe pas dans la data => INSERTTION GLOABALE utiliateur + compte
+                        // s'il n'existe pas dans la data => INSERTTION GLOABALE utiliateur + PRET
 
                         SqlConnection conn = new SqlConnection(cs);
-                        string queryn = "EXEC CC_insertion '" + this.txtnom.Text + "', '"
-                            + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '"
-                            + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "'";
+                        string queryn = "EXEC new_pret_with_proprietaire '"+this.txtnom.Text+"','"
+                            +this.txtpostnom.Text+"', '"+this.txtprenom.Text+"', '"+this.cmb_type_pret.SelectedItem.ToString()+"', "
+                            +this.txt_montant_prete.Text+", "+this.txt_interet.Text+", "+this.txt_montant_rembourser.Text+", "
+                            +this.txt_nb_tranche.Text+", "+this.txt_mr_tranche.Text+", '"+this.dt_date_debut.Value.ToShortDateString()+"', '"
+                            +this.dt_date_fin.Value.ToShortDateString()+"', '"+this.dt_date_creation.Value.ToShortDateString()+"', '"
+                            +this.cmb_devise.SelectedItem.ToString()+"'";
                         SqlCommand cmdn = new SqlCommand(queryn, conn);
                         SqlDataReader sdrn;
                         try
                         {
                             conn.Open();
                             sdrn = cmdn.ExecuteReader();
-                            MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MetroFramework.MetroMessageBox.Show(this, "Pret cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             conn.Close();
                         }
                         catch (Exception ex)
@@ -129,11 +82,11 @@ namespace Confidence
                     else
                     {
                         // s'il esxiste dans la data
-                        // A deja un compte courant 
+                        // Verifaction de l'existance d'un pret pour ce client
 
                         SqlConnection conn = new SqlConnection(cs);
-                        string queryn = "EXEC CC_recherche_compte '" + this.txtnom.Text + "', '"
-                            + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "'";
+                        string queryn = "EXEC existance_pret '"+this.txtnom.Text+"','"
+                            +this.txtpostnom.Text+"', '"+this.txtprenom.Text+"', '"+this.cmb_type_pret.SelectedItem+"' ";
                         SqlCommand cmdn = new SqlCommand(queryn, conn);
                         SqlDataReader sdrn;
                         try
@@ -144,26 +97,31 @@ namespace Confidence
                             //recuperation de la valeur retournee
                             while (sdrn.Read())
                             {
-                                txt_meme_compte.Text = sdrn["idproprietaire"].ToString();
+                                txt_utilisateur_compte.Text = sdrn["nombre"].ToString();
+                                txt_montant_deja_prete_type.Text = sdrn["deux"].ToString();
                             }
                             conn.Close();
 
                             // conditions 
 
-                            if (txt_meme_compte.Text != "")
+                            if (this.txt_utilisateur_compte.Text != "")
                             {
                                 //message d'erreur
-                                MetroFramework.MetroMessageBox.Show(this, "Ce client dispose deja d'un compte de ce type", "Message erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MetroFramework.MetroMessageBox.Show(this, "Ce client a deja effectue un pret de ce type, il nous doit encore : "+this.txt_montant_deja_prete_type.Text+"", "Message erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
-                                // insertion sans utilisateur
-                                // existe mais sans un compte de ce type
-                                SqlConnection cond = new SqlConnection(cs);
-                                string querynd = "EXEC CC_insertion_mini '" + this.txtnom.Text + "', '"
-                            + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '"
-                            + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "'";
-                                SqlCommand cmdnd = new SqlCommand(querynd, conn);
+                                //insertion sans utilisateur
+                                //existe mais sans un pret de ce type
+                               SqlConnection cond = new SqlConnection(cs);
+                                string querynd = "EXEC new_pret_none_proprietaire '" 
+                                    + this.txtnom.Text + "','"
+                                    + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "','" + this.cmb_type_pret.SelectedItem + "', "
+                                    + this.txt_montant_prete.Text + ", " + this.txt_interet.Text + ", " + this.txt_montant_rembourser.Text + ", "
+                                    + this.txt_nb_tranche.Text + ", " + this.txt_mr_tranche.Text + ", '" + this.dt_date_debut.Value.ToShortDateString() + "', '"
+                                    + this.dt_date_fin.Value.ToShortDateString() + "', '" + this.dt_date_creation.Value.ToShortDateString() + "', '"
+                                    +this.cmb_devise.SelectedItem.ToString()+"'";
+                                SqlCommand cmdnd = new SqlCommand(querynd, cond);
                                 SqlDataReader sdrnd;
                                 try
                                 {
@@ -171,7 +129,7 @@ namespace Confidence
                                     sdrnd = cmdnd.ExecuteReader();
                                     //
                                     //recuperation de la valeur retournee
-                                    MetroFramework.MetroMessageBox.Show(this, "Compte cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MetroFramework.MetroMessageBox.Show(this, "Pret cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     cond.Close();
 
                                 }
@@ -179,6 +137,7 @@ namespace Confidence
                                 {
                                     MessageBox.Show(ex.Message);
                                 }
+
                             }
                         }
                         catch (Exception ex)
@@ -193,12 +152,28 @@ namespace Confidence
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }  
+            }
         }
 
-        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        private void cmb_type_pret_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Close();
+            // taux des prets
+        }
+
+        private void txt_montant_prete_TextChanged(object sender, EventArgs e)
+        {
+            int interet = Convert.ToInt32(this.txt_montant_prete.Text) / 5;
+            txt_interet.Text = interet.ToString();
+
+            int montant_remb = Convert.ToInt32(this.txt_interet.Text) + Convert.ToInt32(txt_montant_prete.Text);
+            txt_montant_rembourser.Text = montant_remb.ToString();
+
+        }
+
+        private void txt_nb_tranche_TextChanged(object sender, EventArgs e)
+        {
+            double mr_tranche = Convert.ToInt32(this.txt_montant_rembourser.Text) / Convert.ToInt32(this.txt_nb_tranche.Text);
+            txt_mr_tranche.Text = mr_tranche.ToString();
         }
     }
 }

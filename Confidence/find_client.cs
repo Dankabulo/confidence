@@ -76,7 +76,36 @@ namespace Confidence
             
         }
 
-  
+
+        public List<string> total_SIV(int compte)
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC total_SIV "+compte+"";
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            List<string> n = new List<string>();
+            SqlDataReader sdr;
+
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                while (sdr.Read())
+                {
+                    n.Add(sdr["nombre"].ToString());
+                    n.Add(sdr["second"].ToString());
+                    n.Add(sdr["deux"].ToString());
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return n;
+
+        }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
@@ -116,6 +145,13 @@ namespace Confidence
                     }
                     else
                     {
+                        List<string> valeurs = new List<string>();
+                        valeurs = total_SIV(Convert.ToInt32(lbl_courant.Text));
+
+                        string[] tableau = valeurs.ToArray();
+                        // Affectation 
+                        lbl_solde_courant.Text = tableau[0];
+                        lbl_val_courant.Text = tableau[2];
                         panel_view_courant.Visible = true;
                     }
 
@@ -125,6 +161,14 @@ namespace Confidence
                     }
                     else
                     {
+                        List<string> valeurs = new List<string>();
+                        valeurs = total_SIV(Convert.ToInt32(lbl_terme.Text));
+
+                        string[] tableau = valeurs.ToArray();
+                        // Affectation 
+                        lbl_solde_terme.Text = tableau[0];
+                        lbl_interet_terme.Text = tableau[1];
+                        lbl_val_terme.Text = tableau[2];
                         panel_view_terme.Visible = true;
                     }
                 }
@@ -191,6 +235,11 @@ namespace Confidence
         private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }

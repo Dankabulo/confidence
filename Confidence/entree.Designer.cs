@@ -41,9 +41,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label12 = new System.Windows.Forms.Label();
+            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuImageButton2
@@ -178,10 +181,36 @@
             this.bunifuImageButton3.Zoom = 10;
             this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(680, 133);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(120, 21);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Nouveau pret";
+            // 
+            // bunifuImageButton4
+            // 
+            this.bunifuImageButton4.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
+            this.bunifuImageButton4.ImageActive = null;
+            this.bunifuImageButton4.Location = new System.Drawing.Point(531, 72);
+            this.bunifuImageButton4.Name = "bunifuImageButton4";
+            this.bunifuImageButton4.Size = new System.Drawing.Size(144, 133);
+            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton4.TabIndex = 30;
+            this.bunifuImageButton4.TabStop = false;
+            this.bunifuImageButton4.Zoom = 10;
+            this.bunifuImageButton4.Click += new System.EventHandler(this.bunifuImageButton4_Click);
+            // 
             // entree
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.bunifuImageButton4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -199,6 +228,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +247,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
+        private System.Windows.Forms.Label label12;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
     }
 }

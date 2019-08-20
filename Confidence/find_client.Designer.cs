@@ -38,20 +38,34 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tab_courant = new System.Windows.Forms.TabPage();
+            this.panel_view_courant = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.lbl_val_courant = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_solde_courant = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lbl_courant = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tab_terme = new System.Windows.Forms.TabPage();
             this.panel_view_terme = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lbl_interet_terme = new System.Windows.Forms.Label();
             this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lbl_val_terme = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label22 = new System.Windows.Forms.Label();
             this.bunifuImageButton6 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.lbl_solde_terme = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.bunifuImageButton7 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label14 = new System.Windows.Forms.Label();
@@ -72,20 +86,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_code_proprietaire = new System.Windows.Forms.TextBox();
-            this.panel_view_courant = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.lbl_courant = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tab_clients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -93,6 +93,9 @@
             this.groupBox3.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tab_courant.SuspendLayout();
+            this.panel_view_courant.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.tab_terme.SuspendLayout();
             this.panel_view_terme.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
@@ -102,9 +105,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.tab_recherche.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel_view_courant.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -162,6 +162,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(740, 345);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
             // tab_detail
             // 
@@ -207,6 +208,159 @@
             this.tab_courant.Text = "COMPTE COURANT";
             this.tab_courant.UseVisualStyleBackColor = true;
             // 
+            // panel_view_courant
+            // 
+            this.panel_view_courant.Controls.Add(this.label16);
+            this.panel_view_courant.Controls.Add(this.label8);
+            this.panel_view_courant.Controls.Add(this.materialRaisedButton3);
+            this.panel_view_courant.Controls.Add(this.materialRaisedButton2);
+            this.panel_view_courant.Controls.Add(this.lbl_val_courant);
+            this.panel_view_courant.Controls.Add(this.label7);
+            this.panel_view_courant.Controls.Add(this.bunifuImageButton4);
+            this.panel_view_courant.Controls.Add(this.label3);
+            this.panel_view_courant.Controls.Add(this.lbl_solde_courant);
+            this.panel_view_courant.Controls.Add(this.label5);
+            this.panel_view_courant.Controls.Add(this.bunifuImageButton2);
+            this.panel_view_courant.Controls.Add(this.lbl_courant);
+            this.panel_view_courant.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_view_courant.Location = new System.Drawing.Point(3, 3);
+            this.panel_view_courant.Name = "panel_view_courant";
+            this.panel_view_courant.Size = new System.Drawing.Size(420, 359);
+            this.panel_view_courant.TabIndex = 0;
+            this.panel_view_courant.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(234, 161);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(58, 20);
+            this.label16.TabIndex = 28;
+            this.label16.Text = "devise";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(212, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 20);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Numero compte :";
+            // 
+            // materialRaisedButton3
+            // 
+            this.materialRaisedButton3.Depth = 0;
+            this.materialRaisedButton3.Location = new System.Drawing.Point(284, 305);
+            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton3.Name = "materialRaisedButton3";
+            this.materialRaisedButton3.Primary = true;
+            this.materialRaisedButton3.Size = new System.Drawing.Size(121, 43);
+            this.materialRaisedButton3.TabIndex = 26;
+            this.materialRaisedButton3.Text = "operation";
+            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
+            // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(153, 305);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(121, 43);
+            this.materialRaisedButton2.TabIndex = 25;
+            this.materialRaisedButton2.Text = "details";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
+            // 
+            // lbl_val_courant
+            // 
+            this.lbl_val_courant.AutoSize = true;
+            this.lbl_val_courant.Location = new System.Drawing.Point(350, 161);
+            this.lbl_val_courant.Name = "lbl_val_courant";
+            this.lbl_val_courant.Size = new System.Drawing.Size(17, 20);
+            this.lbl_val_courant.TabIndex = 24;
+            this.lbl_val_courant.Text = "0";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(101, 161);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(127, 20);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Valeur acquise :";
+            // 
+            // bunifuImageButton4
+            // 
+            this.bunifuImageButton4.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
+            this.bunifuImageButton4.ImageActive = null;
+            this.bunifuImageButton4.Location = new System.Drawing.Point(15, 120);
+            this.bunifuImageButton4.Name = "bunifuImageButton4";
+            this.bunifuImageButton4.Size = new System.Drawing.Size(68, 61);
+            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton4.TabIndex = 22;
+            this.bunifuImageButton4.TabStop = false;
+            this.bunifuImageButton4.Zoom = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(164, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "devise";
+            // 
+            // lbl_solde_courant
+            // 
+            this.lbl_solde_courant.AutoSize = true;
+            this.lbl_solde_courant.Location = new System.Drawing.Point(350, 94);
+            this.lbl_solde_courant.Name = "lbl_solde_courant";
+            this.lbl_solde_courant.Size = new System.Drawing.Size(17, 20);
+            this.lbl_solde_courant.TabIndex = 20;
+            this.lbl_solde_courant.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(101, 94);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Solde :";
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(15, 53);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(68, 61);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 18;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            // 
+            // lbl_courant
+            // 
+            this.lbl_courant.AutoSize = true;
+            this.lbl_courant.Location = new System.Drawing.Point(350, 11);
+            this.lbl_courant.Name = "lbl_courant";
+            this.lbl_courant.Size = new System.Drawing.Size(0, 20);
+            this.lbl_courant.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(104, 154);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Aucun compte correspondant";
+            // 
             // tab_terme
             // 
             this.tab_terme.Controls.Add(this.panel_view_terme);
@@ -223,16 +377,16 @@
             // 
             this.panel_view_terme.Controls.Add(this.label17);
             this.panel_view_terme.Controls.Add(this.label18);
-            this.panel_view_terme.Controls.Add(this.label19);
+            this.panel_view_terme.Controls.Add(this.lbl_interet_terme);
             this.panel_view_terme.Controls.Add(this.materialRaisedButton5);
             this.panel_view_terme.Controls.Add(this.materialRaisedButton6);
-            this.panel_view_terme.Controls.Add(this.label20);
+            this.panel_view_terme.Controls.Add(this.lbl_val_terme);
             this.panel_view_terme.Controls.Add(this.label21);
             this.panel_view_terme.Controls.Add(this.bunifuImageButton5);
             this.panel_view_terme.Controls.Add(this.label22);
             this.panel_view_terme.Controls.Add(this.bunifuImageButton6);
             this.panel_view_terme.Controls.Add(this.label23);
-            this.panel_view_terme.Controls.Add(this.label24);
+            this.panel_view_terme.Controls.Add(this.lbl_solde_terme);
             this.panel_view_terme.Controls.Add(this.label25);
             this.panel_view_terme.Controls.Add(this.bunifuImageButton7);
             this.panel_view_terme.Controls.Add(this.label14);
@@ -262,14 +416,14 @@
             this.label18.TabIndex = 45;
             this.label18.Text = "devise";
             // 
-            // label19
+            // lbl_interet_terme
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(349, 172);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(17, 20);
-            this.label19.TabIndex = 44;
-            this.label19.Text = "0";
+            this.lbl_interet_terme.AutoSize = true;
+            this.lbl_interet_terme.Location = new System.Drawing.Point(349, 172);
+            this.lbl_interet_terme.Name = "lbl_interet_terme";
+            this.lbl_interet_terme.Size = new System.Drawing.Size(17, 20);
+            this.lbl_interet_terme.TabIndex = 44;
+            this.lbl_interet_terme.Text = "0";
             // 
             // materialRaisedButton5
             // 
@@ -297,14 +451,14 @@
             this.materialRaisedButton6.UseVisualStyleBackColor = true;
             this.materialRaisedButton6.Click += new System.EventHandler(this.materialRaisedButton6_Click);
             // 
-            // label20
+            // lbl_val_terme
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(349, 228);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(17, 20);
-            this.label20.TabIndex = 41;
-            this.label20.Text = "0";
+            this.lbl_val_terme.AutoSize = true;
+            this.lbl_val_terme.Location = new System.Drawing.Point(349, 228);
+            this.lbl_val_terme.Name = "lbl_val_terme";
+            this.lbl_val_terme.Size = new System.Drawing.Size(17, 20);
+            this.lbl_val_terme.TabIndex = 41;
+            this.lbl_val_terme.Text = "0";
             // 
             // label21
             // 
@@ -359,14 +513,14 @@
             this.label23.TabIndex = 36;
             this.label23.Text = "devise";
             // 
-            // label24
+            // lbl_solde_terme
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(349, 94);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(17, 20);
-            this.label24.TabIndex = 35;
-            this.label24.Text = "0";
+            this.lbl_solde_terme.AutoSize = true;
+            this.lbl_solde_terme.Location = new System.Drawing.Point(349, 94);
+            this.lbl_solde_terme.Name = "lbl_solde_terme";
+            this.lbl_solde_terme.Size = new System.Drawing.Size(17, 20);
+            this.lbl_solde_terme.TabIndex = 35;
+            this.lbl_solde_terme.Text = "0";
             // 
             // label25
             // 
@@ -563,159 +717,6 @@
             this.txt_code_proprietaire.Size = new System.Drawing.Size(100, 26);
             this.txt_code_proprietaire.TabIndex = 0;
             // 
-            // panel_view_courant
-            // 
-            this.panel_view_courant.Controls.Add(this.label16);
-            this.panel_view_courant.Controls.Add(this.label8);
-            this.panel_view_courant.Controls.Add(this.materialRaisedButton3);
-            this.panel_view_courant.Controls.Add(this.materialRaisedButton2);
-            this.panel_view_courant.Controls.Add(this.label6);
-            this.panel_view_courant.Controls.Add(this.label7);
-            this.panel_view_courant.Controls.Add(this.bunifuImageButton4);
-            this.panel_view_courant.Controls.Add(this.label3);
-            this.panel_view_courant.Controls.Add(this.label2);
-            this.panel_view_courant.Controls.Add(this.label5);
-            this.panel_view_courant.Controls.Add(this.bunifuImageButton2);
-            this.panel_view_courant.Controls.Add(this.lbl_courant);
-            this.panel_view_courant.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_view_courant.Location = new System.Drawing.Point(3, 3);
-            this.panel_view_courant.Name = "panel_view_courant";
-            this.panel_view_courant.Size = new System.Drawing.Size(420, 359);
-            this.panel_view_courant.TabIndex = 0;
-            this.panel_view_courant.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 154);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Aucun compte correspondant";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(234, 161);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(58, 20);
-            this.label16.TabIndex = 28;
-            this.label16.Text = "devise";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(212, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 20);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Numero compte :";
-            // 
-            // materialRaisedButton3
-            // 
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(284, 305);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(121, 43);
-            this.materialRaisedButton3.TabIndex = 26;
-            this.materialRaisedButton3.Text = "operation";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
-            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
-            // 
-            // materialRaisedButton2
-            // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(153, 305);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(121, 43);
-            this.materialRaisedButton2.TabIndex = 25;
-            this.materialRaisedButton2.Text = "details";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
-            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(350, 161);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 20);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "0";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(101, 161);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 20);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Valeur acquise :";
-            // 
-            // bunifuImageButton4
-            // 
-            this.bunifuImageButton4.BackColor = System.Drawing.Color.White;
-            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
-            this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(15, 120);
-            this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Size = new System.Drawing.Size(68, 61);
-            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton4.TabIndex = 22;
-            this.bunifuImageButton4.TabStop = false;
-            this.bunifuImageButton4.Zoom = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(164, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 20);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "devise";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(350, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 20);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(101, 94);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Solde :";
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.White;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(15, 53);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(68, 61);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 18;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            // 
-            // lbl_courant
-            // 
-            this.lbl_courant.AutoSize = true;
-            this.lbl_courant.Location = new System.Drawing.Point(350, 11);
-            this.lbl_courant.Name = "lbl_courant";
-            this.lbl_courant.Size = new System.Drawing.Size(0, 20);
-            this.lbl_courant.TabIndex = 17;
-            // 
             // find_client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -732,6 +733,10 @@
             this.tabControl2.ResumeLayout(false);
             this.tab_courant.ResumeLayout(false);
             this.tab_courant.PerformLayout();
+            this.panel_view_courant.ResumeLayout(false);
+            this.panel_view_courant.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.tab_terme.ResumeLayout(false);
             this.tab_terme.PerformLayout();
             this.panel_view_terme.ResumeLayout(false);
@@ -746,10 +751,6 @@
             this.tab_recherche.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel_view_courant.ResumeLayout(false);
-            this.panel_view_courant.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -783,16 +784,16 @@
         private System.Windows.Forms.Panel panel_view_terme;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lbl_interet_terme;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lbl_val_terme;
         private System.Windows.Forms.Label label21;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
         private System.Windows.Forms.Label label22;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton6;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lbl_solde_terme;
         private System.Windows.Forms.Label label25;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton7;
         private System.Windows.Forms.Label label14;
@@ -804,11 +805,11 @@
         private System.Windows.Forms.Label label8;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_val_courant;
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_solde_courant;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private System.Windows.Forms.Label lbl_courant;

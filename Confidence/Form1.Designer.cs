@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Panelmenu = new System.Windows.Forms.Panel();
             this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -448,7 +448,6 @@
             // 
             // mmainpale
             // 
-            this.mmainpale.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.paneltransition.SetDecoration(this.mmainpale, BunifuAnimatorNS.DecorationType.None);
             this.mmainpale.Location = new System.Drawing.Point(223, 142);
             this.mmainpale.Name = "mmainpale";
@@ -537,28 +536,25 @@
             // 
             this.paneltransition.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.paneltransition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 1F;
-            this.paneltransition.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.paneltransition.DefaultAnimation = animation1;
             // 
             // barre
             // 
-            this.barre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.barre.BackColor = System.Drawing.SystemColors.Control;
             this.barre.Controls.Add(this.btn_recherche);
             this.barre.Controls.Add(this.btnvision);
@@ -568,9 +564,10 @@
             this.barre.Controls.Add(this.btnoperation);
             this.barre.Controls.Add(this.btnListe_clients);
             this.paneltransition.SetDecoration(this.barre, BunifuAnimatorNS.DecorationType.None);
-            this.barre.Location = new System.Drawing.Point(224, 63);
+            this.barre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barre.Location = new System.Drawing.Point(223, 62);
             this.barre.Name = "barre";
-            this.barre.Size = new System.Drawing.Size(1102, 194);
+            this.barre.Size = new System.Drawing.Size(1163, 90);
             this.barre.TabIndex = 3;
             // 
             // btn_recherche
@@ -784,6 +781,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Panelmenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.hidephoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();

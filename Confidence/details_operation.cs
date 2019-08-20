@@ -70,5 +70,31 @@ namespace Confidence
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void cmb_mois_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC " + this.cmb_mois.SelectedItem.ToString() + " " + this.txt_receive.Text + "";      
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+                sdr = cmd.ExecuteReader();
+                BindingSource source = new BindingSource();
+                source.DataSource = sdr;
+                dataGridView1.DataSource = source;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

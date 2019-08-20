@@ -125,3 +125,4 @@ C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Conf
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.find_client.resources
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.details_operation.resources
 C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.new_form_operation.resources
+C:\Users\Dan Kabulo\Documents\Visual Studio 2015\Projects\confidence_update\Confidence\obj\Debug\Confidence.pret_form.resources
