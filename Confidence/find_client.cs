@@ -109,6 +109,13 @@ namespace Confidence
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
+            // hide panels prets
+            panel_pret_1.Visible = false;
+            panel_pret_2.Visible = false;
+            panel_pret_3.Visible = false;
+            panel_pret_4.Visible = false;
+            panel_pret_imm.Visible = false;
+
             txt_idproprietaire.Text = "";
             lbl_courant.Text = "";
             lbl_terme.Text = "";
@@ -240,6 +247,216 @@ namespace Confidence
         private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
+        }
+
+        private void materialRaisedButton7_Click(object sender, EventArgs e)
+        {
+            lbl_id_pret_1.Text = "";
+
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC recherche_prets '" + this.txt_code_proprietaire.Text + "', 'pret_1'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                //MetroFramework.MetroMessageBox.Show(this, "Compte supprimer avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                while (sdr.Read())
+                {
+                    lbl_id_pret_1.Text = sdr["quatre"].ToString();
+                    lbl_montant_prete_1.Text = sdr["nombre"].ToString();
+                    lbl_interet_pret_1.Text = sdr["second"].ToString();
+                    lbl_mr_1.Text = sdr["deux"].ToString();
+                    dt_debut_pret_1.Text = sdr["date_debut"].ToString();
+                    dt_fin_pret_1.Text = sdr["date_fin"].ToString();
+                }
+                con.Close();
+
+                if (this.lbl_id_pret_1.Text != "")
+                {
+                    panel_pret_1.Show();
+                }
+                else
+                {
+                    panel_pret_1.Hide();
+                    MessageBox.Show("Aucune information correspondante");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void materialRaisedButton9_Click(object sender, EventArgs e)
+        {
+            lbl_id_pret_2.Text = "";
+
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC recherche_prets '" + this.txt_code_proprietaire.Text + "', 'pret_2'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                //MetroFramework.MetroMessageBox.Show(this, "Compte supprimer avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                while (sdr.Read())
+                {
+                    lbl_id_pret_2.Text = sdr["quatre"].ToString();
+                    lbl_montant_prete_2.Text = sdr["nombre"].ToString();
+                    lbl_interet_pret_2.Text = sdr["second"].ToString();
+                    lbl_mr_2.Text = sdr["deux"].ToString();
+                    dt_debut_pret_2.Text = sdr["date_debut"].ToString();
+                    dt_fin_pret_2.Text = sdr["date_fin"].ToString();
+                }
+                con.Close();
+
+                if (this.lbl_id_pret_2.Text != "")
+                {
+                    panel_pret_2.Show();
+                }
+                else
+                {
+                    panel_pret_2.Hide();
+                    MessageBox.Show("Aucune information correspondante");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void materialRaisedButton19_Click(object sender, EventArgs e)
+        {
+            lbl_id_pret_3.Text = "";
+
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC recherche_prets '" + this.txt_code_proprietaire.Text + "', 'pret_3'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                //MetroFramework.MetroMessageBox.Show(this, "Compte supprimer avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                while (sdr.Read())
+                {
+                    lbl_id_pret_3.Text = sdr["quatre"].ToString();
+                    lbl_montant_prete_3.Text = sdr["nombre"].ToString();
+                    lbl_interet_pret_3.Text = sdr["second"].ToString();
+                    lbl_mr_3.Text = sdr["deux"].ToString();
+                    dt_debut_pret_3.Text = sdr["date_debut"].ToString();
+                    dt_fin_pret_3.Text = sdr["date_fin"].ToString();
+                }
+                con.Close();
+
+                if (this.lbl_id_pret_3.Text != "")
+                {
+                    panel_pret_3.Show();
+                }
+                else
+                {
+                    panel_pret_3.Hide();
+                    MessageBox.Show("Aucune information correspondante");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void materialRaisedButton20_Click(object sender, EventArgs e)
+        {
+            lbl_id_pret_4.Text = "";
+
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC recherche_prets '" + this.txt_code_proprietaire.Text + "', 'pret_4'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                //MetroFramework.MetroMessageBox.Show(this, "Compte supprimer avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                while (sdr.Read())
+                {
+                    lbl_id_pret_4.Text = sdr["quatre"].ToString();
+                    lbl_montant_prete_4.Text = sdr["nombre"].ToString();
+                    lbl_interet_pret_4.Text = sdr["second"].ToString();
+                    lbl_mr_4.Text = sdr["deux"].ToString();
+                    dt_debut_pret_4.Text = sdr["date_debut"].ToString();
+                    dt_fin_pret_4.Text = sdr["date_fin"].ToString();
+                }
+                con.Close();
+
+                if (this.lbl_id_pret_4.Text != "")
+                {
+                    panel_pret_4.Show();
+                }
+                else
+                {
+                    panel_pret_4.Hide();
+                    MessageBox.Show("Aucune information correspondante");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void materialRaisedButton21_Click(object sender, EventArgs e)
+        {
+            lbl_id_pret_imm.Text = "";
+
+            SqlConnection con = new SqlConnection(cs);
+            string query = "EXEC recherche_prets '" + this.txt_code_proprietaire.Text + "', 'Immobilier'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader sdr;
+            try
+            {
+                con.Open();
+
+                sdr = cmd.ExecuteReader();
+                //MetroFramework.MetroMessageBox.Show(this, "Compte supprimer avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                while (sdr.Read())
+                {
+                    lbl_id_pret_imm.Text = sdr["quatre"].ToString();
+                    lbl_montant_prete_imm.Text = sdr["nombre"].ToString();
+                    lbl_interet_pret_imm.Text = sdr["second"].ToString();
+                    lbl_mr_imm.Text = sdr["deux"].ToString();
+                    dt_debut_pret_imm.Text = sdr["date_debut"].ToString();
+                    dt_fin_pret_imm.Text = sdr["date_fin"].ToString();
+                }
+                con.Close();
+
+                if (this.lbl_id_pret_imm.Text != "")
+                {
+                    panel_pret_imm.Show();
+                }
+                else
+                {
+                    panel_pret_imm.Hide();
+                    MessageBox.Show("Aucune information correspondante");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
