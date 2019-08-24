@@ -24,7 +24,7 @@ namespace Confidence
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            if (txtnom.Text == "" || txtpostnom.Text == "" || txtprenom.Text == "" || txt_montant_prete.Text == "" || cmb_type_pret.Text == "" || dt_date_debut.Text == "" || txt_nb_tranche.Text == "" || dt_date_fin.Text == "")
+            if (txtnom.Text == ""  || txt_montant_prete.Text == "" || cmb_type_pret.Text == "" || dt_date_debut.Text == "" || txt_nb_tranche.Text == "" || dt_date_fin.Text == "")
             {
                 MetroFramework.MetroMessageBox.Show(this, "Veuillez renseigner tous les champs avant de continuer", "Certains champs sont vides", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -106,8 +106,41 @@ namespace Confidence
 
                             if (this.txt_utilisateur_compte.Text != "")
                             {
-                                //message d'erreur
-                                MetroFramework.MetroMessageBox.Show(this, "Ce client a deja effectue un pret de ce type, il nous doit encore : "+this.txt_montant_deja_prete_type.Text+"", "Message erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                int reste = Convert.ToInt32(txt_montant_deja_prete_type.Text);
+                                if (reste == 0)
+                                {
+                                    // update insertion
+                                    SqlConnection cond = new SqlConnection(cs);
+                                    string querynd = "EXEC update_pret_none_proprietaire '"
+                                        + this.txtnom.Text + "','"
+                                        + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "','" + this.cmb_type_pret.SelectedItem + "', "
+                                        + this.txt_montant_prete.Text + ", " + this.txt_interet.Text + ", " + this.txt_montant_rembourser.Text + ", "
+                                        + this.txt_nb_tranche.Text + ", " + this.txt_mr_tranche.Text + ", '" + this.dt_date_debut.Value.ToShortDateString() + "', '"
+                                        + this.dt_date_fin.Value.ToShortDateString() + "', '" + this.dt_date_creation.Value.ToShortDateString() + "', '"
+                                        + this.cmb_devise.SelectedItem.ToString() + "'";
+                                    SqlCommand cmdnd = new SqlCommand(querynd, cond);
+                                    SqlDataReader sdrnd;
+                                    try
+                                    {
+                                        cond.Open();
+                                        sdrnd = cmdnd.ExecuteReader();
+                                        //
+                                        //recuperation de la valeur retournee
+                                        MetroFramework.MetroMessageBox.Show(this, "Pret cree avec success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        cond.Close();
+
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show(ex.Message);
+                                    }
+
+                                }
+                                else
+                                {
+                                    //message d'erreur
+                                    MetroFramework.MetroMessageBox.Show(this, "Ce client a deja effectue un pret de ce type, il nous doit encore : " + this.txt_montant_deja_prete_type.Text + "", "Message erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
                             }
                             else
                             {
@@ -174,6 +207,14 @@ namespace Confidence
         {
             double mr_tranche = Convert.ToInt32(this.txt_montant_rembourser.Text) / Convert.ToInt32(this.txt_nb_tranche.Text);
             txt_mr_tranche.Text = mr_tranche.ToString();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            view_grid_form n = new view_grid_form();
+            string requete = "SELECT * FROM PRET";
+            n.set_requete(requete, "Informations des prets enregistrés");
+            n.ShowDialog();
         }
     }
 }

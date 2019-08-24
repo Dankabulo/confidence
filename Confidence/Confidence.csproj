@@ -77,6 +77,12 @@
     <Compile Include="account.Designer.cs">
       <DependentUpon>account.cs</DependentUpon>
     </Compile>
+    <Compile Include="actionnaire_operation_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actionnaire_operation_form.Designer.cs">
+      <DependentUpon>actionnaire_operation_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Authentification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,12 @@
     </Compile>
     <Compile Include="details_operation.Designer.cs">
       <DependentUpon>details_operation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="details_remboursement_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="details_remboursement_form.Designer.cs">
+      <DependentUpon>details_remboursement_form.cs</DependentUpon>
     </Compile>
     <Compile Include="entree.cs">
       <SubType>UserControl</SubType>
@@ -154,6 +166,12 @@
     <Compile Include="new_form_operation.Designer.cs">
       <DependentUpon>new_form_operation.cs</DependentUpon>
     </Compile>
+    <Compile Include="new_remboursement_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_remboursement_form.Designer.cs">
+      <DependentUpon>new_remboursement_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="operation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +183,12 @@
     </Compile>
     <Compile Include="operationss_client.Designer.cs">
       <DependentUpon>operationss_client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="other_ressource_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other_ressource_form.Designer.cs">
+      <DependentUpon>other_ressource_form.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonnesAt.cs">
       <SubType>Form</SubType>
@@ -193,6 +217,12 @@
     <Compile Include="suppression.Designer.cs">
       <DependentUpon>suppression.cs</DependentUpon>
     </Compile>
+    <Compile Include="view_grid_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_grid_form.Designer.cs">
+      <DependentUpon>view_grid_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="visionG.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -204,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="account.resx">
       <DependentUpon>account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionnaire_operation_form.resx">
+      <DependentUpon>actionnaire_operation_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
@@ -222,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="details_operation.resx">
       <DependentUpon>details_operation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="details_remboursement_form.resx">
+      <DependentUpon>details_remboursement_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="entree.resx">
       <DependentUpon>entree.cs</DependentUpon>
@@ -244,11 +280,17 @@
     <EmbeddedResource Include="new_form_operation.resx">
       <DependentUpon>new_form_operation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="new_remboursement_form.resx">
+      <DependentUpon>new_remboursement_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="operation.resx">
       <DependentUpon>operation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="operationss_client.resx">
       <DependentUpon>operationss_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other_ressource_form.resx">
+      <DependentUpon>other_ressource_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonnesAt.resx">
       <DependentUpon>PersonnesAt.cs</DependentUpon>
@@ -270,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="suppression.resx">
       <DependentUpon>suppression.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_grid_form.resx">
+      <DependentUpon>view_grid_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="visionG.resx">
       <DependentUpon>visionG.cs</DependentUpon>

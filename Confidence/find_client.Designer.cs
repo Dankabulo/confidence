@@ -89,18 +89,9 @@
             this.tab_pret = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel_pret_1 = new System.Windows.Forms.Panel();
+            this.dt_fin_pret_1 = new System.Windows.Forms.TextBox();
+            this.dt_debut_pret_1 = new System.Windows.Forms.TextBox();
             this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton17 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label35 = new System.Windows.Forms.Label();
@@ -118,8 +109,12 @@
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbl_id_pret_1 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel_pret_2 = new System.Windows.Forms.Panel();
+            this.dt_fin_pret_2 = new System.Windows.Forms.TextBox();
+            this.dt_debut_pret_2 = new System.Windows.Forms.TextBox();
             this.materialRaisedButton10 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton18 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label36 = new System.Windows.Forms.Label();
@@ -137,8 +132,12 @@
             this.bunifuImageButton14 = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbl_id_pret_2 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            this.materialRaisedButton19 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel_pret_3 = new System.Windows.Forms.Panel();
+            this.dt_fin_pret_3 = new System.Windows.Forms.TextBox();
+            this.dt_debut_pret_3 = new System.Windows.Forms.TextBox();
             this.materialRaisedButton11 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton12 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label47 = new System.Windows.Forms.Label();
@@ -156,8 +155,12 @@
             this.bunifuImageButton18 = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbl_id_pret_3 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
-            this.materialRaisedButton20 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton19 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel_pret_4 = new System.Windows.Forms.Panel();
+            this.dt_fin_pret_4 = new System.Windows.Forms.TextBox();
+            this.dt_debut_pret_4 = new System.Windows.Forms.TextBox();
             this.materialRaisedButton13 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton14 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label58 = new System.Windows.Forms.Label();
@@ -175,8 +178,12 @@
             this.bunifuImageButton22 = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbl_id_pret_4 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
-            this.materialRaisedButton21 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton20 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label19 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel_pret_imm = new System.Windows.Forms.Panel();
+            this.dt_fin_pret_imm = new System.Windows.Forms.TextBox();
+            this.dt_debut_pret_imm = new System.Windows.Forms.TextBox();
             this.materialRaisedButton15 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton16 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label69 = new System.Windows.Forms.Label();
@@ -194,16 +201,9 @@
             this.bunifuImageButton26 = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbl_id_pret_imm = new System.Windows.Forms.Label();
             this.label79 = new System.Windows.Forms.Label();
-            this.dt_debut_pret_1 = new System.Windows.Forms.TextBox();
-            this.dt_fin_pret_1 = new System.Windows.Forms.TextBox();
-            this.dt_fin_pret_2 = new System.Windows.Forms.TextBox();
-            this.dt_debut_pret_2 = new System.Windows.Forms.TextBox();
-            this.dt_fin_pret_3 = new System.Windows.Forms.TextBox();
-            this.dt_debut_pret_3 = new System.Windows.Forms.TextBox();
-            this.dt_fin_pret_4 = new System.Windows.Forms.TextBox();
-            this.dt_debut_pret_4 = new System.Windows.Forms.TextBox();
-            this.dt_fin_pret_imm = new System.Windows.Forms.TextBox();
-            this.dt_debut_pret_imm = new System.Windows.Forms.TextBox();
+            this.materialRaisedButton21 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tab_clients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -226,30 +226,30 @@
             this.tab_pret.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             this.panel_pret_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.panel_pret_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton14)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.panel_pret_3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton18)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.panel_pret_4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton22)).BeginInit();
+            this.tabPage5.SuspendLayout();
             this.panel_pret_imm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton24)).BeginInit();
@@ -904,122 +904,6 @@
             this.tabPage1.Text = "Pret 1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.panel_pret_2);
-            this.tabPage2.Controls.Add(this.materialRaisedButton9);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(638, 485);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Pret 2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.panel_pret_3);
-            this.tabPage3.Controls.Add(this.materialRaisedButton19);
-            this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(638, 485);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Pret 3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.panel_pret_4);
-            this.tabPage4.Controls.Add(this.materialRaisedButton20);
-            this.tabPage4.Controls.Add(this.label19);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(638, 485);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Pret 4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(102, 197);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(432, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Aucun prêt de ce type n\'a été enregistre pour ce compte";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(102, 195);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(432, 20);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Aucun prêt de ce type n\'a été enregistre pour ce compte";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(101, 195);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(432, 20);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "Aucun prêt de ce type n\'a été enregistre pour ce compte";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.panel_pret_imm);
-            this.tabPage5.Controls.Add(this.materialRaisedButton21);
-            this.tabPage5.Controls.Add(this.label24);
-            this.tabPage5.Controls.Add(this.label20);
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(638, 485);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Immobilier";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(90, 189);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(0, 20);
-            this.label20.TabIndex = 0;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(96, 189);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(432, 20);
-            this.label24.TabIndex = 2;
-            this.label24.Text = "Aucun prêt de ce type n\'a été enregistre pour ce compte";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(98, 196);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(432, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Aucun prêt de ce type n\'a été enregistre pour ce compte";
-            // 
-            // materialRaisedButton7
-            // 
-            this.materialRaisedButton7.Depth = 0;
-            this.materialRaisedButton7.Location = new System.Drawing.Point(242, 236);
-            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton7.Name = "materialRaisedButton7";
-            this.materialRaisedButton7.Primary = true;
-            this.materialRaisedButton7.Size = new System.Drawing.Size(115, 40);
-            this.materialRaisedButton7.TabIndex = 2;
-            this.materialRaisedButton7.Text = "rafraichir";
-            this.materialRaisedButton7.UseVisualStyleBackColor = true;
-            this.materialRaisedButton7.Click += new System.EventHandler(this.materialRaisedButton7_Click);
-            // 
             // panel_pret_1
             // 
             this.panel_pret_1.Controls.Add(this.dt_fin_pret_1);
@@ -1048,6 +932,20 @@
             this.panel_pret_1.TabIndex = 3;
             this.panel_pret_1.Visible = false;
             // 
+            // dt_fin_pret_1
+            // 
+            this.dt_fin_pret_1.Location = new System.Drawing.Point(217, 352);
+            this.dt_fin_pret_1.Name = "dt_fin_pret_1";
+            this.dt_fin_pret_1.Size = new System.Drawing.Size(200, 26);
+            this.dt_fin_pret_1.TabIndex = 47;
+            // 
+            // dt_debut_pret_1
+            // 
+            this.dt_debut_pret_1.Location = new System.Drawing.Point(217, 310);
+            this.dt_debut_pret_1.Name = "dt_debut_pret_1";
+            this.dt_debut_pret_1.Size = new System.Drawing.Size(200, 26);
+            this.dt_debut_pret_1.TabIndex = 46;
+            // 
             // materialRaisedButton8
             // 
             this.materialRaisedButton8.Depth = 0;
@@ -1059,6 +957,7 @@
             this.materialRaisedButton8.TabIndex = 45;
             this.materialRaisedButton8.Text = "Nouvelle operation";
             this.materialRaisedButton8.UseVisualStyleBackColor = true;
+            this.materialRaisedButton8.Click += new System.EventHandler(this.materialRaisedButton8_Click);
             // 
             // materialRaisedButton17
             // 
@@ -1071,6 +970,7 @@
             this.materialRaisedButton17.TabIndex = 44;
             this.materialRaisedButton17.Text = "recents mouvements";
             this.materialRaisedButton17.UseVisualStyleBackColor = true;
+            this.materialRaisedButton17.Click += new System.EventHandler(this.materialRaisedButton17_Click);
             // 
             // label35
             // 
@@ -1226,18 +1126,40 @@
             this.label26.TabIndex = 0;
             this.label26.Text = "Identifiant pret :";
             // 
-            // materialRaisedButton9
+            // materialRaisedButton7
             // 
-            this.materialRaisedButton9.Depth = 0;
-            this.materialRaisedButton9.Location = new System.Drawing.Point(237, 231);
-            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton9.Name = "materialRaisedButton9";
-            this.materialRaisedButton9.Primary = true;
-            this.materialRaisedButton9.Size = new System.Drawing.Size(123, 44);
-            this.materialRaisedButton9.TabIndex = 3;
-            this.materialRaisedButton9.Text = "rafraichir";
-            this.materialRaisedButton9.UseVisualStyleBackColor = true;
-            this.materialRaisedButton9.Click += new System.EventHandler(this.materialRaisedButton9_Click);
+            this.materialRaisedButton7.Depth = 0;
+            this.materialRaisedButton7.Location = new System.Drawing.Point(242, 236);
+            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton7.Name = "materialRaisedButton7";
+            this.materialRaisedButton7.Primary = true;
+            this.materialRaisedButton7.Size = new System.Drawing.Size(115, 40);
+            this.materialRaisedButton7.TabIndex = 2;
+            this.materialRaisedButton7.Text = "rafraichir";
+            this.materialRaisedButton7.UseVisualStyleBackColor = true;
+            this.materialRaisedButton7.Click += new System.EventHandler(this.materialRaisedButton7_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(98, 196);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(432, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Aucun prêt de ce type n\'a été enregistre pour ce compte";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.panel_pret_2);
+            this.tabPage2.Controls.Add(this.materialRaisedButton9);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(638, 485);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Pret 2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel_pret_2
             // 
@@ -1267,6 +1189,20 @@
             this.panel_pret_2.TabIndex = 4;
             this.panel_pret_2.Visible = false;
             // 
+            // dt_fin_pret_2
+            // 
+            this.dt_fin_pret_2.Location = new System.Drawing.Point(213, 350);
+            this.dt_fin_pret_2.Name = "dt_fin_pret_2";
+            this.dt_fin_pret_2.Size = new System.Drawing.Size(200, 26);
+            this.dt_fin_pret_2.TabIndex = 66;
+            // 
+            // dt_debut_pret_2
+            // 
+            this.dt_debut_pret_2.Location = new System.Drawing.Point(213, 308);
+            this.dt_debut_pret_2.Name = "dt_debut_pret_2";
+            this.dt_debut_pret_2.Size = new System.Drawing.Size(200, 26);
+            this.dt_debut_pret_2.TabIndex = 65;
+            // 
             // materialRaisedButton10
             // 
             this.materialRaisedButton10.Depth = 0;
@@ -1278,6 +1214,7 @@
             this.materialRaisedButton10.TabIndex = 64;
             this.materialRaisedButton10.Text = "Nouvelle operation";
             this.materialRaisedButton10.UseVisualStyleBackColor = true;
+            this.materialRaisedButton10.Click += new System.EventHandler(this.materialRaisedButton10_Click);
             // 
             // materialRaisedButton18
             // 
@@ -1290,6 +1227,7 @@
             this.materialRaisedButton18.TabIndex = 63;
             this.materialRaisedButton18.Text = "recents mouvements";
             this.materialRaisedButton18.UseVisualStyleBackColor = true;
+            this.materialRaisedButton18.Click += new System.EventHandler(this.materialRaisedButton18_Click);
             // 
             // label36
             // 
@@ -1445,18 +1383,39 @@
             this.label46.TabIndex = 46;
             this.label46.Text = "Identifiant pret :";
             // 
-            // materialRaisedButton19
+            // materialRaisedButton9
             // 
-            this.materialRaisedButton19.Depth = 0;
-            this.materialRaisedButton19.Location = new System.Drawing.Point(230, 228);
-            this.materialRaisedButton19.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton19.Name = "materialRaisedButton19";
-            this.materialRaisedButton19.Primary = true;
-            this.materialRaisedButton19.Size = new System.Drawing.Size(123, 44);
-            this.materialRaisedButton19.TabIndex = 4;
-            this.materialRaisedButton19.Text = "rafraichir";
-            this.materialRaisedButton19.UseVisualStyleBackColor = true;
-            this.materialRaisedButton19.Click += new System.EventHandler(this.materialRaisedButton19_Click);
+            this.materialRaisedButton9.Depth = 0;
+            this.materialRaisedButton9.Location = new System.Drawing.Point(237, 231);
+            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton9.Name = "materialRaisedButton9";
+            this.materialRaisedButton9.Primary = true;
+            this.materialRaisedButton9.Size = new System.Drawing.Size(123, 44);
+            this.materialRaisedButton9.TabIndex = 3;
+            this.materialRaisedButton9.Text = "rafraichir";
+            this.materialRaisedButton9.UseVisualStyleBackColor = true;
+            this.materialRaisedButton9.Click += new System.EventHandler(this.materialRaisedButton9_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(102, 197);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(432, 20);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Aucun prêt de ce type n\'a été enregistre pour ce compte";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.panel_pret_3);
+            this.tabPage3.Controls.Add(this.materialRaisedButton19);
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(638, 485);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Pret 3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // panel_pret_3
             // 
@@ -1486,6 +1445,20 @@
             this.panel_pret_3.TabIndex = 5;
             this.panel_pret_3.Visible = false;
             // 
+            // dt_fin_pret_3
+            // 
+            this.dt_fin_pret_3.Location = new System.Drawing.Point(216, 356);
+            this.dt_fin_pret_3.Name = "dt_fin_pret_3";
+            this.dt_fin_pret_3.Size = new System.Drawing.Size(200, 26);
+            this.dt_fin_pret_3.TabIndex = 85;
+            // 
+            // dt_debut_pret_3
+            // 
+            this.dt_debut_pret_3.Location = new System.Drawing.Point(216, 314);
+            this.dt_debut_pret_3.Name = "dt_debut_pret_3";
+            this.dt_debut_pret_3.Size = new System.Drawing.Size(200, 26);
+            this.dt_debut_pret_3.TabIndex = 84;
+            // 
             // materialRaisedButton11
             // 
             this.materialRaisedButton11.Depth = 0;
@@ -1497,6 +1470,7 @@
             this.materialRaisedButton11.TabIndex = 83;
             this.materialRaisedButton11.Text = "Nouvelle operation";
             this.materialRaisedButton11.UseVisualStyleBackColor = true;
+            this.materialRaisedButton11.Click += new System.EventHandler(this.materialRaisedButton11_Click);
             // 
             // materialRaisedButton12
             // 
@@ -1509,6 +1483,7 @@
             this.materialRaisedButton12.TabIndex = 82;
             this.materialRaisedButton12.Text = "recents mouvements";
             this.materialRaisedButton12.UseVisualStyleBackColor = true;
+            this.materialRaisedButton12.Click += new System.EventHandler(this.materialRaisedButton12_Click);
             // 
             // label47
             // 
@@ -1664,18 +1639,39 @@
             this.label57.TabIndex = 65;
             this.label57.Text = "Identifiant pret :";
             // 
-            // materialRaisedButton20
+            // materialRaisedButton19
             // 
-            this.materialRaisedButton20.Depth = 0;
-            this.materialRaisedButton20.Location = new System.Drawing.Point(231, 234);
-            this.materialRaisedButton20.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton20.Name = "materialRaisedButton20";
-            this.materialRaisedButton20.Primary = true;
-            this.materialRaisedButton20.Size = new System.Drawing.Size(123, 44);
-            this.materialRaisedButton20.TabIndex = 4;
-            this.materialRaisedButton20.Text = "rafraichir";
-            this.materialRaisedButton20.UseVisualStyleBackColor = true;
-            this.materialRaisedButton20.Click += new System.EventHandler(this.materialRaisedButton20_Click);
+            this.materialRaisedButton19.Depth = 0;
+            this.materialRaisedButton19.Location = new System.Drawing.Point(230, 228);
+            this.materialRaisedButton19.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton19.Name = "materialRaisedButton19";
+            this.materialRaisedButton19.Primary = true;
+            this.materialRaisedButton19.Size = new System.Drawing.Size(123, 44);
+            this.materialRaisedButton19.TabIndex = 4;
+            this.materialRaisedButton19.Text = "rafraichir";
+            this.materialRaisedButton19.UseVisualStyleBackColor = true;
+            this.materialRaisedButton19.Click += new System.EventHandler(this.materialRaisedButton19_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(102, 195);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(432, 20);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Aucun prêt de ce type n\'a été enregistre pour ce compte";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.panel_pret_4);
+            this.tabPage4.Controls.Add(this.materialRaisedButton20);
+            this.tabPage4.Controls.Add(this.label19);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(638, 485);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Pret 4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // panel_pret_4
             // 
@@ -1705,6 +1701,20 @@
             this.panel_pret_4.TabIndex = 19;
             this.panel_pret_4.Visible = false;
             // 
+            // dt_fin_pret_4
+            // 
+            this.dt_fin_pret_4.Location = new System.Drawing.Point(216, 356);
+            this.dt_fin_pret_4.Name = "dt_fin_pret_4";
+            this.dt_fin_pret_4.Size = new System.Drawing.Size(200, 26);
+            this.dt_fin_pret_4.TabIndex = 85;
+            // 
+            // dt_debut_pret_4
+            // 
+            this.dt_debut_pret_4.Location = new System.Drawing.Point(216, 314);
+            this.dt_debut_pret_4.Name = "dt_debut_pret_4";
+            this.dt_debut_pret_4.Size = new System.Drawing.Size(200, 26);
+            this.dt_debut_pret_4.TabIndex = 84;
+            // 
             // materialRaisedButton13
             // 
             this.materialRaisedButton13.Depth = 0;
@@ -1716,6 +1726,7 @@
             this.materialRaisedButton13.TabIndex = 83;
             this.materialRaisedButton13.Text = "Nouvelle operation";
             this.materialRaisedButton13.UseVisualStyleBackColor = true;
+            this.materialRaisedButton13.Click += new System.EventHandler(this.materialRaisedButton13_Click);
             // 
             // materialRaisedButton14
             // 
@@ -1728,6 +1739,7 @@
             this.materialRaisedButton14.TabIndex = 82;
             this.materialRaisedButton14.Text = "recents mouvements";
             this.materialRaisedButton14.UseVisualStyleBackColor = true;
+            this.materialRaisedButton14.Click += new System.EventHandler(this.materialRaisedButton14_Click);
             // 
             // label58
             // 
@@ -1883,18 +1895,40 @@
             this.label68.TabIndex = 65;
             this.label68.Text = "Identifiant pret :";
             // 
-            // materialRaisedButton21
+            // materialRaisedButton20
             // 
-            this.materialRaisedButton21.Depth = 0;
-            this.materialRaisedButton21.Location = new System.Drawing.Point(227, 224);
-            this.materialRaisedButton21.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton21.Name = "materialRaisedButton21";
-            this.materialRaisedButton21.Primary = true;
-            this.materialRaisedButton21.Size = new System.Drawing.Size(123, 44);
-            this.materialRaisedButton21.TabIndex = 5;
-            this.materialRaisedButton21.Text = "rafraichir";
-            this.materialRaisedButton21.UseVisualStyleBackColor = true;
-            this.materialRaisedButton21.Click += new System.EventHandler(this.materialRaisedButton21_Click);
+            this.materialRaisedButton20.Depth = 0;
+            this.materialRaisedButton20.Location = new System.Drawing.Point(231, 234);
+            this.materialRaisedButton20.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton20.Name = "materialRaisedButton20";
+            this.materialRaisedButton20.Primary = true;
+            this.materialRaisedButton20.Size = new System.Drawing.Size(123, 44);
+            this.materialRaisedButton20.TabIndex = 4;
+            this.materialRaisedButton20.Text = "rafraichir";
+            this.materialRaisedButton20.UseVisualStyleBackColor = true;
+            this.materialRaisedButton20.Click += new System.EventHandler(this.materialRaisedButton20_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(101, 195);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(432, 20);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Aucun prêt de ce type n\'a été enregistre pour ce compte";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.panel_pret_imm);
+            this.tabPage5.Controls.Add(this.materialRaisedButton21);
+            this.tabPage5.Controls.Add(this.label24);
+            this.tabPage5.Controls.Add(this.label20);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(638, 485);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Immobilier";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // panel_pret_imm
             // 
@@ -1924,6 +1958,20 @@
             this.panel_pret_imm.TabIndex = 19;
             this.panel_pret_imm.Visible = false;
             // 
+            // dt_fin_pret_imm
+            // 
+            this.dt_fin_pret_imm.Location = new System.Drawing.Point(216, 356);
+            this.dt_fin_pret_imm.Name = "dt_fin_pret_imm";
+            this.dt_fin_pret_imm.Size = new System.Drawing.Size(200, 26);
+            this.dt_fin_pret_imm.TabIndex = 85;
+            // 
+            // dt_debut_pret_imm
+            // 
+            this.dt_debut_pret_imm.Location = new System.Drawing.Point(216, 314);
+            this.dt_debut_pret_imm.Name = "dt_debut_pret_imm";
+            this.dt_debut_pret_imm.Size = new System.Drawing.Size(200, 26);
+            this.dt_debut_pret_imm.TabIndex = 84;
+            // 
             // materialRaisedButton15
             // 
             this.materialRaisedButton15.Depth = 0;
@@ -1935,6 +1983,7 @@
             this.materialRaisedButton15.TabIndex = 83;
             this.materialRaisedButton15.Text = "Nouvelle operation";
             this.materialRaisedButton15.UseVisualStyleBackColor = true;
+            this.materialRaisedButton15.Click += new System.EventHandler(this.materialRaisedButton15_Click);
             // 
             // materialRaisedButton16
             // 
@@ -1947,6 +1996,7 @@
             this.materialRaisedButton16.TabIndex = 82;
             this.materialRaisedButton16.Text = "recents mouvements";
             this.materialRaisedButton16.UseVisualStyleBackColor = true;
+            this.materialRaisedButton16.Click += new System.EventHandler(this.materialRaisedButton16_Click);
             // 
             // label69
             // 
@@ -2102,75 +2152,35 @@
             this.label79.TabIndex = 65;
             this.label79.Text = "Identifiant pret :";
             // 
-            // dt_debut_pret_1
+            // materialRaisedButton21
             // 
-            this.dt_debut_pret_1.Location = new System.Drawing.Point(217, 310);
-            this.dt_debut_pret_1.Name = "dt_debut_pret_1";
-            this.dt_debut_pret_1.Size = new System.Drawing.Size(200, 26);
-            this.dt_debut_pret_1.TabIndex = 46;
+            this.materialRaisedButton21.Depth = 0;
+            this.materialRaisedButton21.Location = new System.Drawing.Point(227, 224);
+            this.materialRaisedButton21.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton21.Name = "materialRaisedButton21";
+            this.materialRaisedButton21.Primary = true;
+            this.materialRaisedButton21.Size = new System.Drawing.Size(123, 44);
+            this.materialRaisedButton21.TabIndex = 5;
+            this.materialRaisedButton21.Text = "rafraichir";
+            this.materialRaisedButton21.UseVisualStyleBackColor = true;
+            this.materialRaisedButton21.Click += new System.EventHandler(this.materialRaisedButton21_Click);
             // 
-            // dt_fin_pret_1
+            // label24
             // 
-            this.dt_fin_pret_1.Location = new System.Drawing.Point(217, 352);
-            this.dt_fin_pret_1.Name = "dt_fin_pret_1";
-            this.dt_fin_pret_1.Size = new System.Drawing.Size(200, 26);
-            this.dt_fin_pret_1.TabIndex = 47;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(96, 189);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(432, 20);
+            this.label24.TabIndex = 2;
+            this.label24.Text = "Aucun prêt de ce type n\'a été enregistre pour ce compte";
             // 
-            // dt_fin_pret_2
+            // label20
             // 
-            this.dt_fin_pret_2.Location = new System.Drawing.Point(213, 350);
-            this.dt_fin_pret_2.Name = "dt_fin_pret_2";
-            this.dt_fin_pret_2.Size = new System.Drawing.Size(200, 26);
-            this.dt_fin_pret_2.TabIndex = 66;
-            // 
-            // dt_debut_pret_2
-            // 
-            this.dt_debut_pret_2.Location = new System.Drawing.Point(213, 308);
-            this.dt_debut_pret_2.Name = "dt_debut_pret_2";
-            this.dt_debut_pret_2.Size = new System.Drawing.Size(200, 26);
-            this.dt_debut_pret_2.TabIndex = 65;
-            // 
-            // dt_fin_pret_3
-            // 
-            this.dt_fin_pret_3.Location = new System.Drawing.Point(216, 356);
-            this.dt_fin_pret_3.Name = "dt_fin_pret_3";
-            this.dt_fin_pret_3.Size = new System.Drawing.Size(200, 26);
-            this.dt_fin_pret_3.TabIndex = 85;
-            // 
-            // dt_debut_pret_3
-            // 
-            this.dt_debut_pret_3.Location = new System.Drawing.Point(216, 314);
-            this.dt_debut_pret_3.Name = "dt_debut_pret_3";
-            this.dt_debut_pret_3.Size = new System.Drawing.Size(200, 26);
-            this.dt_debut_pret_3.TabIndex = 84;
-            // 
-            // dt_fin_pret_4
-            // 
-            this.dt_fin_pret_4.Location = new System.Drawing.Point(216, 356);
-            this.dt_fin_pret_4.Name = "dt_fin_pret_4";
-            this.dt_fin_pret_4.Size = new System.Drawing.Size(200, 26);
-            this.dt_fin_pret_4.TabIndex = 85;
-            // 
-            // dt_debut_pret_4
-            // 
-            this.dt_debut_pret_4.Location = new System.Drawing.Point(216, 314);
-            this.dt_debut_pret_4.Name = "dt_debut_pret_4";
-            this.dt_debut_pret_4.Size = new System.Drawing.Size(200, 26);
-            this.dt_debut_pret_4.TabIndex = 84;
-            // 
-            // dt_fin_pret_imm
-            // 
-            this.dt_fin_pret_imm.Location = new System.Drawing.Point(216, 356);
-            this.dt_fin_pret_imm.Name = "dt_fin_pret_imm";
-            this.dt_fin_pret_imm.Size = new System.Drawing.Size(200, 26);
-            this.dt_fin_pret_imm.TabIndex = 85;
-            // 
-            // dt_debut_pret_imm
-            // 
-            this.dt_debut_pret_imm.Location = new System.Drawing.Point(216, 314);
-            this.dt_debut_pret_imm.Name = "dt_debut_pret_imm";
-            this.dt_debut_pret_imm.Size = new System.Drawing.Size(200, 26);
-            this.dt_debut_pret_imm.TabIndex = 84;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(90, 189);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(0, 20);
+            this.label20.TabIndex = 0;
             // 
             // find_client
             // 
@@ -2210,38 +2220,38 @@
             this.tabControl3.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
             this.panel_pret_1.ResumeLayout(false);
             this.panel_pret_1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.panel_pret_2.ResumeLayout(false);
             this.panel_pret_2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton14)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.panel_pret_3.ResumeLayout(false);
             this.panel_pret_3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton18)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.panel_pret_4.ResumeLayout(false);
             this.panel_pret_4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton22)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.panel_pret_imm.ResumeLayout(false);
             this.panel_pret_imm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton23)).EndInit();

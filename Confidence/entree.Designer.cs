@@ -43,10 +43,14 @@
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuImageButton2
@@ -111,17 +115,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(236, 369);
+            this.label3.Location = new System.Drawing.Point(236, 348);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(482, 17);
+            this.label3.Size = new System.Drawing.Size(278, 17);
             this.label3.TabIndex = 25;
-            this.label3.Text = "d\'avoir une regle de retrait de son argent suivant un delai bien determine";
+            this.label3.Text = "d\'avoir une regle de retrait de son argent ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(234, 352);
+            this.label4.Location = new System.Drawing.Point(234, 331);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(262, 17);
             this.label4.TabIndex = 24;
@@ -131,7 +135,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(234, 314);
+            this.label5.Location = new System.Drawing.Point(234, 293);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(275, 21);
             this.label5.TabIndex = 23;
@@ -205,10 +209,47 @@
             this.bunifuImageButton4.Zoom = 10;
             this.bunifuImageButton4.Click += new System.EventHandler(this.bunifuImageButton4_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(234, 365);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(212, 17);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "suivant un delai bien determine";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(680, 310);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(143, 21);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Autres ressources";
+            // 
+            // bunifuImageButton5
+            // 
+            this.bunifuImageButton5.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
+            this.bunifuImageButton5.ImageActive = null;
+            this.bunifuImageButton5.Location = new System.Drawing.Point(531, 249);
+            this.bunifuImageButton5.Name = "bunifuImageButton5";
+            this.bunifuImageButton5.Size = new System.Drawing.Size(144, 133);
+            this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton5.TabIndex = 33;
+            this.bunifuImageButton5.TabStop = false;
+            this.bunifuImageButton5.Zoom = 10;
+            this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
+            // 
             // entree
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.bunifuImageButton5);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.bunifuImageButton4);
             this.Controls.Add(this.label7);
@@ -229,6 +270,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +291,8 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private System.Windows.Forms.Label label12;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
     }
 }

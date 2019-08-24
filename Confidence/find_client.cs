@@ -458,5 +458,75 @@ namespace Confidence
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void materialRaisedButton8_Click(object sender, EventArgs e)
+        {
+            new_remboursement_form n = new new_remboursement_form();
+            n.set_id_pret(lbl_id_pret_1.Text);
+            n.ShowDialog();
+        }
+
+        private void materialRaisedButton17_Click(object sender, EventArgs e)
+        {
+            details_remboursement_form n = new details_remboursement_form();
+            n.set_id_pret(this.lbl_id_pret_1.Text);
+            n.ShowDialog();
+        }
+
+        private void materialRaisedButton10_Click(object sender, EventArgs e)
+        {
+            new_remboursement_form n = new new_remboursement_form();
+            n.set_id_pret(lbl_id_pret_2.Text);
+            n.ShowDialog();
+        }
+
+        private void materialRaisedButton18_Click(object sender, EventArgs e)
+        {
+            details_remboursement_form n = new details_remboursement_form();
+            n.set_id_pret(this.lbl_id_pret_2.Text);
+            n.ShowDialog();
+        }
+
+        private void materialRaisedButton11_Click(object sender, EventArgs e)
+        {
+            new_remboursement_form n = new new_remboursement_form();
+            n.set_id_pret(lbl_id_pret_3.Text);
+            n.ShowDialog();
+        }
+
+        private void materialRaisedButton12_Click(object sender, EventArgs e)
+        {
+            details_remboursement_form n = new details_remboursement_form();
+            n.set_id_pret(this.lbl_id_pret_3.Text);
+            n.ShowDialog();
+        }
+
+        private void materialRaisedButton13_Click(object sender, EventArgs e)
+        {
+            new_remboursement_form n = new new_remboursement_form();
+            n.set_id_pret(lbl_id_pret_4.Text);
+            n.ShowDialog();
+        }
+
+        private void materialRaisedButton14_Click(object sender, EventArgs e)
+        {
+            details_remboursement_form n = new details_remboursement_form();
+            n.set_id_pret(this.lbl_id_pret_4.Text);
+            n.ShowDialog();
+        }
+
+        private void materialRaisedButton15_Click(object sender, EventArgs e)
+        {
+            new_remboursement_form n = new new_remboursement_form();
+            n.set_id_pret(lbl_id_pret_imm.Text);
+            n.ShowDialog();
+        }
+
+        private void materialRaisedButton16_Click(object sender, EventArgs e)
+        {
+            details_remboursement_form n = new details_remboursement_form();
+            n.set_id_pret(this.lbl_id_pret_imm.Text);
+            n.ShowDialog();
+        }
     }
 }
