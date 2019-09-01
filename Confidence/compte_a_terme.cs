@@ -139,7 +139,7 @@ namespace Confidence
                     {
                         SqlConnection con1 = new SqlConnection(cs);
                         string query1 = "EXEC CC_insertionCA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '"
-                            + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '" + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "' ";
+                            + this.txtprenom.Text + "', 0, '" + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "' ";
 
                         SqlCommand cmd1 = new SqlCommand(query1, con1);
                         SqlDataReader sdr1;
@@ -183,7 +183,7 @@ namespace Confidence
                             {
                                 SqlConnection con11 = new SqlConnection(cs);
                                 string query11 = "EXEC CC_insertion_miniCA '" + this.txtnom.Text + "', '" + this.txtpostnom.Text + "', '"
-                            + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '" + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "' ";
+                            + this.txtprenom.Text + "', 0, '" + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "', '" + this.txtdelai.Text + "' ";
 
                                 SqlCommand cmd11 = new SqlCommand(query11, con11);
 

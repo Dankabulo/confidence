@@ -84,7 +84,7 @@ namespace Confidence
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             view_grid_form n = new view_grid_form();
-            string requete = "SELECT * FROM actionnaire";
+            string requete = "SELECT 'Identifiant Actionnaire '= id_actionnaire,nom, postnom, prenom, 'Apport'= montant_apport FROM actionnaire";
             n.set_requete(requete, "Informations des actionnaires enregistré(e)s");
             n.ShowDialog();
         }

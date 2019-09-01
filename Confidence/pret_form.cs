@@ -191,16 +191,42 @@ namespace Confidence
         private void cmb_type_pret_SelectedIndexChanged(object sender, EventArgs e)
         {
             // taux des prets
+            if (this.cmb_type_pret.Text == "Pret_4" || this.cmb_type_pret.Text == "Immobilier")
+            {
+                MessageBox.Show("Veuillez preciser la valeur de l'interet pour ce type de pret");
+                panel_taux.Visible = true;
+            }
         }
 
-        private void txt_montant_prete_TextChanged(object sender, EventArgs e)
+        public void calcul_montant_rembourser(int taux)
         {
-            int interet = Convert.ToInt32(this.txt_montant_prete.Text) / 5;
+            int interet = (Convert.ToInt32(this.txt_montant_prete.Text)* taux) / 100;
             txt_interet.Text = interet.ToString();
 
             int montant_remb = Convert.ToInt32(this.txt_interet.Text) + Convert.ToInt32(txt_montant_prete.Text);
             txt_montant_rembourser.Text = montant_remb.ToString();
+        }
 
+        private void txt_montant_prete_TextChanged(object sender, EventArgs e)
+        {
+            if (this.cmb_type_pret.Text == "Pret_1")
+            {
+                calcul_montant_rembourser(10);
+            }
+            else if (this.cmb_type_pret.Text == "Pret_2")
+            {
+
+                calcul_montant_rembourser(20);
+            }
+            else if (this.cmb_type_pret.Text == "Pret_3")
+            {
+                calcul_montant_rembourser(30);
+            }
+            if (this.cmb_type_pret.Text == "Pret_4" || this.cmb_type_pret.Text == "Immobilier")
+            {
+                int taux = Convert.ToInt32(txt_taux.Text);
+                calcul_montant_rembourser(taux);
+            }
         }
 
         private void txt_nb_tranche_TextChanged(object sender, EventArgs e)

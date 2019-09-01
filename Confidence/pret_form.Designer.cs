@@ -75,10 +75,15 @@
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txt_utilisateur_compte = new System.Windows.Forms.TextBox();
             this.txt_montant_deja_prete_type = new System.Windows.Forms.TextBox();
+            this.panel_taux = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_taux = new System.Windows.Forms.TextBox();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.panel_taux.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -186,6 +191,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.panel_taux);
             this.groupBox2.Controls.Add(this.cmb_devise);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.panel13);
@@ -214,7 +220,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.groupBox2.Location = new System.Drawing.Point(12, 209);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(780, 295);
+            this.groupBox2.Size = new System.Drawing.Size(780, 328);
             this.groupBox2.TabIndex = 77;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pret";
@@ -226,7 +232,7 @@
             this.cmb_devise.Items.AddRange(new object[] {
             "USD",
             "CDF"});
-            this.cmb_devise.Location = new System.Drawing.Point(171, 248);
+            this.cmb_devise.Location = new System.Drawing.Point(171, 282);
             this.cmb_devise.Name = "cmb_devise";
             this.cmb_devise.Size = new System.Drawing.Size(94, 25);
             this.cmb_devise.TabIndex = 38;
@@ -235,7 +241,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(107, 256);
+            this.label11.Location = new System.Drawing.Point(107, 290);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 17);
             this.label11.TabIndex = 40;
@@ -244,7 +250,7 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel13.Location = new System.Drawing.Point(171, 271);
+            this.panel13.Location = new System.Drawing.Point(171, 305);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(96, 2);
             this.panel13.TabIndex = 39;
@@ -329,9 +335,8 @@
             "Pret_2",
             "Pret_3",
             "Pret_4",
-            "Cas_special",
             "Immobilier"});
-            this.cmb_type_pret.Location = new System.Drawing.Point(172, 40);
+            this.cmb_type_pret.Location = new System.Drawing.Point(171, 74);
             this.cmb_type_pret.Name = "cmb_type_pret";
             this.cmb_type_pret.Size = new System.Drawing.Size(94, 25);
             this.cmb_type_pret.TabIndex = 34;
@@ -341,7 +346,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(92, 50);
+            this.label9.Location = new System.Drawing.Point(91, 84);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(74, 17);
             this.label9.TabIndex = 36;
@@ -350,7 +355,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel7.Location = new System.Drawing.Point(172, 65);
+            this.panel7.Location = new System.Drawing.Point(171, 99);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(96, 2);
             this.panel7.TabIndex = 35;
@@ -359,7 +364,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(43, 186);
+            this.label5.Location = new System.Drawing.Point(43, 220);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 17);
             this.label5.TabIndex = 33;
@@ -370,7 +375,7 @@
             this.txt_nb_tranche.BackColor = System.Drawing.SystemColors.Control;
             this.txt_nb_tranche.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_nb_tranche.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_nb_tranche.Location = new System.Drawing.Point(172, 187);
+            this.txt_nb_tranche.Location = new System.Drawing.Point(172, 221);
             this.txt_nb_tranche.Name = "txt_nb_tranche";
             this.txt_nb_tranche.Size = new System.Drawing.Size(156, 16);
             this.txt_nb_tranche.TabIndex = 31;
@@ -379,7 +384,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel10.Location = new System.Drawing.Point(172, 204);
+            this.panel10.Location = new System.Drawing.Point(172, 238);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(159, 2);
             this.panel10.TabIndex = 32;
@@ -388,7 +393,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(47, 218);
+            this.label3.Location = new System.Drawing.Point(47, 252);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 17);
             this.label3.TabIndex = 30;
@@ -399,7 +404,7 @@
             this.txt_mr_tranche.BackColor = System.Drawing.SystemColors.Control;
             this.txt_mr_tranche.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_mr_tranche.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_mr_tranche.Location = new System.Drawing.Point(171, 221);
+            this.txt_mr_tranche.Location = new System.Drawing.Point(171, 255);
             this.txt_mr_tranche.Name = "txt_mr_tranche";
             this.txt_mr_tranche.Size = new System.Drawing.Size(156, 16);
             this.txt_mr_tranche.TabIndex = 28;
@@ -407,7 +412,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel9.Location = new System.Drawing.Point(171, 238);
+            this.panel9.Location = new System.Drawing.Point(171, 272);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(159, 2);
             this.panel9.TabIndex = 29;
@@ -416,7 +421,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 154);
+            this.label2.Location = new System.Drawing.Point(6, 188);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 17);
             this.label2.TabIndex = 27;
@@ -427,7 +432,7 @@
             this.txt_montant_rembourser.BackColor = System.Drawing.SystemColors.Control;
             this.txt_montant_rembourser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_montant_rembourser.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_montant_rembourser.Location = new System.Drawing.Point(172, 152);
+            this.txt_montant_rembourser.Location = new System.Drawing.Point(172, 186);
             this.txt_montant_rembourser.Name = "txt_montant_rembourser";
             this.txt_montant_rembourser.Size = new System.Drawing.Size(156, 16);
             this.txt_montant_rembourser.TabIndex = 25;
@@ -435,7 +440,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel3.Location = new System.Drawing.Point(172, 169);
+            this.panel3.Location = new System.Drawing.Point(172, 203);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(159, 2);
             this.panel3.TabIndex = 26;
@@ -444,7 +449,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(109, 121);
+            this.label1.Location = new System.Drawing.Point(109, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 17);
             this.label1.TabIndex = 24;
@@ -455,7 +460,7 @@
             this.txt_interet.BackColor = System.Drawing.SystemColors.Control;
             this.txt_interet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_interet.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_interet.Location = new System.Drawing.Point(172, 121);
+            this.txt_interet.Location = new System.Drawing.Point(172, 155);
             this.txt_interet.Name = "txt_interet";
             this.txt_interet.Size = new System.Drawing.Size(156, 16);
             this.txt_interet.TabIndex = 22;
@@ -463,7 +468,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel1.Location = new System.Drawing.Point(172, 138);
+            this.panel1.Location = new System.Drawing.Point(172, 172);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 2);
             this.panel1.TabIndex = 23;
@@ -472,7 +477,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(57, 88);
+            this.label6.Location = new System.Drawing.Point(57, 122);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 17);
             this.label6.TabIndex = 11;
@@ -483,7 +488,7 @@
             this.txt_montant_prete.BackColor = System.Drawing.SystemColors.Control;
             this.txt_montant_prete.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_montant_prete.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_montant_prete.Location = new System.Drawing.Point(171, 86);
+            this.txt_montant_prete.Location = new System.Drawing.Point(171, 120);
             this.txt_montant_prete.Name = "txt_montant_prete";
             this.txt_montant_prete.Size = new System.Drawing.Size(156, 16);
             this.txt_montant_prete.TabIndex = 0;
@@ -502,7 +507,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
-            this.panel4.Location = new System.Drawing.Point(171, 103);
+            this.panel4.Location = new System.Drawing.Point(171, 137);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(159, 2);
             this.panel4.TabIndex = 10;
@@ -542,7 +547,7 @@
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(650, 510);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(650, 543);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -554,7 +559,7 @@
             // 
             // txt_utilisateur_compte
             // 
-            this.txt_utilisateur_compte.Location = new System.Drawing.Point(12, 528);
+            this.txt_utilisateur_compte.Location = new System.Drawing.Point(12, 589);
             this.txt_utilisateur_compte.Name = "txt_utilisateur_compte";
             this.txt_utilisateur_compte.Size = new System.Drawing.Size(100, 20);
             this.txt_utilisateur_compte.TabIndex = 80;
@@ -562,17 +567,56 @@
             // 
             // txt_montant_deja_prete_type
             // 
-            this.txt_montant_deja_prete_type.Location = new System.Drawing.Point(124, 528);
+            this.txt_montant_deja_prete_type.Location = new System.Drawing.Point(124, 589);
             this.txt_montant_deja_prete_type.Name = "txt_montant_deja_prete_type";
             this.txt_montant_deja_prete_type.Size = new System.Drawing.Size(100, 20);
             this.txt_montant_deja_prete_type.TabIndex = 81;
             this.txt_montant_deja_prete_type.Visible = false;
             // 
+            // panel_taux
+            // 
+            this.panel_taux.Controls.Add(this.label14);
+            this.panel_taux.Controls.Add(this.txt_taux);
+            this.panel_taux.Controls.Add(this.panel15);
+            this.panel_taux.Location = new System.Drawing.Point(103, 22);
+            this.panel_taux.Name = "panel_taux";
+            this.panel_taux.Size = new System.Drawing.Size(233, 43);
+            this.panel_taux.TabIndex = 41;
+            this.panel_taux.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(5, 12);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 17);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "Interet :";
+            // 
+            // txt_taux
+            // 
+            this.txt_taux.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_taux.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_taux.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_taux.Location = new System.Drawing.Point(68, 12);
+            this.txt_taux.Name = "txt_taux";
+            this.txt_taux.Size = new System.Drawing.Size(156, 16);
+            this.txt_taux.TabIndex = 44;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(105)))), ((int)(((byte)(161)))));
+            this.panel15.Location = new System.Drawing.Point(68, 29);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(159, 2);
+            this.panel15.TabIndex = 45;
+            // 
             // pret_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 586);
+            this.ClientSize = new System.Drawing.Size(831, 630);
             this.Controls.Add(this.txt_montant_deja_prete_type);
             this.Controls.Add(this.txt_utilisateur_compte);
             this.Controls.Add(this.materialRaisedButton1);
@@ -589,6 +633,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.panel_taux.ResumeLayout(false);
+            this.panel_taux.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -642,5 +688,9 @@
         private System.Windows.Forms.ComboBox cmb_devise;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel_taux;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txt_taux;
+        private System.Windows.Forms.Panel panel15;
     }
 }

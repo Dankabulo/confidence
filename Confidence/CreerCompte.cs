@@ -109,7 +109,7 @@ namespace Confidence
 
                         SqlConnection conn = new SqlConnection(cs);
                         string queryn = "EXEC CC_insertion '" + this.txtnom.Text + "', '"
-                            + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '"
+                            + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "', 0, '"
                             + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "'";
                         SqlCommand cmdn = new SqlCommand(queryn, conn);
                         SqlDataReader sdrn;
@@ -161,7 +161,7 @@ namespace Confidence
                                 // existe mais sans un compte de ce type
                                 SqlConnection cond = new SqlConnection(cs);
                                 string querynd = "EXEC CC_insertion_mini '" + this.txtnom.Text + "', '"
-                            + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "', " + this.txtmontant.Text + ", '"
+                            + this.txtpostnom.Text + "', '" + this.txtprenom.Text + "', 0, '"
                             + this.cmbdevise.SelectedItem + "', '" + this.dtdate.Value.ToShortDateString() + "'";
                                 SqlCommand cmdnd = new SqlCommand(querynd, conn);
                                 SqlDataReader sdrnd;
